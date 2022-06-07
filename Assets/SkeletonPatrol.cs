@@ -2,40 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkeletonIdle : StateMachineBehaviour
+public class SkeletonPatrol : StateMachineBehaviour
 {
     private Skeleton skeleton;
-    private float lastChanceTime;
-    private float initialWaitTime;
+    private Vector3 destination;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         skeleton = animator.GetComponentInParent<Skeleton>();
-        initialWaitTime = skeleton.waitTime;
+        destination = skeleton.patrolPoint.position;
+        Debug.Log(destination);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Time.time - lastChanceTime > skeleton.idleWaitTime)
+        if(skeleton.agent.remainingDistance <= skeleton.agent.stoppingDistance)
         {
-            skeleton.ChangeIdleState();
-            lastChanceTime = Time.time;
-        }
-        if (skeleton.target == null)
-        {
-            skeleton.waitTime -= Time.deltaTime;
-            if (skeleton.waitTime <= 0)
-            {
-                skeleton.SkeletonPatrol();
-            }
+            skeleton.agent.enabled = false;
+            animator.SetBool("Patrol", false);
         }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        skeleton.waitTime = initialWaitTime;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
