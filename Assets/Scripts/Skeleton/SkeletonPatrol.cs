@@ -19,7 +19,7 @@ public class SkeletonPatrol : StateMachineBehaviour
     {
         if(skeleton.agent.remainingDistance <= skeleton.agent.stoppingDistance)
         {
-            skeleton.agent.enabled = false;
+            //skeleton.agent.enabled = false;
             animator.SetBool("Patrol", false);
         }
     }
