@@ -6,10 +6,6 @@ public class AttackWeapon : MonoBehaviour
 {
     public int defaultDamage;
     private int currentDamage;
-    private void Start()
-    {
-        
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<Health>(out Health health))
@@ -21,7 +17,6 @@ public class AttackWeapon : MonoBehaviour
     {
         currentDamage -= amount;
         //if (currentDamage < 0) currentDamage = 0;
-        
     }
     public void IncreaseDamage(int amout)
     {
