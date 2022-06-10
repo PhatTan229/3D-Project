@@ -84,6 +84,12 @@ ModelImporter:
   - first:
       74: 3316786127858398870
     second: Release
+  - first:
+      74: -8766456253055335724
+    second: Take
+  - first:
+      74: -2613544721827560436
+    second: Wait
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -271,6 +277,108 @@ ModelImporter:
       takeName: Take 001
       internalID: 0
       firstFrame: 20
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PT_Medieval_bow_01_root
+        weight: 1
+      - path: PT_Medieval_bow_01_root/PT_Medieval_bow_01_down_01
+        weight: 1
+      - path: PT_Medieval_bow_01_root/PT_Medieval_bow_01_down_01/PT_Medieval_bow_01_down_02
+        weight: 1
+      - path: PT_Medieval_bow_01_root/PT_Medieval_bow_01_down_01/PT_Medieval_bow_01_down_02/PT_Medieval_bow_01_down_03
+        weight: 1
+      - path: PT_Medieval_bow_01_root/PT_Medieval_bow_01_down_01/PT_Medieval_bow_01_down_02/PT_Medieval_bow_01_down_03/PT_Medieval_bow_01_down_04
+        weight: 1
+      - path: PT_Medieval_bow_01_root/PT_Medieval_bow_01_string
+        weight: 1
+      - path: PT_Medieval_bow_01_root/PT_Medieval_bow_01_up_01
+        weight: 1
+      - path: PT_Medieval_bow_01_root/PT_Medieval_bow_01_up_01/PT_Medieval_bow_01_up_02
+        weight: 1
+      - path: PT_Medieval_bow_01_root/PT_Medieval_bow_01_up_01/PT_Medieval_bow_01_up_02/PT_Medieval_bow_01_up_03
+        weight: 1
+      - path: PT_Medieval_bow_01_root/PT_Medieval_bow_01_up_01/PT_Medieval_bow_01_up_02/PT_Medieval_bow_01_up_03/PT_Medieval_bow_01_up_04
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Take
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 29
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: PT_Medieval_bow_01_root
+        weight: 1
+      - path: PT_Medieval_bow_01_root/PT_Medieval_bow_01_down_01
+        weight: 1
+      - path: PT_Medieval_bow_01_root/PT_Medieval_bow_01_down_01/PT_Medieval_bow_01_down_02
+        weight: 1
+      - path: PT_Medieval_bow_01_root/PT_Medieval_bow_01_down_01/PT_Medieval_bow_01_down_02/PT_Medieval_bow_01_down_03
+        weight: 1
+      - path: PT_Medieval_bow_01_root/PT_Medieval_bow_01_down_01/PT_Medieval_bow_01_down_02/PT_Medieval_bow_01_down_03/PT_Medieval_bow_01_down_04
+        weight: 1
+      - path: PT_Medieval_bow_01_root/PT_Medieval_bow_01_string
+        weight: 1
+      - path: PT_Medieval_bow_01_root/PT_Medieval_bow_01_up_01
+        weight: 1
+      - path: PT_Medieval_bow_01_root/PT_Medieval_bow_01_up_01/PT_Medieval_bow_01_up_02
+        weight: 1
+      - path: PT_Medieval_bow_01_root/PT_Medieval_bow_01_up_01/PT_Medieval_bow_01_up_02/PT_Medieval_bow_01_up_03
+        weight: 1
+      - path: PT_Medieval_bow_01_root/PT_Medieval_bow_01_up_01/PT_Medieval_bow_01_up_02/PT_Medieval_bow_01_up_03/PT_Medieval_bow_01_up_04
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Wait
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 32
       lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0

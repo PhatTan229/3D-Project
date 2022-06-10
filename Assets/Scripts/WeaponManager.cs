@@ -28,6 +28,7 @@ public class WeaponManager : MonoBehaviour
 {
     public Animator anim;
     public WeaponInformaton[] weaponCollection;
+    public Animator bowAnim;
     //public RuntimeAnimatorController daggerController;
     //public RuntimeAnimatorController swordAndShieldController;
     private void OnValidate() => anim = GetComponent<Animator>();
@@ -53,5 +54,15 @@ public class WeaponManager : MonoBehaviour
             weaponCollection[1].ActiveWeapon();
             weaponCollection[0].DisableWeapon();
         }
+    }
+    public void LoadArrow()
+    {
+        anim.SetTrigger("Prepare");
+        bowAnim.SetTrigger("Load");
+    }
+    public void ShootArrow()
+    {
+        anim.SetTrigger("Shoot");
+        bowAnim.SetTrigger("Release");
     }
 }
