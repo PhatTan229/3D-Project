@@ -5361,6 +5361,7 @@ GameObject:
   - component: {fileID: 1290225015}
   - component: {fileID: 1290225016}
   - component: {fileID: 4123384205950301784}
+  - component: {fileID: 754934319}
   m_Layer: 0
   m_Name: MalePlayer
   m_TagString: Untagged
@@ -5501,6 +5502,41 @@ MonoBehaviour:
   thirdPersonCamera: {fileID: 0}
   controller: {fileID: 8339157311754780458}
   anim: {fileID: 316410700326983233}
+--- !u!114 &754934319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6471639280217413249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7578ca4bd1360940bdbedb47eb91e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  suitCollection:
+  - type: 0
+    parts:
+    - {fileID: 5367749608619872777}
+    - {fileID: 2271288422239356578}
+    - {fileID: 2725775195054961528}
+    - {fileID: 2590227022297402444}
+  - type: 1
+    parts:
+    - {fileID: 1904734166110886033}
+    - {fileID: 6993934757870833118}
+    - {fileID: 9180565799827797747}
+    - {fileID: 4172505699919093618}
+    - {fileID: 1000380859282195996}
+    - {fileID: 470423094594826783}
+  - type: 2
+    parts:
+    - {fileID: 1913798846665490229}
+    - {fileID: 1697208653470423309}
+    - {fileID: 5475172490350104628}
+    - {fileID: 5812491250941978630}
+    - {fileID: 1734562281911611796}
+    - {fileID: 5993157004416514251}
 --- !u!1 &6617388189318818570
 GameObject:
   m_ObjectHideFlags: 0
