@@ -5,8 +5,8 @@ using UnityEngine;
 public enum WeaponType
 {
     Dagger,
-    SwordAndShield,
-    Bow
+    Bow,
+    SwordAndShield
 }
 
 [System.Serializable]
@@ -15,9 +15,9 @@ public class WeaponInformaton
     public WeaponType type;
     public GameObject[] parts;
     public RuntimeAnimatorController skill;
-    public void ActiveWeapon() => SetWeapon(true);
-    public void DisableWeapon() => SetWeapon(false);
-    public void SetWeapon(bool isActive)
+    public void ActiveWeapon() => SetUp(true);
+    public void DisableWeapon() => SetUp(false);
+    public void SetUp(bool isActive)
     {
         for (int i = 0; i < parts.Length; i++)
             parts[i].SetActive(isActive);
@@ -42,19 +42,29 @@ public class WeaponManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            //anim.runtimeAnimatorController = daggerController;
+            SetUp(WeaponType.Dagger);
             anim.runtimeAnimatorController = weaponCollection[0].skill;
-            weaponCollection[0].ActiveWeapon();
-            weaponCollection[1].DisableWeapon();
+            
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            //anim.runtimeAnimatorController = swordAndShieldController;
+            SetUp(WeaponType.Bow);
             anim.runtimeAnimatorController = weaponCollection[1].skill;
-            weaponCollection[1].ActiveWeapon();
-            weaponCollection[0].DisableWeapon();
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            SetUp(WeaponType.SwordAndShield);
+            anim.runtimeAnimatorController = weaponCollection[2].skill;
         }
     }
+    private void SetUp(WeaponType type)
+    {
+        for (int i = 0; i < weaponCollection.Length; i++)
+        {
+            weaponCollection[i].SetUp(i == (int)type);
+        }
+    }
+
     public void LoadArrow()
     {
         anim.SetTrigger("Prepare");
