@@ -31,6 +31,12 @@ public class WeaponManager : MonoBehaviour
     //public RuntimeAnimatorController daggerController;
     //public RuntimeAnimatorController swordAndShieldController;
     private void OnValidate() => anim = GetComponent<Animator>();
+    private void Start()
+    {
+        anim.runtimeAnimatorController = weaponCollection[0].skill;
+        weaponCollection[0].ActiveWeapon();
+        weaponCollection[1].DisableWeapon();
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
