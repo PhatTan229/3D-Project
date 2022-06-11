@@ -28,51 +28,46 @@ public class WeaponManager : MonoBehaviour
 {
     public Animator anim;
     public WeaponInformaton[] weaponCollection;
+    public GameObject arrowOnHand;
     public Animator bowAnim;
     //public RuntimeAnimatorController daggerController;
     //public RuntimeAnimatorController swordAndShieldController;
     private void OnValidate() => anim = GetComponent<Animator>();
     private void Start()
     {
-        anim.runtimeAnimatorController = weaponCollection[0].skill;
-        weaponCollection[0].ActiveWeapon();
-        weaponCollection[1].DisableWeapon();
+        SetUp(WeaponType.Dagger);
     }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SetUp(WeaponType.Dagger);
-            anim.runtimeAnimatorController = weaponCollection[0].skill;
-            
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             SetUp(WeaponType.Bow);
-            anim.runtimeAnimatorController = weaponCollection[1].skill;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             SetUp(WeaponType.SwordAndShield);
-            anim.runtimeAnimatorController = weaponCollection[2].skill;
         }
     }
     private void SetUp(WeaponType type)
     {
+        int weaponIndex = (int)type;
         for (int i = 0; i < weaponCollection.Length; i++)
         {
-            weaponCollection[i].SetUp(i == (int)type);
+            weaponCollection[i].SetUp(i == weaponIndex);
+            anim.runtimeAnimatorController = weaponCollection[weaponIndex].skill;
         }
     }
-
-    public void LoadArrow()
-    {
-        anim.SetTrigger("Prepare");
-        bowAnim.SetTrigger("Load");
-    }
+    public void GetArrow() => anim.SetTrigger("Prepare");
+    public void LoadArrow() => arrowOnHand.SetActive(true);
+    public void EquipArrow() => bowAnim.SetTrigger("Load");
     public void ShootArrow()
     {
         anim.SetTrigger("Shoot");
         bowAnim.SetTrigger("Release");
+        arrowOnHand.SetActive(false);
     }
 }
