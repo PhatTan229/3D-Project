@@ -11,13 +11,12 @@ public class SkeletonPatrol : StateMachineBehaviour
     {
         skeleton = animator.GetComponentInParent<Skeleton>();
         destination = skeleton.patrolPoint.position;
-        Debug.Log(destination);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(skeleton.agent.remainingDistance <= skeleton.agent.stoppingDistance)
+        if (skeleton.agent.remainingDistance <= skeleton.agent.stoppingDistance && skeleton.target == null)
         {
             //skeleton.agent.enabled = false;
             animator.SetBool("Patrol", false);
@@ -27,6 +26,7 @@ public class SkeletonPatrol : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        skeleton.PatrolWaitTime = skeleton.maxPatrolWaitTime;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

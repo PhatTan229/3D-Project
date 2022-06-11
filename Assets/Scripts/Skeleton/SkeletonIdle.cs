@@ -6,36 +6,39 @@ public class SkeletonIdle : StateMachineBehaviour
 {
     private Skeleton skeleton;
     private float lastChanceTime;
-    private float initialWaitTime;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         skeleton = animator.GetComponentInParent<Skeleton>();
-        initialWaitTime = skeleton.waitTime;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        if (Time.time - lastChanceTime > skeleton.idleWaitTime)
-        {
-            skeleton.ChangeIdleState();
-            lastChanceTime = Time.time;
-        }
+    {       
         if (skeleton.target == null)
         {
-            skeleton.waitTime -= Time.deltaTime;
-            if (skeleton.waitTime <= 0)
+            skeleton.PatrolWaitTime -= Time.deltaTime;
+            if (skeleton.PatrolWaitTime <= 0)
             {
                 skeleton.SkeletonPatrol();
             }
+            if (Time.time - lastChanceTime > skeleton.idleWaitTime)
+            {
+                skeleton.ChangeIdleState();
+                lastChanceTime = Time.time;
+            }
+        }
+        else
+        {
+            skeleton.Chasing();
         }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        skeleton.waitTime = initialWaitTime;
+
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

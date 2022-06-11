@@ -8,36 +8,37 @@ public class Skeleton : MonoBehaviour
     [SerializeField] private Animator anim;
     [System.NonSerialized] public GameObject target;
     [System.NonSerialized] public NavMeshAgent agent;
-
+    [System.NonSerialized] public float distance;
     public Transform patrolPoint;
 
     public float idleWaitTime;
-    public float waitTime;
+    public float maxPatrolWaitTime;
+    
+    public float PatrolWaitTime { get { return patrolWaitTime; } set { patrolWaitTime = value; } }
     public float patrolRange;
+    public float attackRange;
 
+    private float patrolWaitTime;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
         agent = GetComponentInChildren<NavMeshAgent>();
+        patrolWaitTime = maxPatrolWaitTime;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        if(other.gameObject.layer == LayerMask.NameToLayer("Player"))
+        target = GameObject.Find("MalePlayer");       
+        if(target != null)
         {
-            target = other.gameObject;
+            distance = Vector3.Distance(agent.transform.position, target.transform.position);
+            agent.destination = target.transform.position;
+            anim.SetBool("Attack", distance <= attackRange);
         }
+        Debug.Log(PatrolWaitTime);
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
-        {
-            target = null;
-        }
-    }
-    
     public void ChangeIdleState()
     {
         var r = Random.Range(1, 3);
@@ -58,6 +59,19 @@ public class Skeleton : MonoBehaviour
         var randomZ = Random.Range(-patrolRange, patrolRange);
         patrolPoint.position = new Vector3(randomX,0,randomZ);
         agent.SetDestination(patrolPoint.position);
+        agent.stoppingDistance = 0;
         anim.SetBool("Patrol", true);
+    }
+
+    public void Chasing()
+    {
+        agent.SetDestination(target.transform.position);
+        agent.stoppingDistance = attackRange;
+        anim.SetBool("Patrol", true);
+    }
+
+    public void Stun()
+    {
+        anim.SetTrigger("Stun");
     }
 }

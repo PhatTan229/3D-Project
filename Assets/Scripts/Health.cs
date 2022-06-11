@@ -4,10 +4,22 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int healthPoint;
-    public void TakeDamage(int damage)
+    public int maxHealthPoint;
+    private int healthPoint;
+    public int HealthPoint
     {
-        healthPoint -= damage;
+        get { return healthPoint; }
+        protected set
+        {
+            healthPoint = value;
+        }
+    }
+    public virtual void TakeDamage(int damage)
+    {
+        if(healthPoint > 0)
+        {
+            HealthPoint -= damage;
+        }       
     }
 
 }
