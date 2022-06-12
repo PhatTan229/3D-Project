@@ -34,6 +34,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f61be5db0df28418ca912c2e892762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
 --- !u!1107 &-5017795874044302090
 AnimatorStateMachine:
   serializedVersion: 6
@@ -326,7 +327,7 @@ AnimatorStateMachine:
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: -5017795874044302090}
-    m_Position: {x: 480, y: 160, z: 0}
+    m_Position: {x: 320, y: 220, z: 0}
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}

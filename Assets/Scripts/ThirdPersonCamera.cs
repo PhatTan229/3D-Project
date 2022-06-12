@@ -8,7 +8,11 @@ public class ThirdPersonCamera : MonoBehaviour
     public int minAngle;
     public int maxAngle;
     public Transform target;
-    private void Start() => Cursor.lockState = CursorLockMode.Locked;
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+
+    }
     private void LateUpdate()
     {
         transform.position = target.position;
@@ -17,7 +21,6 @@ public class ThirdPersonCamera : MonoBehaviour
 
         RotateAroundPitchAxis(yInput);
         RotateAroundYawAxis(xInput);
-
     }
 
     private void RotateAroundPitchAxis(float yInput)
@@ -27,6 +30,7 @@ public class ThirdPersonCamera : MonoBehaviour
         if (newEulerAngles.x > 180) newEulerAngles.x -= 360;
         else if (newEulerAngles.x < -180) newEulerAngles.x += 360;
         newEulerAngles.x = Mathf.Clamp(newEulerAngles.x, minAngle, maxAngle);
+        newEulerAngles.z = 0; //dont know what to do
         transform.eulerAngles = newEulerAngles;
     }
     private void RotateAroundYawAxis(float xInput) => transform.Rotate(0, xInput * sensitivity * Time.deltaTime, 0, Space.World);

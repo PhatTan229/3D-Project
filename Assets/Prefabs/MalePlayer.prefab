@@ -5579,6 +5579,8 @@ MonoBehaviour:
     skill: {fileID: 9100000, guid: cf06ffef1c1737942b57d8239c13a2d8, type: 2}
   arrowPosAnim: {fileID: 851830208}
   bowAnim: {fileID: 680445347015739982}
+  arrowOnHandPos: {fileID: 7228124701412411364}
+  arrowPrefab: {fileID: 4987496401560489548, guid: 5f094160b70d2ec429ed6d95b489a25f, type: 3}
 --- !u!114 &4123384205950301784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5591,6 +5593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd21ac78d77dd484f8edb3706e8d6bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotatingSpeed: 1000
   direction: {x: 0, y: 0, z: 0}
   thirdPersonCamera: {fileID: 0}
   controller: {fileID: 8339157311754780458}

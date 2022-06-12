@@ -30,6 +30,8 @@ public class WeaponManager : MonoBehaviour
     public WeaponInformaton[] weaponCollection;
     public Animator arrowPosAnim;
     public Animator bowAnim;
+    public Transform arrowOnHandPos;
+    public AttackingArrow arrowPrefab;
     //public RuntimeAnimatorController daggerController;
     //public RuntimeAnimatorController swordAndShieldController;
     private void OnValidate() => anim = GetComponent<Animator>();
@@ -69,5 +71,6 @@ public class WeaponManager : MonoBehaviour
         anim.SetTrigger("Shoot");
         bowAnim.SetTrigger("Release");
         arrowPosAnim.SetTrigger("Shoot");
+        Instantiate(arrowPrefab, arrowOnHandPos.position, arrowOnHandPos.rotation);
     }
 }
