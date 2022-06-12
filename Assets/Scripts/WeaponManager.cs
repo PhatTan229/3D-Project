@@ -28,7 +28,7 @@ public class WeaponManager : MonoBehaviour
 {
     public Animator anim;
     public WeaponInformaton[] weaponCollection;
-    public GameObject arrowOnHand;
+    public Animator arrowPosAnim;
     public Animator bowAnim;
     //public RuntimeAnimatorController daggerController;
     //public RuntimeAnimatorController swordAndShieldController;
@@ -62,12 +62,12 @@ public class WeaponManager : MonoBehaviour
         }
     }
     public void GetArrow() => anim.SetTrigger("Prepare");
-    public void LoadArrow() => arrowOnHand.SetActive(true);
+    public void LoadArrow() => arrowPosAnim.SetTrigger("Load");
     public void EquipArrow() => bowAnim.SetTrigger("Load");
     public void ShootArrow()
     {
         anim.SetTrigger("Shoot");
         bowAnim.SetTrigger("Release");
-        arrowOnHand.SetActive(false);
+        arrowPosAnim.SetTrigger("Shoot");
     }
 }
