@@ -2,55 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkeletonIdle : StateMachineBehaviour
+public class SkeletonLookForTarget : StateMachineBehaviour
 {
     private Skeleton skeleton;
-    private float lastChanceTime;
-
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        skeleton = animator.GetComponentInParent<Skeleton>();
-        
+        skeleton = animator.GetComponent<Skeleton>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(skeleton.enemyState == EnemyState.PATROL)
+        if(skeleton.target == null)
         {
-            if (skeleton.target == null)
-            {
-                skeleton.PatrolWaitTime -= Time.deltaTime;
-                if (skeleton.PatrolWaitTime <= 0)
-                {
-                    skeleton.SkeletonPatrol();
-                }
-                if (Time.time - lastChanceTime > skeleton.idleWaitTime)
-                {
-                    skeleton.ChangeIdleState();
-                    lastChanceTime = Time.time;
-                }
-            }
-            else
-            {
-                skeleton.Chasing();
-            }
-        }
-        if (skeleton.enemyState == EnemyState.HUNTING)
-        {
-            if(skeleton.target != null)
-            {
-                skeleton.Chasing();
-            }
+            animator.SetTrigger("LookForTarget");
         }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-
-    }
+    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    
+    //}
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

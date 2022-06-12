@@ -5,12 +5,10 @@ using UnityEngine;
 public class SkeletonPatrol : StateMachineBehaviour
 {
     private Skeleton skeleton;
-    private Vector3 destination;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         skeleton = animator.GetComponentInParent<Skeleton>();
-        destination = skeleton.patrolPoint.position;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -20,6 +18,10 @@ public class SkeletonPatrol : StateMachineBehaviour
         {
             //skeleton.agent.enabled = false;
             animator.SetBool("Patrol", false);
+        }
+        if(skeleton.target != null)
+        {
+            skeleton.Chasing();
         }
     }
 
