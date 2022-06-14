@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
 
 public enum WeaponType
 {
@@ -32,12 +33,17 @@ public class WeaponManager : MonoBehaviour
     public Animator bowAnim;
     public Transform arrowOnHandPos;
     public AttackingArrow arrowPrefab;
+
+    public RigBuilder rigBuilder;
+    public AimingBehaviour aimingBehaviour;
+    //public RigLayer rigLayer;
     //public RuntimeAnimatorController daggerController;
     //public RuntimeAnimatorController swordAndShieldController;
     private void OnValidate() => anim = GetComponent<Animator>();
     private void Start()
     {
-        SetUp(WeaponType.Dagger);
+        SetUp(WeaponType.Bow);
+        DisableAiming();
     }
     private void Update()
     {
@@ -72,5 +78,30 @@ public class WeaponManager : MonoBehaviour
         bowAnim.SetTrigger("Release");
         arrowPosAnim.SetTrigger("Shoot");
         Instantiate(arrowPrefab, arrowOnHandPos.position, arrowOnHandPos.rotation);
+    }
+
+    public void ActiveAiming()
+    {
+        //Debug.Log($"before active {rig.weight}");
+        //rig.weight = 1f;
+        //Debug.Log($"after active {rig.weight}");
+
+        //builder.enabled = true;
+
+        rigBuilder.layers[0].active = true;
+        aimingBehaviour.enabled = true;
+        //rigBuilder.layers[0].rig.weight = 1f;
+    }
+    public void DisableAiming()
+    {
+        //Debug.Log($"before disable {rig.weight}");
+        //rig.weight = 0;
+        //Debug.Log($"after disable {rig.weight}");
+
+        //builder.enabled = false;
+
+        rigBuilder.layers[0].active = false;
+        aimingBehaviour.enabled = false;
+        //rigBuilder.layers[0].rig.weight = 0;
     }
 }
