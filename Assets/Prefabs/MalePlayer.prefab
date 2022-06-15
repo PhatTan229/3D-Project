@@ -5729,6 +5729,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e4639b48c12de47bc8a00047acfdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrowSpeed: 20
+  movement: {fileID: 4123384205950301784}
   anim: {fileID: 316410700326983233}
   weaponCollection:
   - type: 0
@@ -5749,7 +5751,7 @@ MonoBehaviour:
   arrowPosAnim: {fileID: 851830208}
   bowAnim: {fileID: 680445347015739982}
   arrowOnHandPos: {fileID: 7228124701412411364}
-  arrowPrefab: {fileID: 4987496401560489548, guid: 5f094160b70d2ec429ed6d95b489a25f, type: 3}
+  arrowPrefab: {fileID: 7031247295875310001, guid: 5f094160b70d2ec429ed6d95b489a25f, type: 3}
   rigBuilder: {fileID: 1254835192}
   aimingBehaviour: {fileID: 1254835193}
 --- !u!114 &4123384205950301784
@@ -5811,7 +5813,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6471639280217413249}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5931,18 +5933,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43ab1f2978a42f743b6796288c593287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotatingSensitivity: 0
   minY: 0
   maxY: 4
   slope: 10
-  sensitivity: 100
-  width: 0.1
+  aimingSensitivity: 10
   defaultLocalPosition: {x: 2, y: 1, z: 1}
   target: {fileID: 633875253}
+  maxPointNumber: 50
+  space: 0.1
   render: {fileID: 1254835200}
   arrow: {fileID: 7228124701412411364}
+  manager: {fileID: 1290225016}
   layer:
     serializedVersion: 2
     m_Bits: 1
+  lineWidth: 0.05
 --- !u!1 &6617388189318818570
 GameObject:
   m_ObjectHideFlags: 0

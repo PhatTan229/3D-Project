@@ -27,12 +27,14 @@ public class WeaponInformaton
 
 public class WeaponManager : MonoBehaviour
 {
+    public float arrowSpeed;
+    public PlayerMovement movement;
     public Animator anim;
     public WeaponInformaton[] weaponCollection;
     public Animator arrowPosAnim;
     public Animator bowAnim;
     public Transform arrowOnHandPos;
-    public AttackingArrow arrowPrefab;
+    public Rigidbody arrowPrefab;
 
     public RigBuilder rigBuilder;
     public AimingBehaviour aimingBehaviour;
@@ -77,31 +79,16 @@ public class WeaponManager : MonoBehaviour
         anim.SetTrigger("Shoot");
         bowAnim.SetTrigger("Release");
         arrowPosAnim.SetTrigger("Shoot");
-        Instantiate(arrowPrefab, arrowOnHandPos.position, arrowOnHandPos.rotation);
+        Rigidbody arrow = Instantiate(arrowPrefab, arrowOnHandPos.position, arrowOnHandPos.rotation);
+        arrow.velocity = arrowOnHandPos.forward * arrowSpeed;
     }
 
-    public void ActiveAiming()
+    private void SetAiming(bool aiming)
     {
-        //Debug.Log($"before active {rig.weight}");
-        //rig.weight = 1f;
-        //Debug.Log($"after active {rig.weight}");
-
-        //builder.enabled = true;
-
-        rigBuilder.layers[0].active = true;
-        aimingBehaviour.enabled = true;
-        //rigBuilder.layers[0].rig.weight = 1f;
+        rigBuilder.layers[0].active = aiming;
+        aimingBehaviour.enabled = aiming;
+        movement.enabled = !aiming;
     }
-    public void DisableAiming()
-    {
-        //Debug.Log($"before disable {rig.weight}");
-        //rig.weight = 0;
-        //Debug.Log($"after disable {rig.weight}");
-
-        //builder.enabled = false;
-
-        rigBuilder.layers[0].active = false;
-        aimingBehaviour.enabled = false;
-        //rigBuilder.layers[0].rig.weight = 0;
-    }
+    public void ActiveAiming() => SetAiming(true);
+    public void DisableAiming() => SetAiming(false);
 }

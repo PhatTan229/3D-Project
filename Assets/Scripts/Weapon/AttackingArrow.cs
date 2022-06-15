@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class AttackingArrow : MonoBehaviour
 {
-    public float speed;
-    private void Update()
-    {
-        transform.Translate(0, 0, speed * Time.deltaTime);
-    }
+    //private void Update()
+    //{
+    //    transform.Translate(0, 0, speed * Time.deltaTime);
+    //}
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"{gameObject.name} touch {other.gameObject.name}");
+        //Debug.Log($"{gameObject.name} touch {other.gameObject.name}");
     }
-    private void OnCollisionEnter(Collision collision)
+    private Vector3 lastPosition;
+    private void Update()
     {
-        Debug.Log($"{gameObject.name} collsition {collision.collider.gameObject.name}");
+        Vector3 direction = transform.position - lastPosition;
+        if (direction!=Vector3.zero)
+            transform.forward = direction;
+        lastPosition = transform.position;
     }
-
 }

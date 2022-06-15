@@ -4,49 +4,74 @@ using UnityEngine;
 
 public class AimingBehaviour : MonoBehaviour
 {
+    [Header("Rotation")]
+    public int rotatingSensitivity;
+
+    [Header("Aiming")]
     public float minY;
     public float maxY;
     public float slope;
-    public int sensitivity;
-    public float width;
+    public int aimingSensitivity;
     public Vector3 defaultLocalPosition = new Vector3(2, 1, 1);
     public Transform target;
+    
+    [Header("Trajectory")]
+    public int maxPointNumber;
+    public float space;
     public LineRenderer render;
     public Transform arrow;
+    public WeaponManager manager;
     public LayerMask layer;
-    private void Awake()
+    public float lineWidth;
+    private List<Vector3> points = new List<Vector3>();
+    private void OnEnable()
     {
+        Debug.Log("OnEnable");
+        render.enabled = true;
         target.localPosition = defaultLocalPosition;
     }
     private void Start()
     {
-        render.startWidth = width;
-        render.endWidth = width;
+        render.startWidth = lineWidth;
+        render.endWidth = lineWidth;
     }
     private void Update()
     {
+        UpdateRotation();
         UpdateAiming();
-        PerformRaycast();
+        DrawTrajectory();
+    }
+    private void UpdateRotation()
+    {
+        float xInput = Input.GetAxis("Mouse X");
+        transform.Rotate(0, xInput * rotatingSensitivity * Time.deltaTime, 0);
     }
     private void UpdateAiming()
     {
         float yInput = Input.GetAxis("Mouse Y");
         Vector3 newPosition = target.localPosition;
-        newPosition.y += yInput * sensitivity * Time.deltaTime;
+        newPosition.y += yInput * aimingSensitivity * Time.deltaTime;
         newPosition.y = Mathf.Clamp(newPosition.y, minY, maxY);
         if (slope != 0)
             newPosition.x = (newPosition.y - defaultLocalPosition.y) / slope + defaultLocalPosition.x;
         target.localPosition = newPosition;
     }
-    private void PerformRaycast()
+    private void DrawTrajectory()
     {
-        Ray ray = new Ray(arrow.position, arrow.forward);
-        bool canRender = Physics.Raycast(ray, out RaycastHit hit, 20f, layer);
-        render.enabled = canRender;
-        if (canRender)
+        Vector3 speedVector = arrow.forward * manager.arrowSpeed;
+        points.Clear();
+        bool canDraw = true;
+        int i = 0;
+        while (canDraw && i < maxPointNumber)
         {
-            render.SetPosition(0, arrow.position);
-            render.SetPosition(1, hit.point);
+            Vector3 point = arrow.transform.position + i * space * speedVector + 0.5f * Physics.gravity * i * space * i * space;
+            if (Physics.OverlapSphere(point, 0.1f, layer).Length != 0)
+                canDraw = false;
+            points.Add(point);
+            i++;
         }
+        render.positionCount = points.Count;
+        render.SetPositions(points.ToArray());
     }
+    private void OnDisable() => render.enabled = false;
 }
