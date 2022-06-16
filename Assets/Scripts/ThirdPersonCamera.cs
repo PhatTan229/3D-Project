@@ -7,6 +7,7 @@ public class ThirdPersonCamera : MonoBehaviour
     public int sensitivity;
     public int minAngle;
     public int maxAngle;
+    public Vector3 offset = new Vector3(0, 1, 0);
     public Transform target;
     private void Start()
     {
@@ -15,7 +16,7 @@ public class ThirdPersonCamera : MonoBehaviour
     }
     private void LateUpdate()
     {
-        transform.position = target.position;
+        transform.position = target.position + offset;
         float xInput = Input.GetAxis("Mouse X");
         float yInput = Input.GetAxis("Mouse Y");
 

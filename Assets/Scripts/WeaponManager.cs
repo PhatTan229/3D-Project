@@ -38,6 +38,9 @@ public class WeaponManager : MonoBehaviour
 
     public RigBuilder rigBuilder;
     public AimingBehaviour aimingBehaviour;
+
+    public GameObject thirdPersonCamera;
+    public GameObject aimingCamera;
     //public RigLayer rigLayer;
     //public RuntimeAnimatorController daggerController;
     //public RuntimeAnimatorController swordAndShieldController;
@@ -88,6 +91,8 @@ public class WeaponManager : MonoBehaviour
         rigBuilder.layers[0].active = aiming;
         aimingBehaviour.enabled = aiming;
         movement.enabled = !aiming;
+        thirdPersonCamera.SetActive(!aiming);
+        aimingCamera.SetActive(aiming);
     }
     public void ActiveAiming() => SetAiming(true);
     public void DisableAiming() => SetAiming(false);

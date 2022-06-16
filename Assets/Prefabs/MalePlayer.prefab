@@ -5754,6 +5754,8 @@ MonoBehaviour:
   arrowPrefab: {fileID: 7031247295875310001, guid: 5f094160b70d2ec429ed6d95b489a25f, type: 3}
   rigBuilder: {fileID: 1254835192}
   aimingBehaviour: {fileID: 1254835193}
+  thirdPersonCamera: {fileID: 0}
+  aimingCamera: {fileID: 0}
 --- !u!114 &4123384205950301784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5933,7 +5935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43ab1f2978a42f743b6796288c593287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotatingSensitivity: 0
+  rotatingSensitivity: 10
   minY: 0
   maxY: 4
   slope: 10
