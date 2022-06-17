@@ -26,7 +26,6 @@ public class AimingBehaviour : MonoBehaviour
     private List<Vector3> points = new List<Vector3>();
     private void OnEnable()
     {
-        Debug.Log("OnEnable");
         render.enabled = true;
         target.localPosition = defaultLocalPosition;
     }
