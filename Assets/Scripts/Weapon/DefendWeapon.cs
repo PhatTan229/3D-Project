@@ -9,7 +9,7 @@ public class DefendWeapon : MonoBehaviour
     {
         if (other.TryGetComponent<AttackWeapon>(out AttackWeapon weapon))
         {
-            weapon.ReduceDamage(armor);
+            weapon.onCountered.Invoke();
         }
     }
 

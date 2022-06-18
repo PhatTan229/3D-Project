@@ -74,6 +74,11 @@ public class WeaponManager : MonoBehaviour
             anim.runtimeAnimatorController = weaponCollection[weaponIndex].skill;
         }
     }
+    public void StartUsing(WeaponType type)
+    {
+        if (type == WeaponType.Bow) return;
+    }
+
     public void GetArrow() => anim.SetTrigger("Prepare");
     public void LoadArrow() => arrowPosAnim.SetTrigger("Load");
     public void EquipArrow() => bowAnim.SetTrigger("Load");

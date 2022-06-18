@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4419308614142845492}
   - component: {fileID: 4419308614145712660}
   - component: {fileID: 4419308614144745684}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Quiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}

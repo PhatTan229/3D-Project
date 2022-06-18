@@ -893,7 +893,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Fishing
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 9015419767647534662}
   m_Solo: 0
@@ -1468,7 +1471,7 @@ AnimatorStateMachine:
     m_Position: {x: 170, y: 310, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: -1885321360030155042}
-    m_Position: {x: -30, y: 320, z: 0}
+    m_Position: {x: 10, y: 370, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 7948087867230204190}
     m_Position: {x: -190, y: 340, z: 0}

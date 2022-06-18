@@ -17,12 +17,15 @@ public class Health : MonoBehaviour
         }
     }
     public UnityEvent onHealthChanged;
-
+    public Animator anim;
+    private void Start()
+    {
+        HealthPoint = maxHealthPoint;
+    }
     public virtual void TakeDamage(int damage)
     {
-        if (healthPoint > 0)
-        {
-            HealthPoint -= damage;
-        }       
+        HealthPoint -= damage;
+        anim.SetTrigger("Hit");
+        if (HealthPoint <= 0) Debug.Log($"{gameObject.name} dead");
     }
 }

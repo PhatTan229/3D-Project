@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1149958754269279345}
   - component: {fileID: 1149958754270606417}
   - component: {fileID: 1149958754271704721}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Shield_19_a_handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1149958754269279349}
-  m_Layer: 0
+  - component: {fileID: 3342397879055498267}
+  - component: {fileID: 7962236216744587890}
+  m_Layer: 6
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,6 +118,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3342397879055498267
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149958754269505621}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.60944366, y: 1.3984462, z: 0.3451233}
+  m_Center: {x: -0.17950058, y: -0.19922316, z: -0.05128479}
+--- !u!114 &7962236216744587890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149958754269505621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea6a0fd554f70d41a16a061b6fdd610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultDamage: 3
+  onCountered:
+    m_PersistentCalls:
+      m_Calls: []
+  _collider: {fileID: 3342397879055498267}
 --- !u!1 &1149958754269505623
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +159,7 @@ GameObject:
   - component: {fileID: 1149958754269279351}
   - component: {fileID: 1149958754270606423}
   - component: {fileID: 1149958754271704727}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Shield_19_a_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
