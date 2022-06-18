@@ -1,25 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
-    public int maxHealthPoint;
-    private int healthPoint;
-    public int HealthPoint
+    public float maxHealthPoint;
+    private float healthPoint;
+    protected float HealthPoint
     {
-        get { return healthPoint; }
-        protected set
+        get => healthPoint;
+        set
         {
             healthPoint = value;
+            onHealthChanged.Invoke();
         }
     }
+    public UnityEvent onHealthChanged;
+
     public virtual void TakeDamage(int damage)
     {
-        if(healthPoint > 0)
+        if (healthPoint > 0)
         {
             HealthPoint -= damage;
         }       
     }
-
 }
