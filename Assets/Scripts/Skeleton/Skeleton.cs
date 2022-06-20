@@ -35,6 +35,7 @@ public class Skeleton : MonoBehaviour
         anim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         patrolWaitTime = maxPatrolWaitTime;
+        patrolPoint.SetParent(null);
     }
 
     private void Update()
@@ -74,10 +75,9 @@ public class Skeleton : MonoBehaviour
 
     public void SkeletonPatrol()
     {
-        agent.enabled = true;
-        var randomX = Random.Range(-patrolRange, patrolRange);
-        var randomZ = Random.Range(-patrolRange, patrolRange);
-        patrolPoint.position = new Vector3(randomX,0,randomZ);
+        var randomX = Random.Range(0, 150);
+        var randomZ = Random.Range(10, 150);
+        patrolPoint.position = new Vector3(randomZ, patrolPoint.position.y, randomZ);
         agent.SetDestination(patrolPoint.position);
         agent.stoppingDistance = 0;
         anim.SetBool("Patrol", true);

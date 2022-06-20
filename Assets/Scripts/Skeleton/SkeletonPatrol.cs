@@ -14,6 +14,7 @@ public class SkeletonPatrol : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+
         if (skeleton.agent.remainingDistance <= skeleton.agent.stoppingDistance && skeleton.target == null)
         {
             //skeleton.agent.enabled = false;
