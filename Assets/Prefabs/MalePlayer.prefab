@@ -5676,7 +5676,7 @@ Animator:
   m_GameObject: {fileID: 6471639280217413249}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 6013c5ec4832f8a48a8931d8d6412df8, type: 3}
-  m_Controller: {fileID: 9100000, guid: 0dd5614a05890df4481f1f675b8ea5ad, type: 2}
+  m_Controller: {fileID: 9100000, guid: cf06ffef1c1737942b57d8239c13a2d8, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -5742,19 +5742,30 @@ MonoBehaviour:
   anim: {fileID: 316410700326983233}
   weaponCollection:
   - type: 0
+    parts: []
+    colliders: []
+    skill: {fileID: 9100000, guid: d76f3d78b3558b244ab681b124349760, type: 2}
+  - type: 0
     parts:
     - {fileID: 6450960971116342389}
     - {fileID: 4429148931049748279}
+    colliders:
+    - {fileID: 6685812651011853127}
+    - {fileID: 4051500793463230469}
     skill: {fileID: 9100000, guid: fc2c31c9ec6e0e649b8ed26451f80d78, type: 2}
   - type: 2
     parts:
     - {fileID: 680445347006364044}
     - {fileID: 5816922854925996659}
+    colliders: []
     skill: {fileID: 9100000, guid: 0dd5614a05890df4481f1f675b8ea5ad, type: 2}
-  - type: 1
+  - type: 3
     parts:
     - {fileID: 876972388009030621}
     - {fileID: 7594677279574284817}
+    colliders:
+    - {fileID: 2875486155229438495}
+    - {fileID: 5256363711350427231}
     skill: {fileID: 9100000, guid: cf06ffef1c1737942b57d8239c13a2d8, type: 2}
   arrowPosAnim: {fileID: 851830208}
   bowAnim: {fileID: 680445347015739982}
@@ -7638,6 +7649,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1125385504041247027, guid: 43b123f4e1ae49e498fe78056c6f1b8b, type: 3}
   m_PrefabInstance: {fileID: 267275449000627918}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &2875486155229438495 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2617236756123921617, guid: 43b123f4e1ae49e498fe78056c6f1b8b, type: 3}
+  m_PrefabInstance: {fileID: 267275449000627918}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1078153239995462329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7647,7 +7663,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3711284765162784142, guid: 4133cbfc5fc5d2142a6dfcb9dd2ab182, type: 3}
       propertyPath: m_Name
-      value: Dagger
+      value: LeftDagger
       objectReference: {fileID: 0}
     - target: {fileID: 3711284765162784142, guid: 4133cbfc5fc5d2142a6dfcb9dd2ab182, type: 3}
       propertyPath: m_Layer
@@ -7699,6 +7715,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4133cbfc5fc5d2142a6dfcb9dd2ab182, type: 3}
+--- !u!65 &4051500793463230469 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 3949529507337822908, guid: 4133cbfc5fc5d2142a6dfcb9dd2ab182, type: 3}
+  m_PrefabInstance: {fileID: 1078153239995462329}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4429148931049581335 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3711284765163215278, guid: 4133cbfc5fc5d2142a6dfcb9dd2ab182, type: 3}
@@ -7958,6 +7979,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9687e13055c24e144acc53e2d1bc2eca, type: 3}
+--- !u!65 &5256363711350427231 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 3342397879055498267, guid: 9687e13055c24e144acc53e2d1bc2eca, type: 3}
+  m_PrefabInstance: {fileID: 7390635531078791748}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7594677279574284817 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1149958754269505621, guid: 9687e13055c24e144acc53e2d1bc2eca, type: 3}
@@ -7977,7 +8003,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3711284765162784142, guid: 4133cbfc5fc5d2142a6dfcb9dd2ab182, type: 3}
       propertyPath: m_Name
-      value: Dagger
+      value: RightDagger
       objectReference: {fileID: 0}
     - target: {fileID: 3711284765162784142, guid: 4133cbfc5fc5d2142a6dfcb9dd2ab182, type: 3}
       propertyPath: m_Layer
@@ -8041,6 +8067,11 @@ Transform:
 --- !u!1 &6450960971116342389 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3711284765162784142, guid: 4133cbfc5fc5d2142a6dfcb9dd2ab182, type: 3}
+  m_PrefabInstance: {fileID: 7640157789256722939}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6685812651011853127 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 3949529507337822908, guid: 4133cbfc5fc5d2142a6dfcb9dd2ab182, type: 3}
   m_PrefabInstance: {fileID: 7640157789256722939}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7921081058475273319
