@@ -5,6 +5,7 @@ using UnityEngine.Animations.Rigging;
 
 public enum WeaponType
 {
+    None,
     Dagger,
     Bow,
     SwordAndShield
@@ -15,6 +16,7 @@ public class WeaponInformaton
 {
     public WeaponType type;
     public GameObject[] parts;
+    public Collider[] colliders;
     public RuntimeAnimatorController skill;
     public void ActiveWeapon() => SetUp(true);
     public void DisableWeapon() => SetUp(false);
@@ -22,6 +24,13 @@ public class WeaponInformaton
     {
         for (int i = 0; i < parts.Length; i++)
             parts[i].SetActive(isActive);
+    }
+    //public void StartAttack() => SetAttackState(true);
+    //public void StopAttack() => SetAttackState(false);
+    public void SetAttackState(bool isAttacking)
+    {
+        for (int i = 0; i < colliders.Length; i++)
+            colliders[i].enabled = isAttacking;
     }
 }
 
@@ -47,7 +56,7 @@ public class WeaponManager : MonoBehaviour
     private void OnValidate() => anim = GetComponent<Animator>();
     private void Start()
     {
-        SetUp(WeaponType.Bow);
+        SetUp(WeaponType.None);
         DisableAiming();
     }
     private void Update()
@@ -74,10 +83,13 @@ public class WeaponManager : MonoBehaviour
             anim.runtimeAnimatorController = weaponCollection[weaponIndex].skill;
         }
     }
-    public void StartUsing(WeaponType type)
+    public void SetAttack(WeaponType type, bool isAttacking)
     {
-        if (type == WeaponType.Bow) return;
+        int weaponIndex = (int)type;
+        weaponCollection[weaponIndex].SetAttackState(isAttacking);
     }
+    public void StartAttack(WeaponType type) => SetAttack(type, true);
+    public void StopAttack(WeaponType type) => SetAttack(type, false);
 
     public void GetArrow() => anim.SetTrigger("Prepare");
     public void LoadArrow() => arrowPosAnim.SetTrigger("Load");
