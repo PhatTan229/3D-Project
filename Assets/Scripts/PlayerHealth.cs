@@ -32,7 +32,13 @@ public class PlayerHealth : Health
             damageOnHealth += redundantDamage;
         }
         HealthPoint -= damageOnHealth;
-        anim.SetTrigger("Hit");
-        if (HealthPoint <= 0) Debug.Log($"{gameObject.name} dead");
+        if (HealthPoint <= 0)
+        {
+            anim.SetTrigger("Dead");
+        }
+        else
+        {
+            anim.SetTrigger("Hit");
+        }
     }
 }

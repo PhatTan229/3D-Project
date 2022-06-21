@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eea6a0fd554f70d41a16a061b6fdd610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultDamage: 1
+  defaultDamage: 2
   onCountered:
     m_PersistentCalls:
       m_Calls: []

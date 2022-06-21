@@ -3492,10 +3492,10 @@ GameObject:
   - component: {fileID: 7471563287839263150}
   - component: {fileID: 7471563287832078316}
   - component: {fileID: 6547574939253131095}
-  - component: {fileID: 6547574939253131089}
   - component: {fileID: 6547574939253131088}
   - component: {fileID: 4294504317652872468}
   - component: {fileID: 6432821152006079474}
+  - component: {fileID: 709837044702050926}
   m_Layer: 7
   m_Name: Skeleton0
   m_TagString: Untagged
@@ -3561,19 +3561,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &6547574939253131089
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7471563287839495630}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.4287367, y: 1.8066067, z: 0.34453082}
-  m_Center: {x: 0.0075922012, y: 0.89283687, z: 0.028149724}
 --- !u!195 &6547574939253131088
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3620,6 +3607,7 @@ MonoBehaviour:
   invasiveRange: 10
   attackRange: 1
   visonRange: 10
+  weaponCollider: {fileID: 542915464316294050}
 --- !u!114 &6432821152006079474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3637,6 +3625,20 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   anim: {fileID: 7471563287832078316}
+--- !u!136 &709837044702050926
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7471563287839495630}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.17764199
+  m_Height: 1.7453852
+  m_Direction: 1
+  m_Center: {x: 0.00000011920929, y: 0.9073074, z: 0}
 --- !u!1 &7471563287839495640
 GameObject:
   m_ObjectHideFlags: 0
@@ -3796,6 +3798,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2733a858fc12c84c863a1ce101619de, type: 3}
+--- !u!65 &542915464316294050 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 3127970711202167316, guid: f2733a858fc12c84c863a1ce101619de, type: 3}
+  m_PrefabInstance: {fileID: 3233613630933330358}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5894484477800774452 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9019988851270750850, guid: f2733a858fc12c84c863a1ce101619de, type: 3}

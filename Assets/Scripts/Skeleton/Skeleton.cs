@@ -27,6 +27,8 @@ public class Skeleton : MonoBehaviour
     public float attackRange;
     public float visonRange;
 
+    public Collider weaponCollider;
+
     private float patrolWaitTime;
     private GameObject currentTarget;
     // Start is called before the first frame update
@@ -35,7 +37,7 @@ public class Skeleton : MonoBehaviour
         anim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         patrolWaitTime = maxPatrolWaitTime;
-        patrolPoint.SetParent(null);
+        if (patrolPoint) patrolPoint.SetParent(null);
     }
 
     private void Update()
@@ -155,6 +157,13 @@ public class Skeleton : MonoBehaviour
         {
             agent.destination = target.transform.position;
         }
+    }
+
+    public void ActiveWeapon() => SetWeaponState(true);
+    public void DisableWeapon() => SetWeaponState(false);
+    public void SetWeaponState(bool isAttacking)
+    {
+        weaponCollider.enabled = isAttacking;
     }
 
     private void OnDrawGizmos()
