@@ -91,7 +91,11 @@ public class WeaponManager : MonoBehaviour
     public void StartAttack(WeaponType type) => SetAttack(type, true);
     public void StopAttack(WeaponType type) => SetAttack(type, false);
 
-    public void GetArrow() => anim.SetTrigger("Prepare");
+    public void GetArrow()
+    {
+        anim.SetTrigger("Prepare");
+        SetAimingCamera(true);
+    }
     public void LoadArrow() => arrowPosAnim.SetTrigger("Load");
     public void EquipArrow() => bowAnim.SetTrigger("Load");
     public void ShootArrow()
@@ -108,9 +112,17 @@ public class WeaponManager : MonoBehaviour
         rigBuilder.layers[0].active = aiming;
         aimingBehaviour.enabled = aiming;
         movement.enabled = !aiming;
+    }
+    public void SetAimingCamera(bool aiming)
+    {
         thirdPersonCamera.SetActive(!aiming);
         aimingCamera.SetActive(aiming);
     }
     public void ActiveAiming() => SetAiming(true);
     public void DisableAiming() => SetAiming(false);
+    public void RecoverBowAndArrowAnimation()
+    {
+        bowAnim.Play("Take");
+        arrowPosAnim.Play("InvisibleArrow");
+    }
 }

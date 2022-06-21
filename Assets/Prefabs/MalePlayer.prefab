@@ -5679,7 +5679,7 @@ Animator:
   m_GameObject: {fileID: 6471639280217413249}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 6013c5ec4832f8a48a8931d8d6412df8, type: 3}
-  m_Controller: {fileID: 9100000, guid: d76f3d78b3558b244ab681b124349760, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0dd5614a05890df4481f1f675b8ea5ad, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -5756,7 +5756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e4639b48c12de47bc8a00047acfdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowSpeed: 20
+  arrowSpeed: 50
   movement: {fileID: 4123384205950301784}
   anim: {fileID: 316410700326983233}
   weaponCollection:

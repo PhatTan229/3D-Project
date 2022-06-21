@@ -3645,7 +3645,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 7471563287832078316}
   target: {fileID: 0}
-  patrolPoint: {fileID: 0}
   player: {fileID: 0}
   enemyState: 1
   idleWaitTime: 5
