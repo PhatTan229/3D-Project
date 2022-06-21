@@ -2,22 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RunningMeleePlayer : StateMachineBehaviour
+public class RunningNoWeaponPlayer : StateMachineBehaviour
 {
-    public float speed;
-    private PlayerMovement movement;
+    //public float speed;
+    //private PlayerMovement movement;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        if (!movement) movement = animator.GetComponent<PlayerMovement>();
-    }
+    //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    //if (!movement) movement = animator.GetComponent<PlayerMovement>();
+    //}
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Input.GetMouseButtonDown(0))
-            animator.SetBool("IsAttacking", true);
         //movement.Move(speed);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetTrigger("Roll");
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

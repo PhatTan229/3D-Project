@@ -82,7 +82,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1829664436173098225}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: -294373244363107847}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -111,13 +112,13 @@ AnimatorStateMachine:
     m_Position: {x: 420, y: 290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1925381119573821991}
-    m_Position: {x: 610, y: 190, z: 0}
+    m_Position: {x: 590, y: 190, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7489979954708060432}
     m_Position: {x: 30, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3242226908569028022}
-    m_Position: {x: 340, y: 400, z: 0}
+    m_Position: {x: 260, y: 410, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1941606795872523690}
     m_Position: {x: -10, y: 470, z: 0}
@@ -478,7 +479,19 @@ AnimatorStateTransition:
   m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
+  m_CanTransitionToSelf: 0
+--- !u!114 &-294373244363107847
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a6b5218ce8d16048b98e49cdca9deb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -626,7 +639,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Skeleton@Attack01
-  m_Speed: 1
+  m_Speed: 0.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 5050844550999166531}

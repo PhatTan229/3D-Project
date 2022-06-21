@@ -2,25 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IdleMeleePlayer : StateMachineBehaviour
+public class SkeletonTakeDamage : StateMachineBehaviour
 {
-    public WeaponType type;
-    private WeaponManager manager;
+    private Skeleton skeleton;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (!manager) manager = animator.GetComponent<WeaponManager>();
+        if (!skeleton) skeleton = animator.GetComponent<Skeleton>();
+        skeleton.DisableWeapon();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            animator.SetBool("IsAttacking", true);
-            manager.StartAttack(type);
-        }
-    }
+    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    
+    //}
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

@@ -14,7 +14,7 @@ public class Skeleton : MonoBehaviour
     public GameObject target;
     [System.NonSerialized] public NavMeshAgent agent;
     [System.NonSerialized] public float distance;
-    public Transform patrolPoint;
+    //public Transform patrolPoint;
     public GameObject player;
     public EnemyState enemyState;
 
@@ -37,7 +37,7 @@ public class Skeleton : MonoBehaviour
         anim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         patrolWaitTime = maxPatrolWaitTime;
-        if (patrolPoint) patrolPoint.SetParent(null);
+        //if (patrolPoint) patrolPoint.SetParent(null);
     }
 
     private void Update()
@@ -77,10 +77,12 @@ public class Skeleton : MonoBehaviour
 
     public void SkeletonPatrol()
     {
-        var randomX = Random.Range(0, 150);
-        var randomZ = Random.Range(10, 150);
-        patrolPoint.position = new Vector3(randomZ, patrolPoint.position.y, randomZ);
-        agent.SetDestination(patrolPoint.position);
+        //var randomX = Random.Range(0, 150);
+        //var randomZ = Random.Range(10, 150);
+        Vector2 patrolCircle = patrolRange * Random.insideUnitCircle;
+        Vector3 direction = new Vector3(patrolCircle.x, 0, patrolCircle.y);
+        Vector3 destination = transform.position + direction;
+        agent.SetDestination(destination);
         agent.stoppingDistance = 0;
         anim.SetBool("Patrol", true);
     }
@@ -151,7 +153,10 @@ public class Skeleton : MonoBehaviour
     {
         if(target == null)
         {
-            agent.destination = patrolPoint.transform.position;
+            //agent.destination = patrolPoint.transform.position;
+            Vector2 patrolCircle = patrolRange * Random.insideUnitCircle;
+            Vector3 direction = new Vector3(patrolCircle.x, 0, patrolCircle.y);
+            Vector3 destination = transform.position + direction;
         }
         if(target != null)
         {
@@ -165,8 +170,7 @@ public class Skeleton : MonoBehaviour
     {
         weaponCollider.enabled = isAttacking;
     }
-
-    private void OnDrawGizmos()
+   private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, visonRange);

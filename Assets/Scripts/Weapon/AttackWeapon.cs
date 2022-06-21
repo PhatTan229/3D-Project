@@ -9,11 +9,15 @@ public class AttackWeapon : MonoBehaviour
     private int currentDamage;
     public UnityEvent onCountered;
     public Collider _collider;
+    private void Start()
+    {
+        currentDamage = defaultDamage;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<Health>(out Health health))
         {
-            Debug.Log($"{gameObject.name} {gameObject.layer} hit {other.gameObject.name} {other.gameObject.layer}");
+            //Debug.Log($"{gameObject.name} {gameObject.layer} hit {other.gameObject.name} {other.gameObject.layer}");
             health.TakeDamage(currentDamage);
         }
     }
