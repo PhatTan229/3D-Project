@@ -3625,7 +3625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoint: 10
-  disappearingDelay: 0
+  disappearingDelay: 5
   isAlive: 0
   onHealthChanged:
     m_PersistentCalls:

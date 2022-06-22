@@ -19,6 +19,10 @@ public class RunningArchingPlayer : StateMachineBehaviour
     {
         if (Input.GetMouseButtonDown(0))
             manager.GetArrow();
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetTrigger("Roll");
+        }
         //movement.Move(speed);
     }
 

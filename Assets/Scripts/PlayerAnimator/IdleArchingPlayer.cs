@@ -16,6 +16,10 @@ public class IdleArchingPlayer : StateMachineBehaviour
     {
         if (Input.GetMouseButtonDown(0))
             manager.GetArrow();
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetTrigger("Roll");
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
