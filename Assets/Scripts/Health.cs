@@ -36,7 +36,9 @@ public class Health : MonoBehaviour
         }
         else
         {
+            Debug.Log($"Before health {HealthPoint} damage {damage}");
             anim.SetTrigger("Hit");
+            Debug.Log($"After health {HealthPoint}");
         }
         
     }

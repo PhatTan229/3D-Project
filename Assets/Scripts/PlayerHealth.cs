@@ -31,9 +31,9 @@ public class PlayerHealth : Health
             armor = 0;
             damageOnHealth += redundantDamage;
         }
-        Debug.Log($"Before health {HealthPoint} damage {damageOnHealth}");
+        
         HealthPoint -= damageOnHealth;
-        Debug.Log($"After health {HealthPoint}");
+        
         if (HealthPoint <= 0)
         {
             anim.SetTrigger("Dead");
