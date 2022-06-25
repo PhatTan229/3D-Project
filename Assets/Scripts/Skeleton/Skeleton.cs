@@ -3,11 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public enum EnemyState
-{
-    PATROL,
-    HUNTING
-}
 public class Skeleton : MonoBehaviour
 {
     [SerializeField] private Animator anim;
@@ -16,7 +11,6 @@ public class Skeleton : MonoBehaviour
     [System.NonSerialized] public float distance;
     //public Transform patrolPoint;
     public GameObject player;
-    public EnemyState enemyState;
 
     public float idleWaitTime;
     public float maxPatrolWaitTime;
@@ -28,6 +22,7 @@ public class Skeleton : MonoBehaviour
     public float visonRange;
 
     public Collider weaponCollider;
+    public LayerMask layerMask;
 
     private float patrolWaitTime;
     private GameObject currentTarget;
@@ -41,20 +36,8 @@ public class Skeleton : MonoBehaviour
     }
 
     private void Update()
-    {
-        //target = GameObject.Find("MalePlayer");       
-        if(enemyState == EnemyState.PATROL)
-        {
-            if (target == null)
-            {
-                FindTarget();
-            }
-        }
-        if (enemyState == EnemyState.HUNTING)
-        {
-            InvasiveFindTarget();
-
-        }
+    {    
+        InvasiveFindTarget();
         if (target != null)
         {
             distance = Vector3.Distance(agent.transform.position, target.transform.position);
@@ -62,30 +45,19 @@ public class Skeleton : MonoBehaviour
         }
     }
 
-    public void ChangeIdleState()
-    {
-        var r = Random.Range(1, 3);
-        if(r == 1)
-        {
-            anim.SetTrigger("Idle_01");
-        }
-        if(r == 2)
-        {
-            anim.SetTrigger("Idle_02");
-        }
-    }
-
-    public void SkeletonPatrol()
-    {
-        //var randomX = Random.Range(0, 150);
-        //var randomZ = Random.Range(10, 150);
-        Vector2 patrolCircle = patrolRange * Random.insideUnitCircle;
-        Vector3 direction = new Vector3(patrolCircle.x, 0, patrolCircle.y);
-        Vector3 destination = transform.position + direction;
-        agent.SetDestination(destination);
-        agent.stoppingDistance = 0;
-        anim.SetBool("Patrol", true);
-    }
+    //public void ChangeIdleState()
+    //{
+    //    var r = Random.Range(1, 3);
+    //    if(r == 1)
+    //    {
+    //        anim.SetTrigger("Idle_01");
+    //    }
+    //    if(r == 2)
+    //    {
+    //        anim.SetTrigger("Idle_02");
+    //    }
+    //}
+  
 
     public void Chasing()
     {
@@ -98,30 +70,30 @@ public class Skeleton : MonoBehaviour
     {
         anim.SetTrigger("Stun");
     }
-    public void FindTarget()
-    {      
-        if (enemyState == EnemyState.PATROL)
-        {
-            var targetsInsight = Physics.OverlapSphere(transform.position, visonRange);
-            for (int i = 0; i < targetsInsight.Length; i++)
-            {
-                if (targetsInsight[i].gameObject.layer == LayerMask.NameToLayer("Ally"))
-                {
-                    target = targetsInsight[i].gameObject;
-                    break;
-                }
-                else if (targetsInsight[i].gameObject.layer == LayerMask.NameToLayer("Player"))
-                {
-                    target = targetsInsight[i].gameObject;
-                }
-                else
-                {
-                    target = null;
-                }
-            }
-        }    
-        UpdateDestination();
-    }
+    //public void FindTarget()
+    //{      
+    //    if (enemyState == EnemyState.PATROL)
+    //    {
+    //        var targetsInsight = Physics.OverlapSphere(transform.position, visonRange);
+    //        for (int i = 0; i < targetsInsight.Length; i++)
+    //        {
+    //            if (targetsInsight[i].gameObject.layer == LayerMask.NameToLayer("Ally"))
+    //            {
+    //                target = targetsInsight[i].gameObject;
+    //                break;
+    //            }
+    //            else if (targetsInsight[i].gameObject.layer == LayerMask.NameToLayer("Player"))
+    //            {
+    //                target = targetsInsight[i].gameObject;
+    //            }
+    //            else
+    //            {
+    //                target = null;
+    //            }
+    //        }
+    //    }    
+    //    UpdateDestination();
+    //}
 
     public void InvasiveFindTarget()
     {
@@ -129,7 +101,7 @@ public class Skeleton : MonoBehaviour
         int count = 5;
         while (count > 0 && target == null)
         {
-            targetsAvaiable = Physics.OverlapSphere(transform.position, invasiveRange, LayerMask.GetMask("Ally"));
+            targetsAvaiable = Physics.OverlapSphere(transform.position, invasiveRange, layerMask);
             invasiveRange += 2;
             count--;
             if (targetsAvaiable.Length > 0)
@@ -149,20 +121,20 @@ public class Skeleton : MonoBehaviour
             target = null;
         }
     }
-    private void UpdateDestination()
-    {
-        if(target == null)
-        {
-            //agent.destination = patrolPoint.transform.position;
-            Vector2 patrolCircle = patrolRange * Random.insideUnitCircle;
-            Vector3 direction = new Vector3(patrolCircle.x, 0, patrolCircle.y);
-            Vector3 destination = transform.position + direction;
-        }
-        if(target != null)
-        {
-            agent.destination = target.transform.position;
-        }
-    }
+    //private void UpdateDestination()
+    //{
+    //    if(target == null)
+    //    {
+    //        //agent.destination = patrolPoint.transform.position;
+    //        Vector2 patrolCircle = patrolRange * Random.insideUnitCircle;
+    //        Vector3 direction = new Vector3(patrolCircle.x, 0, patrolCircle.y);
+    //        Vector3 destination = transform.position + direction;
+    //    }
+    //    if(target != null)
+    //    {
+    //        agent.destination = target.transform.position;
+    //    }
+    //}
 
     public void ActiveWeapon() => SetWeaponState(true);
     public void DisableWeapon() => SetWeaponState(false);

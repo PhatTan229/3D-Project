@@ -17,32 +17,9 @@ public class SkeletonIdle : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(skeleton.enemyState == EnemyState.PATROL)
+        if (skeleton.target != null)
         {
-            if (skeleton.target == null)
-            {
-                skeleton.PatrolWaitTime -= Time.deltaTime;
-                if (skeleton.PatrolWaitTime <= 0)
-                {
-                    skeleton.SkeletonPatrol();
-                }
-                if (Time.time - lastChanceTime > skeleton.idleWaitTime)
-                {
-                    skeleton.ChangeIdleState();
-                    lastChanceTime = Time.time;
-                }
-            }
-            else
-            {
-                skeleton.Chasing();
-            }
-        }
-        if (skeleton.enemyState == EnemyState.HUNTING)
-        {
-            if(skeleton.target != null)
-            {
-                skeleton.Chasing();
-            }
+            skeleton.Chasing();
         }
     }
 

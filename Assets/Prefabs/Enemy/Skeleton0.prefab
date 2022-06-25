@@ -3655,6 +3655,9 @@ MonoBehaviour:
   attackRange: 1
   visonRange: 10
   weaponCollider: {fileID: 542915464316294050}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 72
 --- !u!1 &7471563287839495640
 GameObject:
   m_ObjectHideFlags: 0
