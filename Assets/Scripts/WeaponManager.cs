@@ -43,7 +43,7 @@ public class WeaponManager : MonoBehaviour
     public Animator arrowPosAnim;
     public Animator bowAnim;
     public Transform arrowOnHandPos;
-    public Rigidbody arrowPrefab;
+    public AttackingArrow arrowPrefab;
 
     public RigBuilder rigBuilder;
     public AimingBehaviour aimingBehaviour;
@@ -103,8 +103,8 @@ public class WeaponManager : MonoBehaviour
         anim.SetTrigger("Shoot");
         bowAnim.SetTrigger("Release");
         arrowPosAnim.SetTrigger("Shoot");
-        Rigidbody arrow = Instantiate(arrowPrefab, arrowOnHandPos.position, arrowOnHandPos.rotation);
-        arrow.velocity = arrowOnHandPos.forward * arrowSpeed;
+        AttackingArrow arrow = Instantiate(arrowPrefab, arrowOnHandPos.position, arrowOnHandPos.rotation);
+        arrow.rigid.velocity = arrowOnHandPos.forward * arrowSpeed;
     }
 
     private void SetAiming(bool aiming)
