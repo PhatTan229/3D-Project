@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
         }
     }
     public int disappearingDelay;
-    public bool isAlive;
+    public bool isAlive = true;
     public UnityEvent onHealthChanged;
     public UnityEvent onDead;
     public Animator anim;
