@@ -5809,7 +5809,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd21ac78d77dd484f8edb3706e8d6bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundCheckingRadius: 0.2
   rotatingSpeed: 1000
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
   direction: {x: 0, y: 0, z: 0}
   thirdPersonCamera: {fileID: 0}
   controller: {fileID: 8339157311754780458}
@@ -6007,7 +6011,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &7159246641291891084
 CapsuleCollider:
   m_ObjectHideFlags: 0

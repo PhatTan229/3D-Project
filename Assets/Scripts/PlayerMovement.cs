@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float groundCheckingRadius;
     public float rotatingSpeed;
+    public LayerMask groundLayer;
     public Vector3 direction;
     public Transform thirdPersonCamera;
     public CharacterController controller;
@@ -15,6 +17,11 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
     }
     private void Update()
+    {
+        UpdateMoving();
+        CheckGround();
+    }
+    private void UpdateMoving()
     {
         Vector3 cameraDirection = Vector3.ProjectOnPlane(thirdPersonCamera.forward, Vector3.up).normalized;
         float zInput = Input.GetAxis("Vertical");
@@ -28,6 +35,13 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredDirection, rotatingSpeed * Time.deltaTime);
         }
         anim.SetBool("IsMoving", isMoving);
+    }
+    private void CheckGround()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, groundCheckingRadius, groundLayer);
+        bool isFailing = colliders.Length == 0;
+        anim.SetBool("IsFailing", isFailing);
+
     }
     public void Move(float speed) => controller.SimpleMove(direction.normalized * speed);
 }

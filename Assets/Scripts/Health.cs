@@ -19,6 +19,7 @@ public class Health : MonoBehaviour
     public int disappearingDelay;
     public bool isAlive;
     public UnityEvent onHealthChanged;
+    public UnityEvent onDead;
     public Animator anim;
     private void Start()
     {
@@ -32,6 +33,7 @@ public class Health : MonoBehaviour
         {
             anim.SetTrigger("Dead");
             isAlive = false;
+            onDead.Invoke();
             Destroy(gameObject, disappearingDelay);
         }
         else
