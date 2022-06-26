@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class RunningNoWeaponPlayer : StateMachineBehaviour
 {
-    //public float speed;
-    //private PlayerMovement movement;
+    public float speed;
+    private PlayerMovement movement;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    //if (!movement) movement = animator.GetComponent<PlayerMovement>();
-    //}
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        if (!movement) movement = animator.GetComponent<PlayerMovement>();
+    }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //movement.Move(speed);
+        movement.Move(speed);
         if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetTrigger("Roll");

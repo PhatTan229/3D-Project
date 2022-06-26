@@ -23,7 +23,7 @@ public class RunningArchingPlayer : StateMachineBehaviour
         {
             animator.SetTrigger("Roll");
         }
-        //movement.Move(speed);
+        movement.Move(speed);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
