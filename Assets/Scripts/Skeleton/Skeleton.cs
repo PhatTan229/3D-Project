@@ -12,9 +12,10 @@ public class Skeleton : MonoBehaviour
     //public Transform patrolPoint;
     public GameObject player;
 
-    public float idleWaitTime;
-    public float maxPatrolWaitTime;
     public Collider[] targetsAvaiable;
+    public GameObject[] weaponTrailRenderer;
+    public float idleWaitTime;
+    public float maxPatrolWaitTime;   
     public float PatrolWaitTime { get { return patrolWaitTime; } set { patrolWaitTime = value; } }
     public float patrolRange;
     public float invasiveRange;
@@ -32,6 +33,10 @@ public class Skeleton : MonoBehaviour
         anim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         patrolWaitTime = maxPatrolWaitTime;
+        for (int i = 0; i < weaponTrailRenderer.Length; i++)
+        {
+            weaponTrailRenderer[i].SetActive(false);
+        }
         //if (patrolPoint) patrolPoint.SetParent(null);
     }
 
