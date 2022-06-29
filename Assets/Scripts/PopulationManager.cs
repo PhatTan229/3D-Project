@@ -21,5 +21,24 @@ public class PopulationManager : MonoBehaviour
         pool.Add(Side.Ally, allyList);
         pool.Add(Side.Enemy, enemyList);
     }
+    public CharacterManagement GetRandomTarget(Vector3 currentPosition, Side targetSide)
+    {
+        List<CharacterManagement> targetList = pool[targetSide];
+        CharacterManagement target = targetList[0];
+
+        float minDistance = Vector3.Distance(currentPosition, target.transform.position);
+        foreach (CharacterManagement character in targetList)
+        {
+            float distance = Vector3.Distance(currentPosition, character.transform.position);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                target = character;
+            }
+        }
+        return target;
+    }
+
+
 }
 

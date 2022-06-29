@@ -102,29 +102,30 @@ public class Skeleton : MonoBehaviour
 
     public void InvasiveFindTarget()
     {
-        float initialRange = invasiveRange;
-        int count = 5;
-        while (count > 0 && target == null)
-        {
-            targetsAvaiable = Physics.OverlapSphere(transform.position, invasiveRange, layerMask);
-            invasiveRange += 2;
-            count--;
-            if (targetsAvaiable.Length > 0)
-            {
-                target = targetsAvaiable[0].gameObject;
-                invasiveRange = initialRange;
-                break ;
-            }
-        }
-        if (target == null)
-        {
-            target = player;
-        }
-        currentTarget = target;
-        if(!currentTarget.activeInHierarchy)
-        {
-            target = null;
-        }
+        //float initialRange = invasiveRange;
+        //int count = 5;
+        //while (count > 0 && target == null)
+        //{
+        //    targetsAvaiable = Physics.OverlapSphere(transform.position, invasiveRange, layerMask);
+        //    invasiveRange += 2;
+        //    count--;
+        //    if (targetsAvaiable.Length > 0)
+        //    {
+        //        target = targetsAvaiable[0].gameObject;
+        //        invasiveRange = initialRange;
+        //        break ;
+        //    }
+        //}
+        //if (target == null)
+        //{
+        //    target = player;
+        //}
+
+        //if(!target)
+        //{
+        //    target = null;
+        //}
+        target = PopulationManager.Instance.GetRandomTarget(transform.position, Side.Ally).gameObject;
     }
     //private void UpdateDestination()
     //{

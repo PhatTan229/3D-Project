@@ -26026,6 +26026,8 @@ GameObject:
   - component: {fileID: 2129043982}
   - component: {fileID: 2129043979}
   - component: {fileID: 2129043984}
+  - component: {fileID: 1098315126009818886}
+  - component: {fileID: 700999594714107891}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -26150,6 +26152,43 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1098315126009818886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815730747390600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8c51c29f39c2cb4e8cb6de39b9e83b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  side: 1
+  health: {fileID: 700999594714107891}
+  others: []
+--- !u!114 &700999594714107891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815730747390600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754cc52d681287746ab37d44822010fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoint: 0
+  disappearingDelay: 0
+  isAlive: 1
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDead:
+    m_PersistentCalls:
+      m_Calls: []
+  anim: {fileID: 0}
 --- !u!1 &1824712053150798
 GameObject:
   m_ObjectHideFlags: 0
