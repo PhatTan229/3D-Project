@@ -20,6 +20,7 @@ public class Health : MonoBehaviour
     public bool isAlive = true;
     public UnityEvent onHealthChanged;
     public UnityEvent onDead;
+    public UnityEvent onHit;
     public Animator anim;
     private void Start()
     {
@@ -31,16 +32,13 @@ public class Health : MonoBehaviour
         HealthPoint -= damage;
         if (HealthPoint <= 0)
         {
-            anim.SetTrigger("Dead");
             isAlive = false;
             onDead.Invoke();
             Destroy(gameObject, disappearingDelay);
         }
         else
         {
-            Debug.Log($"Before health {HealthPoint} damage {damage}");
-            anim.SetTrigger("Hit");
-            Debug.Log($"After health {HealthPoint}");
+            onHit.Invoke();
         }
         
     }
