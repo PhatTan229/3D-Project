@@ -21,7 +21,6 @@ public class Health : MonoBehaviour
     public UnityEvent onHealthChanged;
     public UnityEvent onDead;
     public UnityEvent onHit;
-    public Animator anim;
     private void Start()
     {
         HealthPoint = maxHealthPoint;

@@ -10,15 +10,16 @@ public class CharacterManagement : MonoBehaviour
     public Health health;
     public Animator animator;
     public MonoBehaviour[] others;
-    private void Start()
+    protected void Start()
     {
         PopulationManager.Instance.pool[side].Add(this);
         health.onDead.AddListener(() =>
         {
             PopulationManager.Instance.pool[side].Remove(this);
         });
+        RegisterEvent();
     }
-    protected virtual void SetAnimationEvent()
+    protected virtual void RegisterEvent()
     {
         health.onHit.AddListener(()=>
         {

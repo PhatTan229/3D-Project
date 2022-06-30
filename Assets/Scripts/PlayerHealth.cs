@@ -36,11 +36,11 @@ public class PlayerHealth : Health
         
         if (HealthPoint <= 0)
         {
-            anim.SetTrigger("Dead");
+            onDead.Invoke();
         }
         else
         {
-            anim.SetTrigger("Hit");
+            onHit.Invoke();
         }
     }
 }

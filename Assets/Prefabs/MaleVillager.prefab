@@ -811,6 +811,9 @@ GameObject:
   - component: {fileID: 5421568201163333512}
   - component: {fileID: 2151994228670531058}
   - component: {fileID: 5528167378067854505}
+  - component: {fileID: 688156904081791937}
+  - component: {fileID: 1373163710}
+  - component: {fileID: 5806178996525592112}
   m_Layer: 0
   m_Name: MaleVillager
   m_TagString: Untagged
@@ -850,7 +853,7 @@ Animator:
   m_GameObject: {fileID: 4645066235704542514}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: bd83b7da59c20464288209a8d297eb23, type: 3}
-  m_Controller: {fileID: 9100000, guid: 71f6bb69266be074588272ace7b22a15, type: 2}
+  m_Controller: {fileID: 9100000, guid: 809d8dc6719df31468f478841fca1d02, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -872,7 +875,73 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d65a88d622abb4f963e6b5ee7ed9fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  side: 1
+  health: {fileID: 688156904081791937}
+  animator: {fileID: 2151994228670531058}
+  others: []
+  zombieTransform: {fileID: 0}
   job: 0
+--- !u!114 &688156904081791937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4645066235704542514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab266468d8318e643b386c1466c3855d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoint: 5
+  disappearingDelay: 3
+  isAlive: 1
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDead:
+    m_PersistentCalls:
+      m_Calls: []
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1373163710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4645066235704542514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b376dec2930dc4495825f4baa271f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 2
+  oppositeSide: 0
+  target: {fileID: 0}
+--- !u!195 &5806178996525592112
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4645066235704542514}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &4725175564381038729
 GameObject:
   m_ObjectHideFlags: 0

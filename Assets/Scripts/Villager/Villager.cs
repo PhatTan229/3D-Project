@@ -13,7 +13,13 @@ public enum VillagerWork
     Fishing
 }
 
-public class Villager : MonoBehaviour
+public class Villager : AllyManagement
 {
     public VillagerWork job;
+    protected override void RegisterEvent()
+    {
+        base.RegisterEvent();
+        //animator.SetBool("CanTransform", true);
+    }
+
 }

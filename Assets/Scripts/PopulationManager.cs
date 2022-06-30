@@ -24,8 +24,8 @@ public class PopulationManager : MonoBehaviour
     public CharacterManagement GetRandomTarget(Vector3 currentPosition, Side targetSide)
     {
         List<CharacterManagement> targetList = pool[targetSide];
+        if (targetList.Count == 0) return null;
         CharacterManagement target = targetList[0];
-
         float minDistance = Vector3.Distance(currentPosition, target.transform.position);
         foreach (CharacterManagement character in targetList)
         {
