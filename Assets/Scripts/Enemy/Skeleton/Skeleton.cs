@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class Skeleton : MonoBehaviour
 {
     [SerializeField] private Animator anim;
-    public GameObject target;
+    public CharacterManagement target;
     [System.NonSerialized] public NavMeshAgent agent;
     [System.NonSerialized] public float distance;
     //public Transform patrolPoint;
@@ -43,7 +43,7 @@ public class Skeleton : MonoBehaviour
     private void Update()
     {    
         InvasiveFindTarget();
-        if (target != null)
+        if (target != null && target.health.isAlive)
         {
             distance = Vector3.Distance(agent.transform.position, target.transform.position);
             anim.SetBool("Attack", (int)distance <= (int)attackRange);
@@ -125,7 +125,7 @@ public class Skeleton : MonoBehaviour
         //{
         //    target = null;
         //}
-        target = PopulationManager.Instance.GetRandomTarget(transform.position, Side.Ally).gameObject;
+        target = PopulationManager.Instance.GetRandomTarget(transform.position, Side.Ally);
     }
     //private void UpdateDestination()
     //{

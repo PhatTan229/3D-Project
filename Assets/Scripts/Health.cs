@@ -6,8 +6,9 @@ using UnityEngine.Events;
 public class Health : MonoBehaviour
 {
     public float maxHealthPoint;
+    [SerializeField]
     protected float healthPoint;
-    protected float HealthPoint
+    public float HealthPoint
     {
         get => healthPoint;
         set
@@ -21,7 +22,7 @@ public class Health : MonoBehaviour
     public UnityEvent onHealthChanged;
     public UnityEvent onDead;
     public UnityEvent onHit;
-    private void Start()
+    protected virtual void Start()
     {
         Revive();
         isAlive = true;

@@ -2,7 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthBar : MonoBehaviour
+public class HealthBar : StatBar
 {
-    public RectTransform rectTransform;
+    public PlayerHealth health;
+    public void UpdateHealth()
+    {
+        UpdateValue(health.HealthPoint, health.maxHealthPoint);
+    }
 }

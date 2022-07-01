@@ -15,12 +15,12 @@ public class SkeletonPatrol : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
-        if (skeleton.agent.remainingDistance <= skeleton.agent.stoppingDistance && skeleton.target == null)
+        if (skeleton.agent.remainingDistance <= skeleton.agent.stoppingDistance && (skeleton.target == null || !skeleton.target.health.isAlive))
         {
             //skeleton.agent.enabled = false;
             animator.SetBool("Patrol", false);
         }
-        if(skeleton.target != null)
+        if(skeleton.target != null && skeleton.target.health.isAlive)
         {
             skeleton.Chasing();
         }

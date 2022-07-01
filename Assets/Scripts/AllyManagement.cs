@@ -8,16 +8,18 @@ public class AllyManagement : CharacterManagement
     protected override void RegisterEvent()
     {
         base.RegisterEvent();
-        health.onDead.AddListener(() =>
-        {
-            zombieTransform.StartTransform();
-        });
+        health.onDead.AddListener(zombieTransform.StartTransform);
         zombieTransform.onFinish.AddListener(() =>
         {
             side = Side.Enemy;
             health.Revive();
+            gameObject.layer = LayerMask.NameToLayer("Enemy");
             health.isAlive = true;
-            health.onDead.RemoveListener(() => zombieTransform.StartTransform());
+            health.onDead.AddListener(() =>
+            {
+                Destroy(gameObject, 10f);
+            });
+            health.onDead.RemoveListener(zombieTransform.StartTransform);
         });
     }
 }

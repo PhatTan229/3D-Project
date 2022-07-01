@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1701589153406623925}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7677017519532540111}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2012607129343991044}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Left_FrontCloth2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1823356614660510811}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Right_Hand_Weapon_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3284723185277918509}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 637432939348402562}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4653302243229410768}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Left_FrontCloth3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2744040934617055743}
   - component: {fileID: 333584991571476272}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Naked_upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2880311241578969864}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,7 +414,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3006649042662167751}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +446,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 525801641853514523}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,7 +478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5250120571122344392}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Right_FrontCloth3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +509,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4066905250913936532}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftCape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -541,7 +541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5973244120050066548}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2865718921151819820}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9156999461443000121}
   - component: {fileID: 8559270669793337271}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Peasant_01_lower_skirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -764,7 +764,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3967630110982546939}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Cape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -797,7 +797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3213023390996248687}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -829,7 +829,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8840530782483334653}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightCape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -861,7 +861,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3749209942247929341}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Spine3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -899,7 +899,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7740589221795252282}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -931,7 +931,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3274048767995725033}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Quiver_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -962,7 +962,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8813560658685488649}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -994,7 +994,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1147290375358394353}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftCape4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1025,7 +1025,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2962172910635703326}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Left_BackCloth3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1056,7 +1056,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3469453293164638884}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1087,7 +1087,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2216178860455791815}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1118,7 +1118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4451433744843780484}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1150,7 +1150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5422306401848214520}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightCape4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1181,7 +1181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 69211952513441381}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Left_BackCloth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1213,7 +1213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3104073388498951342}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Right_FrontCloth2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1245,7 +1245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6741387641877817439}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1277,7 +1277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1758857418514950526}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1314,7 +1314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5740555125849144784}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1345,7 +1345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1498664726781141377}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1381,7 +1381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6933544251316292201}
   - component: {fileID: 6492008402927866603}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Peasant_01_lower_pants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1540,7 +1540,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3644750985829507835}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Right_FrontCloth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1572,7 +1572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5029377617559810578}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_HeadTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1604,7 +1604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8316981778919406412}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftBackCloth2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1636,7 +1636,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8513976400339774802}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1667,7 +1667,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5570093622276555861}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_HeadTopFeathers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1698,7 +1698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8762165870179087069}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Left_FrontCloth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1730,7 +1730,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3240955074430122309}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Medium_Bow_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1761,7 +1761,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5853286906306296843}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Right_BackCloth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1793,7 +1793,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7939620714110091607}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Right_Hand_Weapon_slot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1824,7 +1824,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3134106234430778161}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1856,7 +1856,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2275580331658561510}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1887,7 +1887,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3313243890381043377}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1918,7 +1918,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7245595277687339453}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Second_Weapon_slot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1950,7 +1950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 871442372430286858}
   - component: {fileID: 339583869287644229}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Naked_lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2095,7 +2095,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 869064543123184772}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2127,7 +2127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 382409660616885898}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2159,7 +2159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7776831357978630450}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2191,7 +2191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8571757088880459514}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2226,7 +2226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4207224287070635355}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2258,7 +2258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1292482505087715995}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2290,7 +2290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1807375255878553230}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2323,7 +2323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1227497877011487603}
   - component: {fileID: 5581431681275026791}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Naked_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2482,7 +2482,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5720337918290682860}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightCape3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2514,7 +2514,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3601444236062085460}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightCape2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2547,7 +2547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6655282842639579838}
   - component: {fileID: 7633815590732740949}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Peasant_01_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2706,7 +2706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 820230723788066406}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2738,7 +2738,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5701059155668583003}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2770,7 +2770,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2746346841577261092}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftCape2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2802,7 +2802,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3734290978348823762}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2834,7 +2834,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1631288386705967632}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2867,7 +2867,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4834230021169430297}
   - component: {fileID: 3998713406412337962}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Peasant_01_upper_short
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3026,7 +3026,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3465913356539571289}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3058,7 +3058,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5693227937529964604}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Second_Weapon_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3089,7 +3089,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3993705426341515532}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3121,7 +3121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8832717691616239829}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3153,7 +3153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4840539559767538324}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3185,7 +3185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1114026232705364055}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3217,7 +3217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5456289486186285242}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Long_Bow_slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3248,7 +3248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5467319515144835355}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightToe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3280,8 +3280,14 @@ GameObject:
   m_Component:
   - component: {fileID: 7190007314770828085}
   - component: {fileID: 3830352553638216015}
+  - component: {fileID: 3880944695118602545}
+  - component: {fileID: 2930278569705198342}
+  - component: {fileID: 1533152842275519400}
   - component: {fileID: 600696988497649459}
-  m_Layer: 0
+  - component: {fileID: 4801224389100740990}
+  - component: {fileID: 8230975722249164543}
+  - component: {fileID: 7108566388372956044}
+  m_Layer: 6
   m_Name: FemaleVillager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3331,6 +3337,58 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &3880944695118602545
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531101743620309391}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.19837022
+  m_Height: 1.8120625
+  m_Direction: 1
+  m_Center: {x: -0.0036252737, y: 0.89279425, z: 0}
+--- !u!54 &2930278569705198342
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531101743620309391}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!195 &1533152842275519400
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531101743620309391}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!114 &600696988497649459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3343,7 +3401,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d65a88d622abb4f963e6b5ee7ed9fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  side: 0
+  health: {fileID: 4801224389100740990}
+  animator: {fileID: 3830352553638216015}
+  others: []
+  zombieTransform: {fileID: 7108566388372956044}
   job: 0
+--- !u!114 &4801224389100740990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531101743620309391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab266468d8318e643b386c1466c3855d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoint: 5
+  isAlive: 1
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDead:
+    m_PersistentCalls:
+      m_Calls: []
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8230975722249164543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531101743620309391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b376dec2930dc4495825f4baa271f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 0.5
+  oppositeSide: 0
+  target: {fileID: 0}
+--- !u!114 &7108566388372956044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531101743620309391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be006200400e92f4984c31924436c101, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  canTransform: 0
+  onFinish:
+    m_PersistentCalls:
+      m_Calls: []
+  anim: {fileID: 3830352553638216015}
+  behaviour: {fileID: 9100000, guid: 809d8dc6719df31468f478841fca1d02, type: 2}
+  headRender: {fileID: 7633815590732740949}
+  upperRender: {fileID: 3998713406412337962}
+  color: {r: 0.022031069, g: 1, b: 0, a: 0}
 --- !u!1 &7665968057255918313
 GameObject:
   m_ObjectHideFlags: 0
@@ -3353,7 +3476,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6165121395306769603}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3385,7 +3508,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 20772798814811262}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3416,7 +3539,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4559373544031385828}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftCape3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3448,7 +3571,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2136110936834856659}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3479,7 +3602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8971357370263498723}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftToe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3510,7 +3633,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 620847705261272550}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Right_BackCloth3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3541,7 +3664,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3920998450060409678}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3572,7 +3695,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2751940531855717711}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3604,7 +3727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286974119268463399}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_LeftHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3636,7 +3759,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7585538977745549770}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3668,7 +3791,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 690056949996929728}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3700,7 +3823,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2968735453383028415}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3732,7 +3855,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7292157450640405989}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3766,7 +3889,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1846520020148761194}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Female_RightBackCloth2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

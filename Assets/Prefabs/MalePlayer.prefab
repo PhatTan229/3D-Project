@@ -5679,7 +5679,7 @@ Animator:
   m_GameObject: {fileID: 6471639280217413249}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 6013c5ec4832f8a48a8931d8d6412df8, type: 3}
-  m_Controller: {fileID: 9100000, guid: 0dd5614a05890df4481f1f675b8ea5ad, type: 2}
+  m_Controller: {fileID: 9100000, guid: cf06ffef1c1737942b57d8239c13a2d8, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5703,7 +5703,7 @@ CharacterController:
   m_Height: 1.82
   m_Radius: 0.17
   m_SlopeLimit: 50
-  m_StepOffset: 0.3
+  m_StepOffset: 0.1
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.91, z: 0}
@@ -5721,6 +5721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   side: 0
   health: {fileID: 1290225015}
+  animator: {fileID: 316410700326983233}
   others: []
   movement: {fileID: 4123384205950301784}
   weapon: {fileID: 1290225016}
@@ -5737,14 +5738,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoint: 20
-  disappearingDelay: 0
   isAlive: 0
   onHealthChanged:
     m_PersistentCalls:
       m_Calls: []
-  anim: {fileID: 316410700326983233}
-  maxArmor: 0
-  onArmorChange:
+  onDead:
+    m_PersistentCalls:
+      m_Calls: []
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
+  maxArmor: 10
+  onArmorChanged:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &1290225016
@@ -5809,7 +5814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd21ac78d77dd484f8edb3706e8d6bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheckingRadius: 0.2
+  groundCheckingRadius: 1
   rotatingSpeed: 1000
   groundLayer:
     serializedVersion: 2

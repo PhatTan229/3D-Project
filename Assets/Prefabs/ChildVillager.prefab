@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2036277587655709289}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5846010871194683028}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 831804159224127471}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftToe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8028310433031667705}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4210603104786401178}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6713951836546258299}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5011315731532497197}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7899858820509253133}
   - component: {fileID: 7731237850956595997}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Boy_Naked_lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,7 +369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4536723081329587506}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,7 +400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2075293921184763309}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 631038174207085598}
   - component: {fileID: 9088281683849705629}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Boy_Peasant_01_lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -570,7 +570,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8919075644049979806}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -602,7 +602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7706750755466840059}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -634,7 +634,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4472175143114261865}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightHandMiddle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +666,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8491445441695235816}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_HeadTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -697,7 +697,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6400465961507671124}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightFoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,7 +730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4219421012549991513}
   - component: {fileID: 6631349266741479267}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Boy_Peasant_01_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -867,7 +867,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4888621529638123168}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -899,7 +899,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8357878232432491752}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -931,7 +931,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6790310244286070271}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -963,7 +963,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 845624640963561423}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -995,7 +995,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4760022451894912307}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1027,7 +1027,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8522410742136577838}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightHandMiddle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1059,7 +1059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6274888077917516655}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1091,7 +1091,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5354793461375773306}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1122,7 +1122,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2190737517106180135}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1154,7 +1154,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4058227841599418644}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1186,7 +1186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1933137389675204060}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1218,7 +1218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4494451152311436263}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightHandIndex2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1250,7 +1250,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8183717011107352754}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1282,7 +1282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4567303985820898219}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1314,7 +1314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5621042448712695213}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1346,7 +1346,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1625348269335387729}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1380,7 +1380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2243451769017941027}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightHandRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1413,7 +1413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4100303655129474670}
   - component: {fileID: 103067974492570494}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Boy_Peasant_01_upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1551,7 +1551,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6943267738629122973}
   - component: {fileID: 7694897619921711299}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Boy_Naked_upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1688,7 +1688,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 943562221165709960}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1720,7 +1720,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6867921399946166178}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1756,7 +1756,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4857182148219258612}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftHandPinky2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1788,7 +1788,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3161494487116567898}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftHandRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1819,7 +1819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5746477146023299268}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1855,7 +1855,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 59003599846212367}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightHandPinky1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1887,7 +1887,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8330844813543599467}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightToe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1918,7 +1918,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3263317868490202059}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1949,7 +1949,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8888722750279518591}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightUpLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1982,7 +1982,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1514519171034678169}
   - component: {fileID: 6173401997542901350}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Boy_Naked_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2119,7 +2119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2506829326585878618}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightForeArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2151,7 +2151,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7652870163195593526}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftHandIndex1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2183,7 +2183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4733874932487635614}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2214,7 +2214,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4215143590855456265}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftShoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2246,7 +2246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6806878471012335601}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightHandRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2278,7 +2278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8025244712125591573}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_Spine3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2312,7 +2312,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8629987625905496576}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftHandIndex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2343,7 +2343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8263079575898028506}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightHandPinky3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2374,7 +2374,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2024307401470395824}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightHandMiddle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2405,7 +2405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2075360878778549378}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightHandThumb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2438,8 +2438,14 @@ GameObject:
   m_Component:
   - component: {fileID: 8209996377847073198}
   - component: {fileID: 2814724347504907220}
+  - component: {fileID: 2461799836229774533}
+  - component: {fileID: 7968092277715345522}
+  - component: {fileID: 636460188420367806}
   - component: {fileID: 5367443646770010840}
-  m_Layer: 0
+  - component: {fileID: 6926012740004919680}
+  - component: {fileID: 1249134150387776087}
+  - component: {fileID: 2900482345750221636}
+  m_Layer: 6
   m_Name: ChildVillager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2488,6 +2494,58 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &2461799836229774533
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837211018693301012}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.15182245
+  m_Height: 1.4454162
+  m_Direction: 1
+  m_Center: {x: 0.003136754, y: 0.71203864, z: 0}
+--- !u!54 &7968092277715345522
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837211018693301012}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!195 &636460188420367806
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837211018693301012}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!114 &5367443646770010840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2500,7 +2558,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d65a88d622abb4f963e6b5ee7ed9fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  side: 0
+  health: {fileID: 6926012740004919680}
+  animator: {fileID: 2814724347504907220}
+  others: []
+  zombieTransform: {fileID: 2900482345750221636}
   job: 0
+--- !u!114 &6926012740004919680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837211018693301012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab266468d8318e643b386c1466c3855d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoint: 5
+  isAlive: 1
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDead:
+    m_PersistentCalls:
+      m_Calls: []
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1249134150387776087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837211018693301012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b376dec2930dc4495825f4baa271f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 0.5
+  oppositeSide: 0
+  target: {fileID: 0}
+--- !u!114 &2900482345750221636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837211018693301012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be006200400e92f4984c31924436c101, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  canTransform: 0
+  onFinish:
+    m_PersistentCalls:
+      m_Calls: []
+  anim: {fileID: 2814724347504907220}
+  behaviour: {fileID: 9100000, guid: 809d8dc6719df31468f478841fca1d02, type: 2}
+  headRender: {fileID: 6631349266741479267}
+  upperRender: {fileID: 103067974492570494}
+  color: {r: 0.1309793, g: 1, b: 0, a: 0}
 --- !u!1 &9000569955256823385
 GameObject:
   m_ObjectHideFlags: 0
@@ -2510,7 +2633,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6531046182301422066}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftHandThumb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2542,7 +2665,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9196462380766497151}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_RightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2574,7 +2697,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3681115020690902919}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Child_LeftHandThumb3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

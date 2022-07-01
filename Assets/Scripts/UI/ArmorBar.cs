@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArmorBar : MonoBehaviour
+public class ArmorBar : StatBar
 {
-    // Start is called before the first frame update
-    void Start()
+    public PlayerHealth health;
+    public void UpdateArmor()
     {
-        
+        UpdateValue(health.Armor, health.maxArmor);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

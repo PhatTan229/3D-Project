@@ -85,6 +85,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2703740500404099797}
+  - component: {fileID: 2250783253238925193}
   m_Layer: 5
   m_Name: ArmorMask
   m_TagString: Untagged
@@ -113,6 +114,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0.17004395, y: -0.00012207}
   m_SizeDelta: {x: 449.66, y: 51.092}
   m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &2250783253238925193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2369701269345138483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding: {x: 0, y: 0, z: 0, w: 0}
+  m_Softness: {x: 0, y: 0}
 --- !u!1 &2599085527511249368
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,6 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 224083e47368e8d448bc6a77d2a6e18f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mask: {fileID: 1023304465157046955}
 --- !u!1 &3434635377088096464
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,6 +189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3434635377088096465}
   - component: {fileID: 6977716553661990450}
+  - component: {fileID: 7953230316218396159}
   m_Layer: 5
   m_Name: StatPanel
   m_TagString: Untagged
@@ -229,6 +246,21 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &7953230316218396159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3434635377088096464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d9d4f6681441e488ffb8ac62ddb9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 3434635378407608502}
+  manaBar: {fileID: 1783564925151066216}
+  armorBar: {fileID: 3534059069282331817}
 --- !u!1 &3434635377724988987
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,6 +270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3434635377724988984}
+  - component: {fileID: 5477038983124472748}
   m_Layer: 5
   m_Name: HealthMask
   m_TagString: Untagged
@@ -266,6 +299,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0.17004395, y: -0.00012207}
   m_SizeDelta: {x: 449.66, y: 51.092}
   m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &5477038983124472748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3434635377724988987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding: {x: 0, y: 0, z: 0, w: 0}
+  m_Softness: {x: 0, y: 0}
 --- !u!1 &3434635378407608504
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2412444322dd7d74c990926e3214f0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rectTransform: {fileID: 3434635378407608505}
+  mask: {fileID: 3434635377724988984}
+  health: {fileID: 0}
 --- !u!1 &5606264797797527748
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,9 +474,9 @@ RectTransform:
   m_Father: {fileID: 3434635377724988984}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.000020981}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 224.83, y: -0.000020981}
   m_SizeDelta: {x: 449.66, y: 51.092}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8656199563271519474
@@ -478,6 +526,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1023304465157046955}
+  - component: {fileID: 3719315727374587786}
   m_Layer: 5
   m_Name: ManaMask
   m_TagString: Untagged
@@ -506,6 +555,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0.17004395, y: -0.00012207}
   m_SizeDelta: {x: 449.66, y: 51.092}
   m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &3719315727374587786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6360203868979991329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding: {x: 0, y: 0, z: 0, w: 0}
+  m_Softness: {x: 0, y: 0}
 --- !u!1 &8564297735798741509
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,3 +619,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afd0c182f348fb48980327ac7be1d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mask: {fileID: 2703740500404099797}
+  health: {fileID: 0}

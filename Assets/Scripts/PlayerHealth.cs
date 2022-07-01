@@ -6,29 +6,38 @@ using UnityEngine.Events;
 public class PlayerHealth : Health
 {
     public float maxArmor;
+    [SerializeField]
     private float _armor;
-    public float armor
+    public float Armor
     {
         get => _armor;
         set
         {
             _armor = value;
-            onHealthChanged.Invoke();
+            onArmorChanged.Invoke();
         }
     }
-    public UnityEvent onArmorChange;
+    public UnityEvent onArmorChanged;
+    protected override void Start()
+    {
+        base.Start();
+        Armor = maxArmor;
+    }
+
     public override void TakeDamage(int damage)
     {
-        float damageOnArmor = Random.Range(damage / 2, damage);
+        float damageOnArmor = Random.Range((float)(damage / 2), damage);
+        Debug.Log($"damage on armor {damageOnArmor}");
         float damageOnHealth = damage - damageOnArmor;
-        float redundantDamage = damageOnArmor - armor;
+        float redundantDamage = damageOnArmor - Armor;
+        Debug.Log($"redundant {redundantDamage}");
         if (redundantDamage <= 0)
         {
-            armor -= damageOnArmor;
+            Armor -= damageOnArmor;
         }
         else
         {
-            armor = 0;
+            Armor = 0;
             damageOnHealth += redundantDamage;
         }
         

@@ -17,7 +17,7 @@ public class SkeletonIdle : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (skeleton.target != null)
+        if (skeleton.target != null && skeleton.target.health.isAlive)
         {
             skeleton.Chasing();
         }
