@@ -814,6 +814,7 @@ GameObject:
   - component: {fileID: 688156904081791937}
   - component: {fileID: 1373163710}
   - component: {fileID: 5806178996525592112}
+  - component: {fileID: 1373163717}
   m_Layer: 0
   m_Name: MaleVillager
   m_TagString: Untagged
@@ -853,7 +854,7 @@ Animator:
   m_GameObject: {fileID: 4645066235704542514}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: bd83b7da59c20464288209a8d297eb23, type: 3}
-  m_Controller: {fileID: 9100000, guid: 809d8dc6719df31468f478841fca1d02, type: 2}
+  m_Controller: {fileID: 9100000, guid: 71f6bb69266be074588272ace7b22a15, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -879,7 +880,7 @@ MonoBehaviour:
   health: {fileID: 688156904081791937}
   animator: {fileID: 2151994228670531058}
   others: []
-  zombieTransform: {fileID: 0}
+  zombieTransform: {fileID: 1373163717}
   job: 0
 --- !u!114 &688156904081791937
 MonoBehaviour:
@@ -894,7 +895,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoint: 5
-  disappearingDelay: 3
   isAlive: 1
   onHealthChanged:
     m_PersistentCalls:
@@ -942,6 +942,28 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1373163717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4645066235704542514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be006200400e92f4984c31924436c101, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  canTransform: 0
+  onFinish:
+    m_PersistentCalls:
+      m_Calls: []
+  anim: {fileID: 0}
+  behaviour: {fileID: 0}
+  headRender: {fileID: 0}
+  upperRender: {fileID: 0}
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &4725175564381038729
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,16 +16,21 @@ public class Health : MonoBehaviour
             onHealthChanged.Invoke();
         }
     }
-    public int disappearingDelay;
+    //public int disappearingDelay;
     public bool isAlive = true;
     public UnityEvent onHealthChanged;
     public UnityEvent onDead;
     public UnityEvent onHit;
     private void Start()
     {
-        HealthPoint = maxHealthPoint;
+        Revive();
         isAlive = true;
     }
+    public void Revive()
+    {
+        HealthPoint = maxHealthPoint;
+    }
+
     public virtual void TakeDamage(int damage)
     {
         HealthPoint -= damage;
@@ -33,7 +38,7 @@ public class Health : MonoBehaviour
         {
             isAlive = false;
             onDead.Invoke();
-            Destroy(gameObject, disappearingDelay);
+            //Destroy(gameObject, disappearingDelay);
         }
         else
         {

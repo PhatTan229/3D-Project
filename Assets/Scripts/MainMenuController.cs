@@ -21,6 +21,6 @@ public class MainMenuController : MonoBehaviour
 {
     public void Play()
     {
-        SceneManager.LoadScene("TheInvasion");
+        SceneManager.LoadScene("Village");
     }
 }

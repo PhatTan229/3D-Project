@@ -19,7 +19,15 @@ public class Villager : AllyManagement
     protected override void RegisterEvent()
     {
         base.RegisterEvent();
-        //animator.SetBool("CanTransform", true);
+        health.onHit.AddListener(() => OnVillagerHit());
+        zombieTransform.onFinish.AddListener(() =>
+        {
+            health.onHit.RemoveListener(() => OnVillagerHit());
+        });
+    }
+    private void OnVillagerHit()
+    {
+        animator.SetTrigger("Run");
     }
 
 }
