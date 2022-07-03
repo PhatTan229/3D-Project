@@ -2445,6 +2445,7 @@ GameObject:
   - component: {fileID: 6926012740004919680}
   - component: {fileID: 1249134150387776087}
   - component: {fileID: 2900482345750221636}
+  - component: {fileID: 4592873652927308609}
   m_Layer: 6
   m_Name: ChildVillager
   m_TagString: Untagged
@@ -2577,6 +2578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoint: 5
+  healthPoint: 0
   isAlive: 1
   onHealthChanged:
     m_PersistentCalls:
@@ -2624,6 +2626,38 @@ MonoBehaviour:
   headRender: {fileID: 6631349266741479267}
   upperRender: {fileID: 103067974492570494}
   color: {r: 0.1309793, g: 1, b: 0, a: 0}
+--- !u!114 &4592873652927308609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837211018693301012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ee7013ff77b0be4cb44b27a1276e3f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 2.5
+  color: {r: 0, g: 1, b: 0.83541393, a: 0.49803922}
+  layer:
+    serializedVersion: 2
+    m_Bits: 8
+  conversation:
+  - speaker: Child
+    content: Hi
+    hasSelection: 0
+    onFinish:
+      m_PersistentCalls:
+        m_Calls: []
+    onSelectingYes:
+      m_PersistentCalls:
+        m_Calls: []
+    onSelectingNo:
+      m_PersistentCalls:
+        m_Calls: []
+  signalPrefab: {fileID: 5830859735662686686, guid: e9e095e111226404fb0aff93d7df7d7b, type: 3}
+  signalOffset: 1.5
 --- !u!1 &9000569955256823385
 GameObject:
   m_ObjectHideFlags: 0

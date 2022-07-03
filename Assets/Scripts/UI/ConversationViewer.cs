@@ -9,13 +9,13 @@ public class ConversationViewer : MonoBehaviour
     public TMP_Text text;
     [SerializeField] private SpeakingBehaviour behaviour;
     private void Awake() => Instance = this;
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            behaviour.conversation[behaviour.currentSpeech].onFinish.Invoke();
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Z))
+    //    {
+    //        behaviour.conversation[behaviour.currentSpeech].onFinish.Invoke();
+    //    }
+    //}
     public void Show() => gameObject.SetActive(true);
     public void Hide() => gameObject.SetActive(false);
     public void ShowSpeech(string speaker, string content)

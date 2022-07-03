@@ -17,40 +17,34 @@ public class Dialogue
 
 public class SpeakingBehaviour : MonoBehaviour
 {
-    public int radius;
+    public float radius;
     public Color color;
     public LayerMask layer;
     public Dialogue[] conversation;
-    public GameObject speakingSignal;
-
-    public int currentSpeech;
-    [SerializeField] private bool isTalking = false;
+    private GameObject currentSignal;
+    public GameObject signalPrefab;
+    public float signalOffset = 1.5f;
+    //[SerializeField] private bool isTalking = false;
+    private void Start()
+    {
+        currentSignal = Instantiate(signalPrefab, transform);
+        currentSignal.transform.localPosition = new Vector3(0, signalOffset, 0);
+    }
 
     private void Update()
     {
-        if (!isTalking)
+        Collider[] colliders = Physics.OverlapSphere(transform.position, radius, layer);
+        bool isPlayerNear = colliders.Length != 0;
+        currentSignal.SetActive(isPlayerNear);
+        if (isPlayerNear)
         {
-            Collider[] colliders = Physics.OverlapSphere(transform.position, radius, layer);
-            bool isPlayerNear = colliders.Length != 0;
-            speakingSignal.SetActive(isPlayerNear);
-            if (isPlayerNear)
+            if (Input.GetKeyDown(KeyCode.Z))
             {
-                if (Input.GetKeyDown(KeyCode.Z))
-                {
-                    StartConversation();
-                }
-                
+                StartConversation();
             }
         }
-        //else
-        //{
-        //    if (Input.GetKeyDown(KeyCode.Z))
-        //    {
-                
-        //    }
-        //}
     }
-    public Dialogue CurrentSpeech() => conversation[currentSpeech];
+    //public Dialogue CurrentSpeech() => conversation[currentSpeech];
     private void StartConversation()
     {
         enabled = false;
@@ -62,16 +56,16 @@ public class SpeakingBehaviour : MonoBehaviour
         //currentSpeech = 0;
         //ShowLine(0);
     }
-    public void ShowSpeech(int index)
-    {
-        currentSpeech = index;
-        ConversationViewer.Instance.ShowSpeech(conversation[currentSpeech].speaker, conversation[currentSpeech].content);
-    }
-    public void ShowNextLine()
-    {
-        currentSpeech++;
-        ShowSpeech(currentSpeech);
-    }
+    //public void ShowSpeech(int index)
+    //{
+    //    currentSpeech = index;
+    //    ConversationViewer.Instance.ShowSpeech(conversation[currentSpeech].speaker, conversation[currentSpeech].content);
+    //}
+    //public void ShowNextLine()
+    //{
+    //    currentSpeech++;
+    //    ShowSpeech(currentSpeech);
+    //}
 
     
     private void OnDrawGizmos()

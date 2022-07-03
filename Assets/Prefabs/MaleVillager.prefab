@@ -811,12 +811,13 @@ GameObject:
   - component: {fileID: 5421568201163333512}
   - component: {fileID: 2151994228670531058}
   - component: {fileID: 1070597926773618384}
+  - component: {fileID: 7744257010878333029}
+  - component: {fileID: 5806178996525592112}
   - component: {fileID: 5528167378067854505}
   - component: {fileID: 688156904081791937}
   - component: {fileID: 1373163710}
-  - component: {fileID: 5806178996525592112}
   - component: {fileID: 1373163717}
-  - component: {fileID: 7744257010878333029}
+  - component: {fileID: 4676027072086653408}
   m_Layer: 6
   m_Name: MaleVillager
   m_TagString: Untagged
@@ -880,6 +881,44 @@ CapsuleCollider:
   m_Height: 1.7971668
   m_Direction: 1
   m_Center: {x: 0, y: 0.90508497, z: 0}
+--- !u!54 &7744257010878333029
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4645066235704542514}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
+--- !u!195 &5806178996525592112
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4645066235704542514}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!114 &5528167378067854505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -911,6 +950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoint: 5
+  healthPoint: 0
   isAlive: 1
   onHealthChanged:
     m_PersistentCalls:
@@ -936,28 +976,6 @@ MonoBehaviour:
   distance: 0.5
   oppositeSide: 0
   target: {fileID: 0}
---- !u!195 &5806178996525592112
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4645066235704542514}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!114 &1373163717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -980,22 +998,38 @@ MonoBehaviour:
   headRender: {fileID: 2558097340628722383}
   upperRender: {fileID: 4871433285778798646}
   color: {r: 0, g: 1, b: 0.0041310787, a: 0}
---- !u!54 &7744257010878333029
-Rigidbody:
+--- !u!114 &4676027072086653408
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4645066235704542514}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 1
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ee7013ff77b0be4cb44b27a1276e3f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 2.5
+  color: {r: 0, g: 1, b: 1, a: 0.39215687}
+  layer:
+    serializedVersion: 2
+    m_Bits: 8
+  conversation:
+  - speaker: Male
+    content: Hi
+    hasSelection: 0
+    onFinish:
+      m_PersistentCalls:
+        m_Calls: []
+    onSelectingYes:
+      m_PersistentCalls:
+        m_Calls: []
+    onSelectingNo:
+      m_PersistentCalls:
+        m_Calls: []
+  signalPrefab: {fileID: 5830859735662686686, guid: e9e095e111226404fb0aff93d7df7d7b, type: 3}
+  signalOffset: 1.5
 --- !u!1 &4725175564381038729
 GameObject:
   m_ObjectHideFlags: 0

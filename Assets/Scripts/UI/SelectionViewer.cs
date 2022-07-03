@@ -13,11 +13,11 @@ public class SelectionViewer : MonoBehaviour
     {
         if (isAgreed && Input.GetKeyDown(KeyCode.DownArrow))
         {
-            SetSelection(true);
+            SetSelection(false);
         }
         if (!isAgreed && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            SetSelection(false);
+            SetSelection(true);
         }
     }
     private void SetSelection(bool _agree)

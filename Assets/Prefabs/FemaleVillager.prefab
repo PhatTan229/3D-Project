@@ -3287,6 +3287,7 @@ GameObject:
   - component: {fileID: 4801224389100740990}
   - component: {fileID: 8230975722249164543}
   - component: {fileID: 7108566388372956044}
+  - component: {fileID: 355475321482490469}
   m_Layer: 6
   m_Name: FemaleVillager
   m_TagString: Untagged
@@ -3420,6 +3421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoint: 5
+  healthPoint: 0
   isAlive: 1
   onHealthChanged:
     m_PersistentCalls:
@@ -3467,6 +3469,38 @@ MonoBehaviour:
   headRender: {fileID: 7633815590732740949}
   upperRender: {fileID: 3998713406412337962}
   color: {r: 0.022031069, g: 1, b: 0, a: 0}
+--- !u!114 &355475321482490469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531101743620309391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ee7013ff77b0be4cb44b27a1276e3f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 2.5
+  color: {r: 0, g: 1, b: 0.7813556, a: 0.4117647}
+  layer:
+    serializedVersion: 2
+    m_Bits: 8
+  conversation:
+  - speaker: Female
+    content: Hi
+    hasSelection: 0
+    onFinish:
+      m_PersistentCalls:
+        m_Calls: []
+    onSelectingYes:
+      m_PersistentCalls:
+        m_Calls: []
+    onSelectingNo:
+      m_PersistentCalls:
+        m_Calls: []
+  signalPrefab: {fileID: 5830859735662686686, guid: e9e095e111226404fb0aff93d7df7d7b, type: 3}
+  signalOffset: 1.5
 --- !u!1 &7665968057255918313
 GameObject:
   m_ObjectHideFlags: 0
