@@ -63,14 +63,17 @@ public class WeaponManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            Debug.Log("dagger");
             SetUp(WeaponType.Dagger);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
+            Debug.Log("bow");
             SetUp(WeaponType.Bow);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
+            Debug.Log("sword");
             SetUp(WeaponType.SwordAndShield);
         }
     }
