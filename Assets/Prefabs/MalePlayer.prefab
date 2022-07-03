@@ -5738,6 +5738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoint: 20
+  healthPoint: 0
   isAlive: 0
   onHealthChanged:
     m_PersistentCalls:
@@ -5749,6 +5750,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   maxArmor: 10
+  _armor: 0
   onArmorChanged:
     m_PersistentCalls:
       m_Calls: []

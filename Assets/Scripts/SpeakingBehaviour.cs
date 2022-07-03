@@ -48,7 +48,7 @@ public class SpeakingBehaviour : MonoBehaviour
     private void StartConversation()
     {
         enabled = false;
-        ConversationController.Instance.StartConversation(this);
+        MonoUtility.Instance.conversation.StartConversation(this);
 
         //DialogueController.Instance.
 

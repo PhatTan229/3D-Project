@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class ConversationController : MonoBehaviour
 {
-    public static ConversationController Instance;
     [SerializeField] public SpeakingBehaviour model;
     public DialogueViewer dialogueViewer;
     public SelectionViewer selectionViewer;
     public int dialogIndex;
-    private void Awake()
-    {
-        Instance = this;
-        enabled = false;
-    }
-
+    private void Start() => enabled = false;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Z))

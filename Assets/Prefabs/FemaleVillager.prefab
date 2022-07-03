@@ -3481,7 +3481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee7013ff77b0be4cb44b27a1276e3f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 2.5
+  radius: 2
   color: {r: 0, g: 1, b: 0.7813556, a: 0.4117647}
   layer:
     serializedVersion: 2
@@ -3500,7 +3500,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   signalPrefab: {fileID: 5830859735662686686, guid: e9e095e111226404fb0aff93d7df7d7b, type: 3}
-  signalOffset: 1.5
+  signalOffset: 2
 --- !u!1 &7665968057255918313
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using Cinemachine;
 
 public class VillageGameflow : MonoBehaviour
 {
+    public MonoUtility mono;
     public PlayerManagement player;
     public CinemachineVirtualCamera aimingCamera;
     public ThirdPersonCamera thirdPersonCamera;
@@ -14,6 +15,7 @@ public class VillageGameflow : MonoBehaviour
     private void Start()
     {
         PlayerManagement myPlayer = Instantiate(player, transform.position, Quaternion.identity);
+        mono.player = myPlayer;
         aimingCamera.Follow = myPlayer.transform;
         thirdPersonCamera.target = myPlayer.transform;
         minimapCamera.target = myPlayer.transform;
