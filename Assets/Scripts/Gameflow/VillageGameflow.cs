@@ -12,9 +12,14 @@ public class VillageGameflow : MonoBehaviour
     public MinimapCamera minimapCamera;
     public StatPanel statPanel;
     public MinimapCompass compass;
+
+    public SpeakingBehaviour packageSender;
+    public SpeakingBehaviour packageReceiver;
+    public SpeakingBehaviour storyTeller;
     private void Start()
     {
-        PlayerManagement myPlayer = Instantiate(player, transform.position, Quaternion.identity);
+        //Default
+        PlayerManagement myPlayer = Instantiate(player, transform.position, transform.rotation);
         mono.player = myPlayer;
         aimingCamera.Follow = myPlayer.transform;
         thirdPersonCamera.target = myPlayer.transform;
@@ -28,19 +33,21 @@ public class VillageGameflow : MonoBehaviour
         statPanel.armorBar.health = newHealth;
         newHealth.onHealthChanged.AddListener(statPanel.healthBar.UpdateHealth);
         newHealth.onArmorChanged.AddListener(statPanel.armorBar.UpdateArmor);
-    }
+        //Indivial
 
-    //For demo only
+    }
     public GameObject[] enemies;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            foreach (GameObject enemy in enemies)
+            for (int i = 0; i < enemies.Length; i++)
             {
-                if (enemy) enemy.SetActive(true);
+                enemies[i].SetActive(true);
             }
         }
     }
+
+
 
 }

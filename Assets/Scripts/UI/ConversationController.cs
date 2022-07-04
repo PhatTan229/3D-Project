@@ -7,8 +7,9 @@ public class ConversationController : MonoBehaviour
     [SerializeField] public SpeakingBehaviour model;
     public DialogueViewer dialogueViewer;
     public SelectionViewer selectionViewer;
-    public int dialogIndex;
+    private int dialogIndex;
     private void Start() => enabled = false;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Z))
@@ -44,6 +45,7 @@ public class ConversationController : MonoBehaviour
     {
         model = behaviour;
         enabled = true;
+        MonoUtility.Instance.DisablePlayer();
         dialogueViewer.Show();
         ShowDialogue(0);
     }
@@ -54,11 +56,13 @@ public class ConversationController : MonoBehaviour
     }
     public void ShowNextDialogue()
     {
+        
         dialogIndex++;
         if (dialogIndex >= model.conversation.Length)
         {
             model.enabled = true;
             enabled = false;
+            MonoUtility.Instance.ActivePlayer();
             dialogueViewer.Hide();
             return;
         }

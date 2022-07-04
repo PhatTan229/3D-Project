@@ -9,13 +9,10 @@ public class ThirdPersonCamera : MonoBehaviour
     public int maxAngle;
     public Vector3 offset = new Vector3(0, 1, 0);
     public Transform target;
-    private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-
-    }
+    
     private void LateUpdate()
     {
+        if (Cursor.lockState != CursorLockMode.Locked) return;
         transform.position = target.position + offset;
         float xInput = Input.GetAxis("Mouse X");
         float yInput = Input.GetAxis("Mouse Y");
