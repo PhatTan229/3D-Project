@@ -10,7 +10,9 @@ public class AttackingMeleePlayer : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (!manager) manager = animator.GetComponent<WeaponManager>();
         animator.SetBool("IsAttacking", false);
+        manager.StartAttack(type);
 
     }
 
@@ -26,8 +28,8 @@ public class AttackingMeleePlayer : StateMachineBehaviour
     {
         if (isComboEnd)
         {
-            if (!manager) manager = animator.GetComponent<WeaponManager>();
-            manager.StopAttack(type);
+            
+            //manager.StopAttack(type);
         }
     }
 
