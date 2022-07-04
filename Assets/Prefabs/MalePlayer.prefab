@@ -5766,7 +5766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e4639b48c12de47bc8a00047acfdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowSpeed: 10
+  arrowSpeed: 50
   movement: {fileID: 4123384205950301784}
   anim: {fileID: 316410700326983233}
   weaponCollection:

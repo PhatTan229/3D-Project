@@ -36,17 +36,17 @@ public class VillageGameflow : MonoBehaviour
         //Indivial
 
     }
-    public GameObject[] enemies;
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            for (int i = 0; i < enemies.Length; i++)
-            {
-                enemies[i].SetActive(true);
-            }
-        }
-    }
+    //public GameObject[] enemies;
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Space))
+    //    {
+    //        for (int i = 0; i < enemies.Length; i++)
+    //        {
+    //            enemies[i].SetActive(true);
+    //        }
+    //    }
+    //}
 
 
 
