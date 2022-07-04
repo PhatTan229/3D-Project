@@ -5773,6 +5773,7 @@ MonoBehaviour:
   - type: 0
     parts: []
     colliders: []
+    trails: []
     skill: {fileID: 9100000, guid: d76f3d78b3558b244ab681b124349760, type: 2}
   - type: 0
     parts:
@@ -5781,12 +5782,16 @@ MonoBehaviour:
     colliders:
     - {fileID: 6685812651011853127}
     - {fileID: 4051500793463230469}
+    trails:
+    - {fileID: 4587821197366956847}
+    - {fileID: 6582612001470122093}
     skill: {fileID: 9100000, guid: fc2c31c9ec6e0e649b8ed26451f80d78, type: 2}
   - type: 2
     parts:
     - {fileID: 680445347006364044}
     - {fileID: 5816922854925996659}
     colliders: []
+    trails: []
     skill: {fileID: 9100000, guid: 0dd5614a05890df4481f1f675b8ea5ad, type: 2}
   - type: 3
     parts:
@@ -5795,6 +5800,8 @@ MonoBehaviour:
     colliders:
     - {fileID: 2875486155229438495}
     - {fileID: 5256363711350427231}
+    trails:
+    - {fileID: 6312895025155667533}
     skill: {fileID: 9100000, guid: cf06ffef1c1737942b57d8239c13a2d8, type: 2}
   arrowPosAnim: {fileID: 851830208}
   bowAnim: {fileID: 680445347015739982}
@@ -5816,7 +5823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd21ac78d77dd484f8edb3706e8d6bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheckingRadius: 1
+  groundCheckingRadius: 0.2
   rotatingSpeed: 1000
   groundLayer:
     serializedVersion: 2
@@ -7717,6 +7724,11 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 2617236756123921617, guid: 43b123f4e1ae49e498fe78056c6f1b8b, type: 3}
   m_PrefabInstance: {fileID: 267275449000627918}
   m_PrefabAsset: {fileID: 0}
+--- !u!96 &6312895025155667533 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 6065896862482069635, guid: 43b123f4e1ae49e498fe78056c6f1b8b, type: 3}
+  m_PrefabInstance: {fileID: 267275449000627918}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1078153239995462329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7791,6 +7803,11 @@ Transform:
 --- !u!1 &4429148931049748279 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3711284765162784142, guid: 4133cbfc5fc5d2142a6dfcb9dd2ab182, type: 3}
+  m_PrefabInstance: {fileID: 1078153239995462329}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &6582612001470122093 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 6173445622788799188, guid: 4133cbfc5fc5d2142a6dfcb9dd2ab182, type: 3}
   m_PrefabInstance: {fileID: 1078153239995462329}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1780871123257852041
@@ -8122,6 +8139,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4133cbfc5fc5d2142a6dfcb9dd2ab182, type: 3}
+--- !u!96 &4587821197366956847 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 6173445622788799188, guid: 4133cbfc5fc5d2142a6dfcb9dd2ab182, type: 3}
+  m_PrefabInstance: {fileID: 7640157789256722939}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6450960971116310613 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3711284765163215278, guid: 4133cbfc5fc5d2142a6dfcb9dd2ab182, type: 3}

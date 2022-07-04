@@ -17,6 +17,7 @@ public class WeaponInformaton
     public WeaponType type;
     public GameObject[] parts;
     public Collider[] colliders;
+    public TrailRenderer[] trails;
     public RuntimeAnimatorController skill;
     public void ActiveWeapon() => SetUp(true);
     public void DisableWeapon() => SetUp(false);
@@ -29,8 +30,10 @@ public class WeaponInformaton
     //public void StopAttack() => SetAttackState(false);
     public void SetAttackState(bool isAttacking)
     {
-        for (int i = 0; i < colliders.Length; i++)
-            colliders[i].enabled = isAttacking;
+        foreach (Collider collider in colliders)
+            collider.enabled = isAttacking;
+        foreach (TrailRenderer trail in trails)
+            trail.enabled = isAttacking;
     }
 }
 
@@ -63,17 +66,14 @@ public class WeaponManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Debug.Log("dagger");
             SetUp(WeaponType.Dagger);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Debug.Log("bow");
             SetUp(WeaponType.Bow);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            Debug.Log("sword");
             SetUp(WeaponType.SwordAndShield);
         }
     }
