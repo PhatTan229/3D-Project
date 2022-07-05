@@ -17,18 +17,17 @@ public class AttackingArrow : MonoBehaviour
     public bool isKinematic;
     private void OnTriggerEnter(Collider other)
     {
-        if (TryGetComponent<EnemyHealth>(out EnemyHealth health))
+        if (other.TryGetComponent<EnemyHealth>(out EnemyHealth health))
         {
+            Debug.Log("hit 2");
             health.TakeDamage(damage);
         }
-        Debug.Log($"before {transform.eulerAngles}");
-        if (zeroVelocity) rigid.velocity = Vector3.zero;
-        if (turnOffGravity) rigid.useGravity = false;
+        //if (zeroVelocity) rigid.velocity = Vector3.zero;
+        //if (turnOffGravity) rigid.useGravity = false;
         if (isKinematic) rigid.isKinematic = true;
         enabled = false;
         transform.SetParent(other.transform);
         Destroy(gameObject, delay);
-        Debug.Log($"after {transform.eulerAngles}");
     }
     private Vector3 lastPosition;
     private void Update()
@@ -37,6 +36,5 @@ public class AttackingArrow : MonoBehaviour
         if (direction!=Vector3.zero)
             transform.forward = direction;
         lastPosition = transform.position;
-        Debug.Log(Time.frameCount);
     }
 }

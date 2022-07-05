@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15d6b36e3e353cf4d934fd4ef5071bce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 4
   delay: 100
   rigid: {fileID: 7031247295875310001}
   zeroVelocity: 1

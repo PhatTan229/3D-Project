@@ -34,6 +34,7 @@ public class Health : MonoBehaviour
 
     public virtual void TakeDamage(int damage)
     {
+        Debug.Log($"take damage {damage}");
         HealthPoint -= damage;
         if (HealthPoint <= 0)
         {

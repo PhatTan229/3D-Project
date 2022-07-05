@@ -14,6 +14,7 @@ public class AttackingMeleeAttacker : StateMachineBehaviour
         if (!agent) agent = animator.GetComponent<NavMeshAgent>();
         if (!attacker) attacker = animator.GetComponent<MeleeAttacker>();
         target = attacker.target;
+        attacker.StartAttack();
         agent.isStopped = true;
     }
 
@@ -26,10 +27,10 @@ public class AttackingMeleeAttacker : StateMachineBehaviour
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        attacker.StopAttack();
+    }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
