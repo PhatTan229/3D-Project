@@ -1,29 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class StartingVillager : StateMachineBehaviour
+public class RunningVillager : StateMachineBehaviour
 {
-    private Villager villager;
+    public int runningDistance;
+    public int stoppingDistance;
+    private NavMeshAgent agent;
+    private Vector3 destination;
+    
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        villager = animator.GetComponent<Villager>();
-        string job = $"{villager.job}";
-        if (job != "None") animator.SetBool(job, true);
+        if (!agent) agent = animator.GetComponent<NavMeshAgent>();
+        Vector2 unitCircle = Random.insideUnitCircle * runningDistance;
+        Vector3 direction = new Vector3(unitCircle.x, 0, unitCircle.y);
+        destination = animator.transform.position + direction;
+        agent.SetDestination(destination);
+        agent.isStopped = false;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        float distance = Vector3.Distance(animator.transform.position, destination);
+        if (distance <= stoppingDistance)
+        {
+            animator.SetTrigger("Stop");
+        }
+    }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        agent.isStopped = true;
+    }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

@@ -2535,7 +2535,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 1.5
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -2603,6 +2603,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 1.5
   oppositeSide: 0
+  weaponCollider: {fileID: 0}
+  weaponTrail: {fileID: 0}
   target: {fileID: 0}
 --- !u!114 &2900482345750221636
 MonoBehaviour:
