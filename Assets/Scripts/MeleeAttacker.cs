@@ -13,7 +13,7 @@ public class MeleeAttacker : MonoBehaviour
     public void StopAttack() => SetAttack(false);
     private void SetAttack(bool isAttacking)
     {
-        weaponCollider.enabled = isAttacking;
-        weaponTrail.enabled = isAttacking;
+        if (weaponCollider) weaponCollider.enabled = isAttacking;
+        if (weaponTrail) weaponTrail.enabled = isAttacking;
     }
 }

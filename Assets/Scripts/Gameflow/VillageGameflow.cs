@@ -16,6 +16,8 @@ public class VillageGameflow : MonoBehaviour
     public SpeakingBehaviour packageSender;
     public SpeakingBehaviour packageReceiver;
     public SpeakingBehaviour storyTeller;
+
+    public Animator[] villagerAnim;
     private void Start()
     {
         //Default
@@ -34,9 +36,8 @@ public class VillageGameflow : MonoBehaviour
         newHealth.onHealthChanged.AddListener(statPanel.healthBar.UpdateHealth);
         newHealth.onArmorChanged.AddListener(statPanel.armorBar.UpdateArmor);
         //Indivial
-
     }
-    //public GameObject[] enemies;
+    public GameObject[] enemies;
     //private void Update()
     //{
     //    if (Input.GetKeyDown(KeyCode.Space))
@@ -47,7 +48,26 @@ public class VillageGameflow : MonoBehaviour
     //        }
     //    }
     //}
-
-
-
+    public void StartShippingTask()
+    {
+        packageSender.enabled = false;
+        packageReceiver.enabled = true;
+    }
+    public void FinishShippingTask()
+    {
+        packageReceiver.enabled = false;
+        storyTeller.enabled = true;
+    }
+    public void OnEnemyAttack()
+    {
+        storyTeller.enabled = false;
+        foreach (Animator anim in villagerAnim)
+        {
+            anim.SetTrigger("Run");
+        }
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            enemies[i].SetActive(true);
+        }
+    }
 }
