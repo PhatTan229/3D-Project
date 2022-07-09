@@ -13,5 +13,6 @@ public class PlayerData
 {
     public string name;
     public int level;
+    public int coin;
     public Gender gender;
 }

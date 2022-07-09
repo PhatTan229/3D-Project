@@ -8,7 +8,11 @@ public class DatabaseController : MonoBehaviour
     public PlayerData data;
     private void Awake()
     {
-        if (Instance != null) Destroy(Instance.gameObject);
+        if (Instance != null)
+        {
+            Destroy(this);
+            return;
+        }
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
