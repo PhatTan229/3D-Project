@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 6150072638017115550}
   - component: {fileID: 5799394408545290543}
   - component: {fileID: 8029636389440943958}
+  - component: {fileID: 871439004}
   m_Layer: 0
   m_Name: MainPriest
   m_TagString: Untagged
@@ -258,7 +259,7 @@ Animator:
   m_GameObject: {fileID: 5971493892210892295}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: cb65eb249b552d742b211f18f4f01f7e, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b242529ab92805e4088eb74f6722787c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -380,6 +381,20 @@ MonoBehaviour:
       m_Calls: []
   anim: {fileID: 0}
   behaviour: {fileID: 0}
+--- !u!114 &871439004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5971493892210892295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19541597618546e4787c1454b90019da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visonRange: 10
+  tree: {fileID: 0}
 --- !u!1 &5971493892210892297
 GameObject:
   m_ObjectHideFlags: 0
