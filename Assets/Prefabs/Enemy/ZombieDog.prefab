@@ -31,7 +31,7 @@ Transform:
   - {fileID: 7276538850910916869}
   m_Father: {fileID: 3275307816147134839}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.00000086181456, y: 0.0000014831876, z: 52.566174}
 --- !u!1 &683238666879744495
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,7 +63,7 @@ Transform:
   - {fileID: 7333018466485856812}
   m_Father: {fileID: 6535355991585541602}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.00018959599, y: 0.00015051545, z: -95.94379}
 --- !u!1 &1010620945014857293
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +95,7 @@ Transform:
   - {fileID: 7997704809543703417}
   m_Father: {fileID: 2206921994481974628}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.00003394684, y: 0.000069015885, z: -5.6817093}
 --- !u!1 &1026932387797054951
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +130,7 @@ Transform:
   - {fileID: 6657305623085823017}
   m_Father: {fileID: 5234722040734700367}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.00024017128, y: 0.00007820911, z: -0.031337738}
 --- !u!1 &1390199082719309958
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +161,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1998091214824799659}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.81400067, y: 5.696802, z: 72.05572}
 --- !u!1 &1537637612058091406
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +193,7 @@ Transform:
   - {fileID: 6521723559007047339}
   m_Father: {fileID: 683303078297076427}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.00000047219095, y: 0.0000057971583, z: 95.049355}
 --- !u!1 &1937834191452094384
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,6 +203,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7333018466485856812}
+  - component: {fileID: 8629395654531298968}
+  - component: {fileID: 913099562047351801}
   m_Layer: 0
   m_Name: Bip01 Ponytail1Nub
   m_TagString: Untagged
@@ -224,7 +226,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2832729935328122931}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.0001574116, y: -180, z: -90.045616}
+--- !u!135 &8629395654531298968
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937834191452094384}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.31
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &913099562047351801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937834191452094384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea6a0fd554f70d41a16a061b6fdd610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultDamage: 3
+  onCountered:
+    m_PersistentCalls:
+      m_Calls: []
+  _collider: {fileID: 8629395654531298968}
 --- !u!1 &2033063763471453487
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +288,7 @@ Transform:
   - {fileID: 7449950822143752107}
   m_Father: {fileID: 8550476495025394233}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -3.750066, y: 177.95921, z: -73.78993}
 --- !u!1 &2557000141084484550
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +319,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 118882635434651860}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.00015741176, y: -180, z: -90.045616}
 --- !u!1 &2619079366205263769
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +351,7 @@ Transform:
   - {fileID: 3323386018656803486}
   m_Father: {fileID: 7449950822143752107}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.0103445, y: 4.732396, z: 13.748199}
 --- !u!1 &3378509678503565697
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,7 +383,7 @@ Transform:
   - {fileID: 4840686745472944366}
   m_Father: {fileID: 8254372483762743464}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -1.346415, y: -4.958126, z: 1.3911204}
 --- !u!1 &3738702806514251583
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +415,7 @@ Transform:
   - {fileID: 6023012486858825019}
   m_Father: {fileID: 7115889411816573029}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -73.420105, y: -125.27302, z: 94.27994}
 --- !u!1 &4121095277769156317
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,7 +447,7 @@ Transform:
   - {fileID: 2206921994481974628}
   m_Father: {fileID: 8550476495025394233}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.00031616978, y: -0.0000006254704, z: 167.21606}
 --- !u!1 &4685231869071969235
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,7 +479,7 @@ Transform:
   - {fileID: 8254372483762743464}
   m_Father: {fileID: 8550476495025394233}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 4.4566107, y: -177.5462, z: -107.8451}
 --- !u!1 &4782042625975162166
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,7 +511,7 @@ Transform:
   - {fileID: 118882635434651860}
   m_Father: {fileID: 6657305623085823017}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.00004290824, y: 0.000037398564, z: 1.9302936}
 --- !u!1 &5029881496282743142
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,7 +543,7 @@ Transform:
   - {fileID: 8550476495025394233}
   m_Father: {fileID: 3679750039186598995}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 90, z: 0}
 --- !u!1 &5209629897797688340
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,7 +685,7 @@ Transform:
   - {fileID: 5257617319446331434}
   m_Father: {fileID: 326438213066447722}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.00000064894573, y: -0.00000036782018, z: 58.781784}
 --- !u!1 &5755211296752567386
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,7 +716,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6535355991585541602}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 9.094666e-10, y: 3.8483553e-11, z: 1.2368454e-17}
 --- !u!1 &5789265025243993887
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,7 +748,7 @@ Transform:
   - {fileID: 5048726734815573097}
   m_Father: {fileID: 8550476495025394233}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.0000027216843, y: -0.000026547215, z: 5.6605415}
 --- !u!1 &5864230050226509129
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,7 +780,7 @@ Transform:
   - {fileID: 3275307816147134839}
   m_Father: {fileID: 5048726734815573097}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 42.470066, y: 87.14724, z: -108.469795}
 --- !u!1 &6364252169562532087
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,7 +811,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4840686745472944366}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.00000016271565, y: -0.00000008135721, z: -4.0127433e-12}
 --- !u!1 &6517623968041617438
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,7 +842,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6023012486858825019}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 3.039477, y: -4.420368, z: 53.256096}
 --- !u!1 &6888802698125141452
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,7 +873,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3679750039186598995}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.000026115966, y: 90.39335, z: -89.981415}
 --- !u!1 &7166232971425933185
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,7 +904,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3323386018656803486}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -1.0031861e-12, y: -0.000000020341965, z: 180}
 --- !u!1 &7512229201730538077
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,7 +937,7 @@ Transform:
   - {fileID: 2832729935328122931}
   m_Father: {fileID: 5048726734815573097}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.00015748484, y: -0.000044681135, z: 45.678413}
 --- !u!1 &7664456812859099023
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,7 +969,7 @@ Transform:
   - {fileID: 8202013967371131714}
   m_Father: {fileID: 5257617319446331434}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 3.6801412, y: 5.0012555, z: -169.45776}
 --- !u!1 &7737880178491483368
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,6 +980,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6717436459572500219}
   - component: {fileID: 2948116343952010080}
+  - component: {fileID: 8239569418670990919}
+  - component: {fileID: 34187868103937726}
+  - component: {fileID: 7043477774238878617}
+  - component: {fileID: 7682544819195095806}
   m_Layer: 0
   m_Name: ZombieDog
   m_TagString: Untagged
@@ -997,6 +1033,560 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!114 &8239569418670990919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737880178491483368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fsm:
+    dataVersion: 2
+    usedInTemplate: {fileID: 0}
+    name: FSM
+    startState: Init
+    states:
+    - name: Init
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 54
+        y: 103
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: CHASE
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Chasing
+        linkStyle: 0
+        linkConstraint: 0
+        linkTarget: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.PlayAnimation
+        - HutongGames.PlayMaker.Actions.CallMethod
+        - HutongGames.PlayMaker.Actions.CallMethod
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 000000
+        actionStartIndex: 00000000070000000d000000
+        actionHashCodes: 4f383600ca51e900ca51e900
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: stand
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Action1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Action2
+        fsmObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: ZombieDog
+          value: {fileID: 7043477774238878617}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: ZombieDog
+          value: {fileID: 7043477774238878617}
+        fsmVarParams:
+        - variableName: 
+          objectType: 
+          useVariable: 0
+          type: -1
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: 
+          objectType: 
+          useVariable: 0
+          type: -1
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.3
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - 
+        - 
+        byteData: 040000000001000100
+        arrayParamSizes: 0000000000000000
+        arrayParamTypes:
+        - HutongGames.PlayMaker.FsmVar
+        - HutongGames.PlayMaker.FsmVar
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 1400000012000000070000000f00000017000000170000000100000018000000120000000c00000027000000010000000100000018000000120000000c000000270000000100000001000000
+        paramName:
+        - gameObject
+        - animName
+        - playMode
+        - blendTime
+        - finishEvent
+        - loopEvent
+        - stopOnExit
+        - behaviour
+        - methodName
+        - parameters
+        - storeResult
+        - everyFrame
+        - manualUI
+        - behaviour
+        - methodName
+        - parameters
+        - storeResult
+        - everyFrame
+        - manualUI
+        paramDataPos: 00000000000000000000000000000000000000000100000004000000000000000100000000000000000000000500000006000000010000000200000001000000010000000700000008000000
+        paramByteDataSize: 00000000000000000400000000000000000000000000000001000000000000000000000000000000000000000100000001000000000000000000000000000000000000000100000001000000
+    - name: Chasing
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 275
+        y: 53.203125
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.BlendAnimation
+        - HutongGames.PlayMaker.Actions.CallMethod
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0001
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 2c108304ca51e900
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: run
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: GetDistance
+        fsmObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: ZombieDog
+          value: {fileID: 7043477774238878617}
+        fsmVarParams:
+        - variableName: Target
+          objectType: CharacterManagement
+          useVariable: 1
+          type: 12
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        - variableName: 
+          objectType: UnityEngine.Object
+          useVariable: 1
+          type: 0
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.3
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - 
+        byteData: 0000
+        arrayParamSizes: 01000000
+        arrayParamTypes:
+        - HutongGames.PlayMaker.FsmVar
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 14000000120000000f0000000f0000001700000018000000120000000c00000027000000270000000100000001000000
+        paramName:
+        - gameObject
+        - animName
+        - targetWeight
+        - time
+        - finishEvent
+        - behaviour
+        - methodName
+        - parameters
+        - 
+        - storeResult
+        - everyFrame
+        - manualUI
+        paramDataPos: 000000000000000000000000010000000000000000000000010000000000000000000000010000000000000001000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000
+    - name: Attack
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 266
+        y: 175.20312
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    events:
+    - name: FINISHED
+      isSystemEvent: 1
+      isGlobal: 0
+    - name: CHASE
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: ATTACK
+      isSystemEvent: 0
+      isGlobal: 0
+    globalTransitions: []
+    variables:
+      floatVariables: []
+      intVariables: []
+      boolVariables: []
+      stringVariables: []
+      vector2Variables: []
+      vector3Variables: []
+      colorVariables: []
+      rectVariables: []
+      quaternionVariables: []
+      gameObjectVariables: []
+      objectVariables:
+      - useVariable: 1
+        name: Target
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        typeName: CharacterManagement
+        value: {fileID: 0}
+      materialVariables: []
+      textureVariables: []
+      arrayVariables: []
+      enumVariables: []
+      categories:
+      - 
+      variableCategoryIDs: 00000000
+    description: 
+    docUrl: 
+    showStateLabel: 0
+    maxLoopCount: 0
+    watermark: 
+    password: 
+    locked: 0
+    manualUpdate: 0
+    outVariableIndices: 
+    keepDelayedEventsOnStateExit: 0
+    preprocessed: 0
+    ExposedEvents: []
+    OutputEvents: []
+    RestartOnEnable: 1
+    ResetVariablesOnEnable: 0
+    EnableDebugFlow: 0
+    EnableBreakpoints: 1
+    editorFlags: 225
+    activeStateName: 
+    mouseEvents: 0
+    handleLevelLoaded: 0
+    handleTriggerEnter2D: 0
+    handleTriggerExit2D: 0
+    handleTriggerStay2D: 0
+    handleCollisionEnter2D: 0
+    handleCollisionExit2D: 0
+    handleCollisionStay2D: 0
+    handleTriggerEnter: 0
+    handleTriggerExit: 0
+    handleTriggerStay: 0
+    handleCollisionEnter: 0
+    handleCollisionExit: 0
+    handleCollisionStay: 0
+    handleParticleCollision: 0
+    handleControllerColliderHit: 0
+    handleJointBreak: 0
+    handleJointBreak2D: 0
+    handleOnGUI: 0
+    handleFixedUpdate: 0
+    handleLateUpdate: 0
+    handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
+    handleAnimatorMove: 0
+    handleAnimatorIK: 0
+  fsmTemplate: {fileID: 0}
+  eventHandlerComponentsAdded: 0
+--- !u!114 &34187868103937726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737880178491483368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b376dec2930dc4495825f4baa271f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 1.5
+  oppositeSide: 0
+  weaponCollider: {fileID: 8629395654531298968}
+  weaponTrail: {fileID: 0}
+  target: {fileID: 0}
+--- !u!114 &7043477774238878617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737880178491483368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c8e0e1dc483a1b4eb754537c693a47c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  side: 0
+  health: {fileID: 7682544819195095806}
+  animator: {fileID: 0}
+  others: []
+  fsm: {fileID: 8239569418670990919}
+--- !u!114 &7682544819195095806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737880178491483368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754cc52d681287746ab37d44822010fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoint: 5
+  healthPoint: 0
+  isAlive: 1
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDead:
+    m_PersistentCalls:
+      m_Calls: []
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
+  delay: 0
 --- !u!1 &7896807994724415975
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,7 +1618,7 @@ Transform:
   - {fileID: 4123800980003985051}
   m_Father: {fileID: 5461914644587307197}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.00000015673137, y: 0.00000012150088, z: 49.954464}
 --- !u!1 &7918398868019056569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,7 +1650,7 @@ Transform:
   - {fileID: 5461914644587307197}
   m_Father: {fileID: 5048726734815573097}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -28.52093, y: -92.35067, z: -105.42509}
 --- !u!1 &8147533202214655885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,7 +1682,7 @@ Transform:
   - {fileID: 1998091214824799659}
   m_Father: {fileID: 2305631274827639872}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 77.48076, y: 103.92456, z: 65.88473}
 --- !u!1 &8198327247284938575
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,7 +1716,7 @@ Transform:
   - {fileID: 2305631274827639872}
   m_Father: {fileID: 8434512992881881516}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.000015190835, y: -0.00022674444, z: 35.503635}
 --- !u!1 &8388853051256314775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,7 +1748,7 @@ Transform:
   - {fileID: 2692975203211040464}
   m_Father: {fileID: 6521723559007047339}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -2.9024975, y: -5.7541604, z: -158.27194}
 --- !u!1 &9061238980188218882
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,4 +1781,4 @@ Transform:
   - {fileID: 5234722040734700367}
   m_Father: {fileID: 6717436459572500219}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.39333558, y: -0.019067077, z: 90.00004}
