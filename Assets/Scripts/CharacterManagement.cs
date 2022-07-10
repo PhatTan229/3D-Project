@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
 public class CharacterManagement : MonoBehaviour
 {
     public Side side;
@@ -31,3 +30,5 @@ public class CharacterManagement : MonoBehaviour
         });
     }
 }
+
+

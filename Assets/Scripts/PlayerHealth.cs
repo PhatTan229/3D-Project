@@ -27,10 +27,8 @@ public class PlayerHealth : Health
     public override void TakeDamage(int damage)
     {
         float damageOnArmor = Random.Range((float)(damage / 2), damage);
-        Debug.Log($"damage on armor {damageOnArmor}");
         float damageOnHealth = damage - damageOnArmor;
         float redundantDamage = damageOnArmor - Armor;
-        Debug.Log($"redundant {redundantDamage}");
         if (redundantDamage <= 0)
         {
             Armor -= damageOnArmor;

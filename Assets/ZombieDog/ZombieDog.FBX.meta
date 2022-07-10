@@ -129,7 +129,7 @@ ModelImporter:
       internalID: 0
       firstFrame: 152
       lastFrame: 192
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
@@ -158,7 +158,7 @@ ModelImporter:
       internalID: 0
       firstFrame: 196
       lastFrame: 284
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
@@ -187,7 +187,7 @@ ModelImporter:
       internalID: 0
       firstFrame: 288
       lastFrame: 326
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0

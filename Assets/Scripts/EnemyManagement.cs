@@ -5,5 +5,5 @@ using UnityEngine.AI;
 
 public class EnemyManagement : CharacterManagement
 {
-
+    public NavMeshAgent agent;
 }
