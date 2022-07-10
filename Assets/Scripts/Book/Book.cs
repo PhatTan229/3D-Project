@@ -25,11 +25,11 @@ public class Book : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKey(KeyCode.R))
         {
 			pages[1].anim.Play("RL");
         }
-		if (Input.GetKeyDown(KeyCode.L))
+		if (Input.GetKey(KeyCode.L))
 		{
 			pages[1].anim.Play("LR");
 		}
