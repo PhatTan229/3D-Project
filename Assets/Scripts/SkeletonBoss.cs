@@ -2,18 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZombieDog : EnemyManagement
+public class SkeletonBoss : EnemyManagement
 {
-    public float runningAnimationSpeed;
     public float stoppingDistance;
     public Animation anima;
     public PlayMakerFSM fsm;
     public CharacterManagement target;
-    public Collider jaw;
+    public Collider swordCollider;
+    public TrailRenderer swordTrail;
     protected override void RegisterEvent()
     {
-        anima["run"].speed = runningAnimationSpeed;
-        health.onHit.AddListener(() => 
+        health.onHit.AddListener(() =>
         {
             fsm.SendEvent("HIT");
         });
@@ -35,8 +34,8 @@ public class ZombieDog : EnemyManagement
     {
         if (!target || !target.health.isAlive)
         {
-            agent.isStopped = true;
             fsm.SendEvent("FIND");
+            agent.isStopped = true;
             return;
         }
         agent.SetDestination(target.transform.position);
@@ -44,7 +43,7 @@ public class ZombieDog : EnemyManagement
         if (distance <= stoppingDistance)
         {
             agent.isStopped = true;
-            jaw.enabled = true;
+            ActiveWeapon();
             fsm.SendEvent("ATTACK");
         }
     }
@@ -52,7 +51,7 @@ public class ZombieDog : EnemyManagement
     {
         if (!target || !target.health.isAlive)
         {
-            jaw.enabled = false;
+            DisableWeapon();
             fsm.SendEvent("FIND");
             return;
         }
@@ -60,12 +59,17 @@ public class ZombieDog : EnemyManagement
         if (distance > stoppingDistance)
         {
             agent.isStopped = false;
-            jaw.enabled = false;
+            DisableWeapon();
             fsm.SendEvent("CHASE");
         }
     }
-    //public void CheckTarget()
-    //{
-    //    if (!target || !target.health.isAlive) fsm.SendEvent("FIND");
-    //}
+
+    private void ActiveWeapon() => SetWeapon(true);
+    private void DisableWeapon() => SetWeapon(false);
+
+    private void SetWeapon(bool isActive)
+    {
+        swordCollider.enabled = isActive;
+        if (swordTrail) swordTrail.enabled = isActive;
+    }
 }
