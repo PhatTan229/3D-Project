@@ -5,11 +5,14 @@ using UnityEngine;
 public class ZombieDog : EnemyManagement
 {
     public float runningAnimationSpeed;
+    public float walkingSpeed;
     public float stoppingDistance;
+    public bool isCasting;
     public Animation anima;
     public PlayMakerFSM fsm;
     public CharacterManagement target;
     public Collider jaw;
+    public Rigidbody rigid;
     protected override void RegisterEvent()
     {
         anima["run"].speed = runningAnimationSpeed;
@@ -29,6 +32,18 @@ public class ZombieDog : EnemyManagement
         {
             agent.isStopped = false;
             fsm.SendEvent("CHASE");
+        }
+    }
+    public void InitData()
+    {
+        if (isCasting)
+        {
+            rigid.isKinematic = false;
+            fsm.SendEvent("WALK");
+        }
+        else
+        {
+            fsm.SendEvent("START");
         }
     }
     public void UpdateChasing()
@@ -62,6 +77,28 @@ public class ZombieDog : EnemyManagement
             agent.isStopped = false;
             jaw.enabled = false;
             fsm.SendEvent("CHASE");
+        }
+    }
+    
+    public void UpdateWalking()
+    {
+        rigid.velocity = walkingSpeed * transform.forward;
+    }
+    public void StopWalking()
+    {
+        rigid.isKinematic = true;
+        fsm.SendEvent("WAIT");
+    }
+    public void StartAttack() => fsm.SendEvent("START");
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            StopWalking();
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            StartAttack();
         }
     }
     //public void CheckTarget()

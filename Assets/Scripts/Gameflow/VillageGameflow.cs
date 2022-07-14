@@ -50,11 +50,14 @@ public class VillageGameflow : MonoBehaviour
     //}
     public void StartShippingTask()
     {
+        Debug.Log("StartShippingTask");
         packageSender.enabled = false;
+        Debug.Log(packageSender.enabled);
         packageReceiver.enabled = true;
     }
     public void FinishShippingTask()
     {
+        Debug.Log("FinishShippingTask");
         packageReceiver.enabled = false;
         storyTeller.enabled = true;
     }
