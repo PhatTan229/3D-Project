@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1149958754269279345}
   - component: {fileID: 1149958754270606417}
   - component: {fileID: 1149958754271704721}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: PT_Medieval_Shield_19_a_handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1149958754269279349}
   - component: {fileID: 3342397879055498267}
   - component: {fileID: 7962236216744587890}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 1149958754269279351}
   - component: {fileID: 1149958754270606423}
   - component: {fileID: 1149958754271704727}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: PT_Medieval_Shield_19_a_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

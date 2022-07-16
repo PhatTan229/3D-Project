@@ -14,8 +14,8 @@ TagManager:
   - Ally
   - Enemy
   - Ground
-  - 
-  - 
+  - AllyWeapon
+  - EnemyWeapon
   - 
   - 
   - 

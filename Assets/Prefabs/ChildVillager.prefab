@@ -2444,8 +2444,8 @@ GameObject:
   - component: {fileID: 5367443646770010840}
   - component: {fileID: 6926012740004919680}
   - component: {fileID: 1249134150387776087}
-  - component: {fileID: 2900482345750221636}
   - component: {fileID: 4592873652927308609}
+  - component: {fileID: 2451752717094642545}
   m_Layer: 6
   m_Name: ChildVillager
   m_TagString: Untagged
@@ -2563,7 +2563,7 @@ MonoBehaviour:
   health: {fileID: 6926012740004919680}
   animator: {fileID: 2814724347504907220}
   others: []
-  zombieTransform: {fileID: 2900482345750221636}
+  zombieTransform: {fileID: 2451752717094642545}
   job: 0
 --- !u!114 &6926012740004919680
 MonoBehaviour:
@@ -2606,28 +2606,6 @@ MonoBehaviour:
   weaponCollider: {fileID: 0}
   weaponTrail: {fileID: 0}
   target: {fileID: 0}
---- !u!114 &2900482345750221636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8837211018693301012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be006200400e92f4984c31924436c101, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 10
-  canTransform: 0
-  onFinish:
-    m_PersistentCalls:
-      m_Calls: []
-  anim: {fileID: 2814724347504907220}
-  behaviour: {fileID: 9100000, guid: 809d8dc6719df31468f478841fca1d02, type: 2}
-  headRender: {fileID: 6631349266741479267}
-  upperRender: {fileID: 103067974492570494}
-  color: {r: 0.1309793, g: 1, b: 0, a: 0}
 --- !u!114 &4592873652927308609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2660,6 +2638,27 @@ MonoBehaviour:
         m_Calls: []
   signalPrefab: {fileID: 5830859735662686686, guid: e9e095e111226404fb0aff93d7df7d7b, type: 3}
   signalOffset: 2
+--- !u!114 &2451752717094642545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837211018693301012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1e48d30c7b0a1c4e95f0d129808b4eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  canTransform: 0
+  zombieSpeed: 1.5
+  onFinish:
+    m_PersistentCalls:
+      m_Calls: []
+  anim: {fileID: 2814724347504907220}
+  agent: {fileID: 636460188420367806}
+  behaviour: {fileID: 9100000, guid: 809d8dc6719df31468f478841fca1d02, type: 2}
 --- !u!1 &9000569955256823385
 GameObject:
   m_ObjectHideFlags: 0

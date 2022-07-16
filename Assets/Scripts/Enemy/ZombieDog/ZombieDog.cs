@@ -18,11 +18,17 @@ public class ZombieDog : EnemyManagement
         anima["run"].speed = runningAnimationSpeed;
         health.onHit.AddListener(() => 
         {
+            Debug.Log("Dog hit");
             fsm.SendEvent("HIT");
         });
         health.onDead.AddListener(() =>
         {
-            fsm.SendEvent("DEAD");
+            Debug.Log($"Dog dead 1 isAlive {health.isAlive}");
+            if (health.isAlive)
+            {
+                Debug.Log("Dog dead 2");
+                fsm.SendEvent("DEAD");
+            }
         });
     }
     public void FindTarget()

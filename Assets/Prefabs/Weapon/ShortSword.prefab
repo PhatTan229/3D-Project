@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3590661371813065587}
   - component: {fileID: 2868688588770720118}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 9019988851268980834}
   - component: {fileID: 3127970711202167316}
   - component: {fileID: 1282766141059040801}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: ShortSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
