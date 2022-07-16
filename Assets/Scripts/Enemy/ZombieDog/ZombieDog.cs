@@ -12,7 +12,7 @@ public class ZombieDog : EnemyManagement
     public PlayMakerFSM fsm;
     public CharacterManagement target;
     public Collider jaw;
-    public Rigidbody rigid;
+    //public Rigidbody rigid;
     protected override void RegisterEvent()
     {
         anima["run"].speed = runningAnimationSpeed;
@@ -38,7 +38,7 @@ public class ZombieDog : EnemyManagement
     {
         if (isCasting)
         {
-            rigid.isKinematic = false;
+            //rigid.isKinematic = false;
             fsm.SendEvent("WALK");
         }
         else
@@ -80,27 +80,16 @@ public class ZombieDog : EnemyManagement
         }
     }
     
-    public void UpdateWalking()
-    {
-        rigid.velocity = walkingSpeed * transform.forward;
-    }
+    //public void UpdateWalking()
+    //{
+    //    rigid.velocity = walkingSpeed * transform.forward;
+    //}
     public void StopWalking()
     {
-        rigid.isKinematic = true;
+        //rigid.isKinematic = true;
         fsm.SendEvent("WAIT");
     }
-    public void StartAttack() => fsm.SendEvent("START");
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            StopWalking();
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            StartAttack();
-        }
-    }
+    public void StartAttack() => fsm.SendEvent("START");    
     //public void CheckTarget()
     //{
     //    if (!target || !target.health.isAlive) fsm.SendEvent("FIND");

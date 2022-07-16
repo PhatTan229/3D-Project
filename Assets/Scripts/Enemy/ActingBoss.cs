@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class ActingBoss : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Animation anim;
+    public void LookAround() => anim.Play("idle break01");
+    public void Scream() => anim.Play("idle break02");
+    public void GiveOrder() => anim.Play("casting");
+    public void Walk()
     {
-        
+        Debug.Log("Boss walk");
+        anim.Play("walk");
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public void Stop() => anim.Stop();
 }
