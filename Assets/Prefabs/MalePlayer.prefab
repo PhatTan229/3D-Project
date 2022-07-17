@@ -5827,7 +5827,7 @@ MonoBehaviour:
   rotatingSpeed: 1000
   groundLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 449
   direction: {x: 0, y: 0, z: 0}
   thirdPersonCamera: {fileID: 0}
   controller: {fileID: 8339157311754780458}

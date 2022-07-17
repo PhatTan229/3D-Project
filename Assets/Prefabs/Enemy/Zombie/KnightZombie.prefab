@@ -1061,6 +1061,7 @@ MonoBehaviour:
   health: {fileID: 4647944288587491576}
   animator: {fileID: 2332456876055554763}
   others: []
+  agent: {fileID: 0}
 --- !u!114 &4647944288587491576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1098,7 +1099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23b376dec2930dc4495825f4baa271f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 1.5
+  distance: 1.1
   oppositeSide: 0
   weaponCollider: {fileID: 5404933211642559164}
   weaponTrail: {fileID: 7336483813235898114}
@@ -2581,7 +2582,7 @@ GameObject:
   - component: {fileID: 2332456876062770457}
   - component: {fileID: 5404933211642559164}
   - component: {fileID: 3051488343071843752}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Hand_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2618,7 +2619,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 11
+  m_Radius: 16.19
   m_Center: {x: 12.16, y: 0, z: 0}
 --- !u!114 &3051488343071843752
 MonoBehaviour:

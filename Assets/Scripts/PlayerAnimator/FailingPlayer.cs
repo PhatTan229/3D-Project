@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FailingPlayer : StateMachineBehaviour
 {
-    //public float speed;
+    public float speed;
     private PlayerMovement movement;
     private Rigidbody rigid;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -18,7 +18,7 @@ public class FailingPlayer : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        movement.Move(0);
+        movement.Move(speed);
 
     }
 

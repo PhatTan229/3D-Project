@@ -47,6 +47,7 @@ public class SpeakingBehaviour : MonoBehaviour
     //public Dialogue CurrentSpeech() => conversation[currentSpeech];
     private void StartConversation()
     {
+        currentSignal.SetActive(false);
         enabled = false;
         MonoUtility.Instance.conversation.StartConversation(this);
 

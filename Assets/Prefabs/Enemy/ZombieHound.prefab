@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 7333018466485856812}
   - component: {fileID: 8629395654531298968}
   - component: {fileID: 913099562047351801}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Bip01 Ponytail1Nub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2150,7 +2150,7 @@ MonoBehaviour:
   others: []
   agent: {fileID: 5775533004590997664}
   runningAnimationSpeed: 1.5
-  walkingSpeed: 1
+  runningSpeed: 3.5
   stoppingDistance: 1.75
   isCasting: 0
   anima: {fileID: 2948116343952010080}

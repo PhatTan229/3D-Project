@@ -16,6 +16,7 @@ public enum VillagerWork
 public class Villager : AllyManagement
 {
     public VillagerWork job;
+    public GameObject tool;
     protected override void RegisterEvent()
     {
         base.RegisterEvent();
@@ -27,6 +28,11 @@ public class Villager : AllyManagement
     }
     private void OnVillagerHit()
     {
+        animator.SetTrigger("Run");
+    }
+    public void OnInvasionStart()
+    {
+        if (tool) tool.SetActive(false);
         animator.SetTrigger("Run");
     }
 

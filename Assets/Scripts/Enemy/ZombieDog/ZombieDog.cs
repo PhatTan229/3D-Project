@@ -5,7 +5,7 @@ using UnityEngine;
 public class ZombieDog : EnemyManagement
 {
     public float runningAnimationSpeed;
-    public float walkingSpeed;
+    public float runningSpeed;
     public float stoppingDistance;
     public bool isCasting;
     public Animation anima;
@@ -18,15 +18,12 @@ public class ZombieDog : EnemyManagement
         anima["run"].speed = runningAnimationSpeed;
         health.onHit.AddListener(() => 
         {
-            Debug.Log("Dog hit");
             fsm.SendEvent("HIT");
         });
         health.onDead.AddListener(() =>
         {
-            Debug.Log($"Dog dead 1 isAlive {health.isAlive}");
             if (health.isAlive)
             {
-                Debug.Log("Dog dead 2");
                 fsm.SendEvent("DEAD");
             }
         });
@@ -36,7 +33,8 @@ public class ZombieDog : EnemyManagement
         target = PopulationManager.Instance.GetRandomTarget(transform.position, Side.Ally);
         if (target != null)
         {
-            agent.isStopped = false;
+            //agent.isStopped = false;
+            agent.speed = runningSpeed;
             fsm.SendEvent("CHASE");
         }
     }
@@ -56,7 +54,8 @@ public class ZombieDog : EnemyManagement
     {
         if (!target || !target.health.isAlive)
         {
-            agent.isStopped = true;
+            //agent.isStopped = true;
+            agent.speed = 0;
             fsm.SendEvent("FIND");
             return;
         }
@@ -64,7 +63,8 @@ public class ZombieDog : EnemyManagement
         float distance = Vector3.Distance(transform.position, target.transform.position);
         if (distance <= stoppingDistance)
         {
-            agent.isStopped = true;
+            //agent.isStopped = true;
+            agent.speed = 0;
             jaw.enabled = true;
             fsm.SendEvent("ATTACK");
         }
@@ -80,7 +80,8 @@ public class ZombieDog : EnemyManagement
         float distance = Vector3.Distance(transform.position, target.transform.position);
         if (distance > stoppingDistance)
         {
-            agent.isStopped = false;
+            //agent.isStopped = false;
+            agent.speed = runningSpeed;
             jaw.enabled = false;
             fsm.SendEvent("CHASE");
         }
