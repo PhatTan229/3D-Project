@@ -13,7 +13,9 @@ public class ZombieTransform : MonoBehaviour
     public Animator anim;
     public NavMeshAgent agent;
     public RuntimeAnimatorController behaviour;
-    
+    public GameObject shadowPrefab;
+    private GameObject shadowFog;
+
     public virtual void StartTransform()
     {
         Invoke(nameof(FinishTransform), delay);
@@ -23,7 +25,13 @@ public class ZombieTransform : MonoBehaviour
     {
         anim.runtimeAnimatorController = behaviour;
         agent.speed = zombieSpeed;
+        CreateMagicEffect();
         onFinish.Invoke();
         Destroy(this);
+    }
+    private void CreateMagicEffect()
+    {
+        shadowFog = Instantiate(shadowPrefab, transform);
+        shadowFog.transform.localPosition = new Vector3(0, 1, 0);
     }
 }

@@ -1205,6 +1205,7 @@ MonoBehaviour:
   anim: {fileID: 2151994228670531058}
   agent: {fileID: 5806178996525592112}
   behaviour: {fileID: 9100000, guid: 809d8dc6719df31468f478841fca1d02, type: 2}
+  shadowPrefab: {fileID: 8346374960626448657, guid: e808a5e77cb56c24db7d5d2f625e4982, type: 3}
 --- !u!1 &4725175564381038729
 GameObject:
   m_ObjectHideFlags: 0

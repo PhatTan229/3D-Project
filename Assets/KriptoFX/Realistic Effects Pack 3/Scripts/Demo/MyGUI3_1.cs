@@ -34,7 +34,7 @@ public class MyGUI3_1 : MonoBehaviour
 
     private float oldLightIntensity;
     private Color oldAmbientColor;
-    private GameObject currentGo;
+    [SerializeField] private GameObject currentGo;
     private bool isDay, isDefaultPlaneTexture;
     private int current;
     private EffectSettings effectSettings;
