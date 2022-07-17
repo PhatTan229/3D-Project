@@ -11,7 +11,7 @@ public class VillageGameflow : MonoBehaviour
     public CinemachineVirtualCamera aimingCamera;
     public ThirdPersonCamera thirdPersonCamera;
     public MinimapCamera minimapCamera;
-    public StatPanel statPanel;
+    public StatusPanel statusPanel;
     public MinimapCompass compass;
 
     public PlayableDirector director;
@@ -19,7 +19,7 @@ public class VillageGameflow : MonoBehaviour
     public SpeakingBehaviour packageReceiver;
     public SpeakingBehaviour storyTeller;
 
-    public Animator[] villagerAnim;
+    public Villager[] villagers;
     private void Start()
     {
         //Default
@@ -33,10 +33,10 @@ public class VillageGameflow : MonoBehaviour
         myPlayer.weapon.thirdPersonCamera = thirdPersonCamera.gameObject;
         myPlayer.weapon.aimingCamera = aimingCamera.gameObject;
         PlayerHealth newHealth = myPlayer.health as PlayerHealth;
-        statPanel.healthBar.health = newHealth;
-        statPanel.armorBar.health = newHealth;
-        newHealth.onHealthChanged.AddListener(statPanel.healthBar.UpdateHealth);
-        newHealth.onArmorChanged.AddListener(statPanel.armorBar.UpdateArmor);
+        statusPanel.healthBar.health = newHealth;
+        statusPanel.armorBar.health = newHealth;
+        newHealth.onHealthChanged.AddListener(statusPanel.healthBar.UpdateHealth);
+        newHealth.onArmorChanged.AddListener(statusPanel.armorBar.UpdateArmor);
         //Indivial
         //StartCoroutine(PlayTimeline());
     }
@@ -66,9 +66,9 @@ public class VillageGameflow : MonoBehaviour
 
     public void OnInvasionStart()
     {
-        foreach (Animator anim in villagerAnim)
+        foreach (Villager villager in villagers)
         {
-            anim.SetTrigger("Run");
+            villager.OnInvasionStart();
         }
     }
 }
