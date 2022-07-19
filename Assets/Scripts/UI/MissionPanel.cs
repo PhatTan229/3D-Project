@@ -7,19 +7,14 @@ using TMPro;
 
 public class MissionPanel : MonoBehaviour
 {
-    public float duration;
+    public float showingDuration;
+    public float fadingDuration;
     public TMP_Text text;
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Show("Fix the bug");
-        }
-    }
-    public void Show(string mission)
+    public IEnumerator Show(string mission)
     {
         text.text = mission;
         text.alpha = 1f;
-        text.DOFade(0, duration);
+        yield return new WaitForSeconds(showingDuration);
+        text.DOFade(0, fadingDuration);
     }
 }

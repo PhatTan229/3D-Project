@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerSpawner : MonoBehaviour
 {
+    public MonoUtility mono;
     public PlayerManagement player;
     public CinemachineVirtualCamera aimingCamera;
     public ThirdPersonCamera thirdPersonCamera;
@@ -20,6 +21,7 @@ public class PlayerSpawner : MonoBehaviour
         myPlayer.movement.thirdPersonCamera = thirdPersonCamera.transform;
         myPlayer.weapon.thirdPersonCamera = thirdPersonCamera.gameObject;
         myPlayer.weapon.aimingCamera = aimingCamera.gameObject;
+        mono.player = myPlayer;
     }
 
 }

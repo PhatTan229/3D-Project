@@ -2151,7 +2151,9 @@ MonoBehaviour:
   agent: {fileID: 5775533004590997664}
   runningAnimationSpeed: 1.5
   runningSpeed: 3.5
-  stoppingDistance: 1.75
+  minStoppingDistance: 1.6
+  maxStoppingDistance: 2
+  stoppingDistance: 2
   isCasting: 0
   anima: {fileID: 2948116343952010080}
   fsm: {fileID: 8239569418670990919}

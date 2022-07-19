@@ -6,6 +6,8 @@ public class ZombieDog : EnemyManagement
 {
     public float runningAnimationSpeed;
     public float runningSpeed;
+    public float minStoppingDistance;
+    public float maxStoppingDistance;
     public float stoppingDistance;
     public bool isCasting;
     public Animation anima;
@@ -35,6 +37,8 @@ public class ZombieDog : EnemyManagement
         {
             //agent.isStopped = false;
             agent.speed = runningSpeed;
+            bool isTargetPlayer = target == MonoUtility.Instance.player;
+            stoppingDistance = isTargetPlayer ? maxStoppingDistance : minStoppingDistance;
             fsm.SendEvent("CHASE");
         }
     }

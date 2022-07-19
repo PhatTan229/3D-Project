@@ -13,6 +13,7 @@ public class VillageGameflow : MonoBehaviour
     public MinimapCamera minimapCamera;
     public StatusPanel statusPanel;
     public MinimapCompass compass;
+    public MissionPanel missionPanel;
 
     public PlayableDirector director;
     public SpeakingBehaviour packageSender;
@@ -37,16 +38,17 @@ public class VillageGameflow : MonoBehaviour
         statusPanel.armorBar.health = newHealth;
         newHealth.onHealthChanged.AddListener(statusPanel.healthBar.UpdateHealth);
         newHealth.onArmorChanged.AddListener(statusPanel.armorBar.UpdateArmor);
+
         //Indivial
-        //StartCoroutine(PlayTimeline());
+        StartCoroutine(missionPanel.Show("Explore the world"));
     }
     //public GameObject[] enemies;
 
     public void StartShippingTask()
     {
         packageSender.enabled = false;
-        Debug.Log(packageSender.enabled);
         packageReceiver.enabled = true;
+        StartCoroutine(missionPanel.Show("Ship the package to the village"));
     }
     public void FinishShippingTask()
     {
@@ -70,5 +72,6 @@ public class VillageGameflow : MonoBehaviour
         {
             villager.OnInvasionStart();
         }
+        StartCoroutine(missionPanel.Show("Find a weapon"));
     }
 }

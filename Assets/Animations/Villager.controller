@@ -1051,6 +1051,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runningDistance: 15
   stoppingDistance: 1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1107 &581648757616184711
 AnimatorStateMachine:
   serializedVersion: 6
