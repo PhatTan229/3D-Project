@@ -16,6 +16,8 @@ public class VillageGameflow : MonoBehaviour
     public MinimapCompass compass;
     public MissionPanel missionPanel;
 
+    public PathRenderer path;
+
     public PlayableDirector director;
     public SpeakingBehaviour packageSender;
     public SpeakingBehaviour packageReceiver;
@@ -30,6 +32,11 @@ public class VillageGameflow : MonoBehaviour
 
     public int targetNumberOfDeadEnemies;
     private int currentNumberOfDeadEnemies;
+
+    public GameObject knifeIcon;
+    public GameObject gate;
+    public Transform boat;
+    public float completingDelay;
 
     private void Start()
     {
@@ -51,6 +58,8 @@ public class VillageGameflow : MonoBehaviour
 
         //Indivial
         StartCoroutine(missionPanel.Show("Explore the world"));
+        path.player = myPlayer.transform;
+        path.target = packageSender.transform;
         
     }
     //public GameObject[] enemies;
@@ -60,11 +69,13 @@ public class VillageGameflow : MonoBehaviour
         packageSender.enabled = false;
         packageReceiver.enabled = true;
         StartCoroutine(missionPanel.Show("Ship the package to the village"));
+        path.target = packageReceiver.transform;
     }
     public void FinishShippingTask()
     {
         packageReceiver.enabled = false;
         storyTeller.enabled = true;
+        path.target = storyTeller.transform;
     }
 
     //private IEnumerator PlayTimeline()
@@ -75,6 +86,7 @@ public class VillageGameflow : MonoBehaviour
     public void OnBossAppear()
     {
         director.Play();
+        path.gameObject.SetActive(false);
     }
 
     public void OnInvasionStart()
@@ -83,9 +95,13 @@ public class VillageGameflow : MonoBehaviour
         {
             villager.OnInvasionStart();
         }
-        StartCoroutine(missionPanel.Show("Find a weapon"));
         currentNumberOfDeadEnemies = 0;
         StartSpawning();
+        StartCoroutine(missionPanel.Show("Find a weapon"));
+        knifeIcon.SetActive(true);
+        path.gameObject.SetActive(true);
+        path.target = knifeIcon.transform;
+        
     }
     public void ActivePlayer() => mono.player.ActivePlayer();
     public void DisablePlayer() => mono.player.DisablePlayer();
@@ -118,15 +134,25 @@ public class VillageGameflow : MonoBehaviour
     {
         mono.player.weapon.SetUp(WeaponType.Dagger);
         StartCoroutine(missionPanel.Show("Keep survive"));
+        path.gameObject.SetActive(false);
     }
 
     private void StartEscapingMission()
     {
         StartCoroutine(missionPanel.Show("Escape to the river side"));
+        gate.SetActive(true);
+        path.gameObject.SetActive(true);
+        path.target = boat;
     }
-    private void FinishEscapingMission()
+    public void FinishEscapingMission()
     {
-        StartCoroutine(missionPanel.Show("Mission Complete"));
+        StartCoroutine(missionPanel.Show("Mission complete"));
+        path.gameObject.SetActive(false);
+        Invoke(nameof(FinishChapter), completingDelay);
+    }
+    private void FinishChapter()
+    {
+        SceneManager.LoadScene("Town");
     }
 
 }
