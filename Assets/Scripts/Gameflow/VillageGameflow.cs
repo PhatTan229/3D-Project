@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 public class VillageGameflow : MonoBehaviour
 {
@@ -21,6 +22,15 @@ public class VillageGameflow : MonoBehaviour
     public SpeakingBehaviour storyTeller;
 
     public Villager[] villagers;
+
+    public Transform[] spawningPositions;
+    public EnemyManagement[] enemies;
+    public float spawningDuration;
+    public int maxNumberOfEnemies;
+
+    public int targetNumberOfDeadEnemies;
+    private int currentNumberOfDeadEnemies;
+
     private void Start()
     {
         //Default
@@ -41,6 +51,7 @@ public class VillageGameflow : MonoBehaviour
 
         //Indivial
         StartCoroutine(missionPanel.Show("Explore the world"));
+        
     }
     //public GameObject[] enemies;
 
@@ -73,5 +84,49 @@ public class VillageGameflow : MonoBehaviour
             villager.OnInvasionStart();
         }
         StartCoroutine(missionPanel.Show("Find a weapon"));
+        currentNumberOfDeadEnemies = 0;
+        StartSpawning();
     }
+    public void ActivePlayer() => mono.player.ActivePlayer();
+    public void DisablePlayer() => mono.player.DisablePlayer();
+    private void StartSpawning()
+    {
+        foreach(Transform trans in spawningPositions)
+        {
+            Instantiate(enemies.GetRandomElement(), trans.position, Quaternion.identity);
+        }
+        Invoke(nameof(SpawnEnemy), spawningDuration);
+    }
+    private void SpawnEnemy()
+    {
+        if (mono.population.pool[Side.Enemy].Count <= maxNumberOfEnemies)
+        {
+            Vector3 position = spawningPositions.GetRandomElement().position;
+            EnemyManagement enemy = Instantiate(enemies.GetRandomElement(), position, Quaternion.identity);
+            enemy.health.onDead.AddListener(CountEnemyDeath);
+        }
+        Invoke(nameof(SpawnEnemy), spawningDuration);
+    }
+    private void CountEnemyDeath()
+    {
+        currentNumberOfDeadEnemies++;
+        if (currentNumberOfDeadEnemies >= targetNumberOfDeadEnemies)
+            StartEscapingMission();
+    }
+
+    public void StartCombat()
+    {
+        mono.player.weapon.SetUp(WeaponType.Dagger);
+        StartCoroutine(missionPanel.Show("Keep survive"));
+    }
+
+    private void StartEscapingMission()
+    {
+        StartCoroutine(missionPanel.Show("Escape to the river side"));
+    }
+    private void FinishEscapingMission()
+    {
+        StartCoroutine(missionPanel.Show("Mission Complete"));
+    }
+
 }

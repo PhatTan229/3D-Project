@@ -7,13 +7,6 @@ public class MonoUtility : MonoBehaviour
     public static MonoUtility Instance;
     public ConversationController conversation;
     public PlayerManagement player;
+    public PopulationManager population;
     private void Awake() => Instance = this;
-    public void ActivePlayer() => SetPlayerState(true);
-    public void DisablePlayer() => SetPlayerState(false);
-    private void SetPlayerState(bool isActive)
-    {
-        player.movement.enabled = isActive;
-        player.weapon.enabled = isActive;
-
-    }
 }

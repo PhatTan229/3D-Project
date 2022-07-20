@@ -45,7 +45,7 @@ public class ConversationController : MonoBehaviour
     {
         model = behaviour;
         enabled = true;
-        MonoUtility.Instance.DisablePlayer();
+        MonoUtility.Instance.player.DisablePlayer();
         dialogueViewer.Show();
         ShowDialogue(0);
     }
@@ -61,7 +61,7 @@ public class ConversationController : MonoBehaviour
         if (dialogIndex >= model.conversation.Length)
         {
             enabled = false;
-            MonoUtility.Instance.ActivePlayer();
+            MonoUtility.Instance.player.ActivePlayer();
             dialogueViewer.Hide();
             return;
         }

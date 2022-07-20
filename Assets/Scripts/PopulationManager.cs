@@ -10,11 +10,11 @@ public enum Side
 
 public class PopulationManager : MonoBehaviour
 {
-    public static PopulationManager Instance;
+    //public static PopulationManager Instance;
     public Dictionary<Side, List<CharacterManagement>> pool;
     private void Awake()
     {
-        Instance = this;
+        //Instance = this;
         pool = new Dictionary<Side, List<CharacterManagement>>();
         List<CharacterManagement> allyList = new List<CharacterManagement>();
         List<CharacterManagement> enemyList = new List<CharacterManagement>();

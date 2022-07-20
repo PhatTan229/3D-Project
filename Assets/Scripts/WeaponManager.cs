@@ -15,6 +15,7 @@ public enum WeaponType
 public class WeaponInformaton
 {
     public WeaponType type;
+    public bool isEquipped;
     public GameObject[] parts;
     public Collider[] colliders;
     public TrailRenderer[] trails;
@@ -66,18 +67,21 @@ public class WeaponManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            SetUp(WeaponType.Dagger);
+            if (weaponCollection[0].isEquipped)
+                SetUp(WeaponType.Dagger);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            SetUp(WeaponType.Bow);
+            if (weaponCollection[1].isEquipped)
+                SetUp(WeaponType.Bow);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            SetUp(WeaponType.SwordAndShield);
+            if (weaponCollection[2].isEquipped)
+                SetUp(WeaponType.SwordAndShield);
         }
     }
-    private void SetUp(WeaponType type)
+    public void SetUp(WeaponType type)
     {
         int weaponIndex = (int)type;
         for (int i = 0; i < weaponCollection.Length; i++)

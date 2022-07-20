@@ -32,7 +32,7 @@ public class ZombieDog : EnemyManagement
     }
     public void FindTarget()
     {
-        target = PopulationManager.Instance.GetRandomTarget(transform.position, Side.Ally);
+        target = MonoUtility.Instance.population.GetRandomTarget(transform.position, Side.Ally);
         if (target != null)
         {
             //agent.isStopped = false;

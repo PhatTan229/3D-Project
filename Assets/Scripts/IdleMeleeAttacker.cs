@@ -8,7 +8,7 @@ public class IdleMeleeAttacker : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if (!attacker) attacker = animator.GetComponent<MeleeAttacker>();
-        CharacterManagement target = PopulationManager.Instance.GetRandomTarget(animator.transform.position, attacker.oppositeSide);
+        CharacterManagement target = MonoUtility.Instance.population.GetRandomTarget(animator.transform.position, attacker.oppositeSide);
         if (target)
         {
             attacker.target = target;

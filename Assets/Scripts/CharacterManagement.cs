@@ -11,10 +11,10 @@ public class CharacterManagement : MonoBehaviour
     public MonoBehaviour[] others;
     protected void Start()
     {
-        PopulationManager.Instance.pool[side].Add(this);
+        MonoUtility.Instance.population.pool[side].Add(this);
         health.onDead.AddListener(() =>
         {
-            PopulationManager.Instance.pool[side].Remove(this);
+            MonoUtility.Instance.population.pool[side].Remove(this);
         });
         RegisterEvent();
     }

@@ -125,7 +125,7 @@ public class Skeleton : MonoBehaviour
         //{
         //    target = null;
         //}
-        target = PopulationManager.Instance.GetRandomTarget(transform.position, Side.Ally);
+        target = MonoUtility.Instance.population.GetRandomTarget(transform.position, Side.Ally);
     }
     //private void UpdateDestination()
     //{

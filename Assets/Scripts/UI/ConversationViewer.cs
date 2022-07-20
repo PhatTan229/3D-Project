@@ -18,8 +18,14 @@ public class ConversationViewer : MonoBehaviour
     //}
     public void Show() => gameObject.SetActive(true);
     public void Hide() => gameObject.SetActive(false);
-    public void ShowSpeech(string speaker, string content)
+    public void ShowSpeech(string speaker, string speech)
     {
-        text.text = speaker + " : " + content;
+        string newSpeech = speech;
+        if (speech.Contains("@name"))
+        {
+            if (DatabaseController.Instance)
+                newSpeech = speech.Replace("@name", DatabaseController.Instance.data.name);
+        }
+        text.text = speaker + " : " + newSpeech;
     }
 }

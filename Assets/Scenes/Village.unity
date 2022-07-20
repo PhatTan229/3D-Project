@@ -547,6 +547,11 @@ MonoBehaviour:
   - {fileID: 910155014}
   - {fileID: 863954213}
   - {fileID: 1088485596}
+  spawningPositions: []
+  enemies: []
+  spawningDuration: 0
+  maxNumberOfEnemies: 0
+  targetNumberOfDeadEnemies: 0
 --- !u!1001 &41125746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14949,6 +14954,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.2404677
       objectReference: {fileID: 0}
+    - target: {fileID: 5748258327157311251, guid: 1c8e740c2bae3e848a1ed2569457af33, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5846010871194683028, guid: 1c8e740c2bae3e848a1ed2569457af33, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -17672,6 +17681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversation: {fileID: 172884938}
   player: {fileID: 0}
+  population: {fileID: 355583782}
 --- !u!4 &619907302
 Transform:
   m_ObjectHideFlags: 0
@@ -34909,6 +34919,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a696748907b98244fad6d814af429e51, type: 2}
     - {fileID: 11400000, guid: 11fdf63fdf153b24386e9ea5af577f50, type: 2}
     - {fileID: 11400000, guid: f20003c0c3746e247acf359187884323, type: 2}
+    - {fileID: 11400000, guid: 38f6511800ec90b4db709e4092d2c3ab, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -34952,6 +34963,18 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 30102340}
+          m_TargetAssemblyTypeName: VillageGameflow, Assembly-CSharp
+          m_MethodName: DisablePlayer
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -35050,9 +35073,23 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
         - m_Target: {fileID: 30102340}
           m_TargetAssemblyTypeName: VillageGameflow, Assembly-CSharp
           m_MethodName: OnInvasionStart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 30102340}
+          m_TargetAssemblyTypeName: VillageGameflow, Assembly-CSharp
+          m_MethodName: ActivePlayer
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
