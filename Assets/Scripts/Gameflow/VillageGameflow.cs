@@ -152,7 +152,7 @@ public class VillageGameflow : MonoBehaviour
     }
     private void FinishChapter()
     {
-        SceneManager.LoadScene("Town");
+        SceneManager.LoadScene("Forest");
     }
 
 }

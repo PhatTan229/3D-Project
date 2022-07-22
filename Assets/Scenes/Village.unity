@@ -558,7 +558,7 @@ MonoBehaviour:
   - {fileID: 7043477774238878617, guid: b7e131c4422d5bc44a3c9edae6d9621e, type: 3}
   spawningDuration: 5
   maxNumberOfEnemies: 10
-  targetNumberOfDeadEnemies: 5
+  targetNumberOfDeadEnemies: 3
   knifeIcon: {fileID: 1735033203}
   gate: {fileID: 2053970705}
   boat: {fileID: 300563588}

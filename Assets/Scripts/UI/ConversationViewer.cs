@@ -23,8 +23,13 @@ public class ConversationViewer : MonoBehaviour
         string newSpeech = speech;
         if (speech.Contains("@name"))
         {
+            Debug.Log(1);
             if (DatabaseController.Instance)
+            {
+                Debug.Log(2);
                 newSpeech = speech.Replace("@name", DatabaseController.Instance.data.name);
+                Debug.Log(newSpeech);
+            }
         }
         text.text = speaker + " : " + newSpeech;
     }
