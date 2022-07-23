@@ -6,12 +6,18 @@ using TMPro;
 
 public class MainMenuManager : MonoBehaviour
 {
-    public TMP_InputField field;
     public void Play()
     {
-        string name = field.text;
-        if (name == string.Empty) return;
         DatabaseController.Instance.data.name = name;
         SceneManager.LoadScene("Book");
     }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+    private void OnApplicationQuit()
+    {
+        Debug.Log("Thach afk");
+    }
+
 }

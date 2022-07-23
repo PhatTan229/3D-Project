@@ -55,8 +55,7 @@ public class ConversationController : MonoBehaviour
         dialogueViewer.ShowDialogue(model.conversation[dialogIndex].speaker, model.conversation[dialogIndex].content);
     }
     public void ShowNextDialogue()
-    {
-        
+    {   
         dialogIndex++;
         if (dialogIndex >= model.conversation.Length)
         {
