@@ -24,6 +24,12 @@ public class PriestRun : StateMachineBehaviour
             priest.agent.isStopped = false;
             priest.agent.SetDestination(priest.tree.transform.position);
         }
+
+        var tree = Physics.OverlapSphere(animator.transform.position, priest.visonRange, LayerMask.GetMask("Tree"));
+        if(tree.Length != 0)
+        {
+            animator.SetBool("Move", false);
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

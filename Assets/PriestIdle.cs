@@ -20,6 +20,11 @@ public class PriestIdle : StateMachineBehaviour
         {
             animator.SetBool("Move", true);
         }
+        var tree = Physics.OverlapSphere(animator.transform.position, priest.visonRange, LayerMask.GetMask("Tree"));
+        if (tree.Length != 0)
+        {
+            animator.SetBool("Cast", true);
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

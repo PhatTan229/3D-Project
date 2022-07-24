@@ -14,4 +14,9 @@ public class Priest : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
     }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, visonRange);
+    }
 }
