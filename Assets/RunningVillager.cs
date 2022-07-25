@@ -10,22 +10,33 @@ public class RunningVillager : StateMachineBehaviour
     public LayerMask groundLayer;
     private NavMeshAgent agent;
     private Vector3 destination;
-    
+
+    public float rayOriginHeight;
+    private Villager villager;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if (!agent) agent = animator.GetComponent<NavMeshAgent>();
         Vector2 unitCircle = Random.insideUnitCircle * runningDistance;
-        Vector3 direction = new Vector3(unitCircle.x, 0, unitCircle.y);
-        destination = animator.transform.position + direction;
-        if (Physics.OverlapSphere(destination, 0.1f, groundLayer).Length != 0)
+        Vector3 radiusVector = new Vector3(unitCircle.x, 0, unitCircle.y);
+        Vector3 origin = animator.transform.position + radiusVector + Vector3.up * rayOriginHeight;
+        Ray ray = new Ray(origin, Vector3.down);
+
+        if (Physics.Raycast(ray, out RaycastHit hit, groundLayer))
         {
-            Ray ray = new Ray(destination + 10 * Vector3.up, Vector3.down);
-            if (Physics.Raycast(ray, out RaycastHit hit, groundLayer))
-            {
-                destination = hit.point;
-            }
+            destination = hit.point;
         }
+        else
+        {
+            destination = animator.transform.position;
+        }
+
+        
+
+        if (!villager) villager = animator.GetComponent<Villager>();
+        villager.target = new GameObject($"Target of {animator.gameObject.name}");
+        villager.target.transform.position = destination;
+
         agent.SetDestination(destination);
         agent.isStopped = false;
     }

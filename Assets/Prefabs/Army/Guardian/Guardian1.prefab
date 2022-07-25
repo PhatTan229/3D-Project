@@ -943,8 +943,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2332456876062770489}
   - component: {fileID: 2332456876055554763}
+  - component: {fileID: 2143584166240566678}
+  - component: {fileID: 2607139663878886972}
+  - component: {fileID: 6697941304608076303}
+  - component: {fileID: 4174274350359090102}
+  - component: {fileID: 8735270979226103811}
+  - component: {fileID: 7349906639752338890}
   m_Layer: 0
-  m_Name: Knight1
+  m_Name: Guardian1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -987,6 +993,121 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &2143584166240566678
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2332456876062808345}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.24037695
+  m_Height: 1.8796637
+  m_Direction: 1
+  m_Center: {x: 0.015271664, y: 0.9346427, z: 0}
+--- !u!54 &2607139663878886972
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2332456876062808345}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!195 &6697941304608076303
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2332456876062808345}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &4174274350359090102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2332456876062808345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9115544a1a42f3743ae90af3a753c64e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  side: 0
+  health: {fileID: 8735270979226103811}
+  animator: {fileID: 2332456876055554763}
+  others: []
+  zombieTransform: {fileID: 7349906639752338890}
+--- !u!114 &8735270979226103811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2332456876062808345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 815d6e8c364402c4c9ee2f590df881d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoint: 20
+  healthPoint: 0
+  isAlive: 1
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDead:
+    m_PersistentCalls:
+      m_Calls: []
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &7349906639752338890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2332456876062808345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1e48d30c7b0a1c4e95f0d129808b4eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 10
+  canTransform: 0
+  zombieSpeed: 1.5
+  onFinish:
+    m_PersistentCalls:
+      m_Calls: []
+  anim: {fileID: 2332456876055554763}
+  agent: {fileID: 6697941304608076303}
+  behaviour: {fileID: 9100000, guid: 809d8dc6719df31468f478841fca1d02, type: 2}
+  shadowPrefab: {fileID: 8346374960626448657, guid: e808a5e77cb56c24db7d5d2f625e4982, type: 3}
 --- !u!1 &2332456876062808349
 GameObject:
   m_ObjectHideFlags: 0

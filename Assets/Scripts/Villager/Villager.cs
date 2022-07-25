@@ -35,5 +35,5 @@ public class Villager : AllyManagement
         if (tool) tool.SetActive(false);
         animator.SetTrigger("Run");
     }
-
+    public GameObject target;
 }

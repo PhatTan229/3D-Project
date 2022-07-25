@@ -67,17 +67,17 @@ public class WeaponManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            if (weaponCollection[0].isEquipped)
+            if (weaponCollection[1].isEquipped)
                 SetUp(WeaponType.Dagger);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            if (weaponCollection[1].isEquipped)
+            if (weaponCollection[2].isEquipped)
                 SetUp(WeaponType.Bow);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            if (weaponCollection[2].isEquipped)
+            if (weaponCollection[3].isEquipped)
                 SetUp(WeaponType.SwordAndShield);
         }
     }
