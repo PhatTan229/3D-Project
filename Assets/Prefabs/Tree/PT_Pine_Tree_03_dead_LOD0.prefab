@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3891601769786132690}
   - component: {fileID: 4062906637727053468}
   - component: {fileID: 1936698842130548133}
+  - component: {fileID: 4099847956886163119}
   m_Layer: 0
   m_Name: PT_Pine_Tree_03_dead_LOD0
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4099847956886163119
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4491285346242605456}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1780260721220084313, guid: 021e9eaa88033da4c94bcdeddffe6562, type: 3}

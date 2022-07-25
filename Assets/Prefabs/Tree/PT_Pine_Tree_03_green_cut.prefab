@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 931513570156552391}
   - component: {fileID: 4270183467912540002}
   - component: {fileID: 2064419344237779880}
+  - component: {fileID: -2208286439463405870}
   m_Layer: 0
   m_Name: PT_Pine_Tree_03_green_cut
   m_TagString: Untagged
@@ -84,3 +85,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-2208286439463405870
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551328134945012349}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5923293107675433356, guid: 2a5e649cde00dd847885c694eb77f1fb, type: 3}

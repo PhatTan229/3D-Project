@@ -13,9 +13,8 @@ public class PriestRun : StateMachineBehaviour
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        var enemies = Physics.OverlapSphere(animator.transform.position, priest.visonRange, LayerMask.GetMask("Enemy"));
-        if(enemies.Length != 0)
+    {       
+        if(priest.enemies.Length != 0)
         {
             animator.SetBool("Move", false);
         }

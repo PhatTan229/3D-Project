@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class Priest : MonoBehaviour
 {
     [System.NonSerialized] public NavMeshAgent agent;
+    [System.NonSerialized] public Collider[] enemies;
     public float visonRange;
     public AncientTree tree;
 
@@ -13,6 +14,10 @@ public class Priest : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+    }
+    private void Update()
+    {
+        enemies = Physics.OverlapSphere(transform.position, visonRange, LayerMask.GetMask("Enemy"));
     }
     private void OnDrawGizmos()
     {

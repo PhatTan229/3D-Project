@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9025418944892694641}
   - component: {fileID: 3872816509339326764}
   - component: {fileID: 4570983109591193583}
+  - component: {fileID: 4373427751367251539}
   m_Layer: 0
   m_Name: PT_Ore_Rock_01_LOD0
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4373427751367251539
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6843380662245850945}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6630216216432505935, guid: a9129ae83f8faf646961b70c4b103833, type: 3}

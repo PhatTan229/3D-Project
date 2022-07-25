@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4293504746060672572}
   - component: {fileID: 3028389923084086632}
   - component: {fileID: 3795491332453587822}
+  - component: {fileID: -8552270587052051437}
   m_Layer: 0
   m_Name: PT_Generic_Shrub_01_dead_LOD0
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-8552270587052051437
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6477468015103511569}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -295899887895760404, guid: 0101712be5ca1c7449afe15d548c8817, type: 3}

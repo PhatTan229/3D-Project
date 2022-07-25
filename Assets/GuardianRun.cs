@@ -2,27 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PriestIdle : StateMachineBehaviour
+public class GuardianRun : StateMachineBehaviour
 {
-    private Priest priest;
+    private Guardian guardian;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        priest = animator.GetComponent<Priest>();
+        guardian = animator.GetComponent<Guardian>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        priest.agent.isStopped = true;       
-        if(priest.enemies.Length == 0)
+        if(guardian.priest.enemies.Length == 0)
         {
-            animator.SetBool("Move", true);
+            guardian.agent.stoppingDistance = 1;
+            guardian.agent.SetDestination(guardian.priest.transform.position);
         }
-        var tree = Physics.OverlapSphere(animator.transform.position, priest.visonRange, LayerMask.GetMask("Tree"));
-        if (tree.Length != 0)
+        else
         {
-            animator.SetBool("Cast", true);
+            guardian.agent.SetDestination(guardian.priest.enemies[0].transform.position);
+            guardian.agent.stoppingDistance = 2;
+            animator.SetBool("Attack", guardian.agent.remainingDistance <= guardian.agent.stoppingDistance);
         }
     }
 

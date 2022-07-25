@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1538782075220516054}
   - component: {fileID: 8525587684068354657}
   - component: {fileID: 7159730910849196684}
+  - component: {fileID: -3266337222548199946}
   m_Layer: 0
   m_Name: PT_Ore_Rock_01_split_LOD0
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-3266337222548199946
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7940863299903697462}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5303071974843470697, guid: e011a827265c38e44baeae9310a2a9e2, type: 3}
