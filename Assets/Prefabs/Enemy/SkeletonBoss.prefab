@@ -1478,7 +1478,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 491.45312
+        x: 315.45312
         y: 110.875
         width: 100
         height: 32
@@ -1496,12 +1496,14 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 0
       actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
+        actionNames:
+        - HutongGames.PlayMaker.Actions.CallMethod
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: ca51e900
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -1511,9 +1513,46 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Init
+        fsmObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: SkeletonBoss
+          value: {fileID: 1726776579084179484}
+        fsmVarParams:
+        - variableName: 
+          objectType: 
+          useVariable: 0
+          type: -1
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams: []
@@ -1525,21 +1564,28 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
+        byteData: 0100
+        arrayParamSizes: 00000000
+        arrayParamTypes:
+        - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
+        paramDataType: 18000000120000000c000000270000000100000001000000
+        paramName:
+        - behaviour
+        - methodName
+        - parameters
+        - storeResult
+        - everyFrame
+        - manualUI
+        paramDataPos: 000000000000000000000000000000000000000001000000
+        paramByteDataSize: 000000000000000000000000000000000100000001000000
     - name: Chase
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 492.6875
+        x: 316.6875
         y: 200.94531
         width: 100
         height: 48
@@ -1568,12 +1614,14 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.PlayAnimation
+        - HutongGames.PlayMaker.Actions.CallMethod
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 4f383600
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000007000000
+        actionHashCodes: 4f383600ca51e900
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -1598,8 +1646,45 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: walk
-        fsmObjectParams: []
-        fsmVarParams: []
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: UpdateChasing
+        fsmObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: SkeletonBoss
+          value: {fileID: 1726776579084179484}
+        fsmVarParams:
+        - variableName: 
+          objectType: 
+          useVariable: 0
+          type: -1
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
@@ -1619,12 +1704,13 @@ MonoBehaviour:
         stringParams:
         - 
         - 
-        byteData: 0400000000
-        arrayParamSizes: 
-        arrayParamTypes: []
+        byteData: 04000000000100
+        arrayParamSizes: 00000000
+        arrayParamTypes:
+        - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000012000000070000000f000000170000001700000001000000
+        paramDataType: 1400000012000000070000000f00000017000000170000000100000018000000120000000c000000270000000100000001000000
         paramName:
         - gameObject
         - animName
@@ -1633,14 +1719,20 @@ MonoBehaviour:
         - finishEvent
         - loopEvent
         - stopOnExit
-        paramDataPos: 00000000000000000000000000000000000000000100000004000000
-        paramByteDataSize: 00000000000000000400000000000000000000000000000001000000
+        - behaviour
+        - methodName
+        - parameters
+        - storeResult
+        - everyFrame
+        - manualUI
+        paramDataPos: 00000000000000000000000000000000000000000100000004000000000000000100000000000000000000000500000006000000
+        paramByteDataSize: 00000000000000000400000000000000000000000000000001000000000000000000000000000000000000000100000001000000
     - name: Summon
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 227.49219
+        x: 51.492188
         y: 338.71875
         width: 100
         height: 32
@@ -1732,7 +1824,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 484.4922
+        x: 308.4922
         y: 461.59375
         width: 110
         height: 32
@@ -1752,12 +1844,14 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.PlayAnimation
+        - HutongGames.PlayMaker.Actions.CallMethod
         customNames:
         - 
-        actionEnabled: 01
-        actionIsOpen: 01
-        actionStartIndex: 00000000
-        actionHashCodes: 4f383600
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000007000000
+        actionHashCodes: 4f383600ca51e900
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -1782,8 +1876,45 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: idle break02
-        fsmObjectParams: []
-        fsmVarParams: []
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: BreathFire
+        fsmObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: SkeletonBoss
+          value: {fileID: 1726776579084179484}
+        fsmVarParams:
+        - variableName: 
+          objectType: 
+          useVariable: 0
+          type: -1
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
@@ -1803,12 +1934,13 @@ MonoBehaviour:
         stringParams:
         - ATTACK
         - 
-        byteData: 0400000000
-        arrayParamSizes: 
-        arrayParamTypes: []
+        byteData: 04000000000000
+        arrayParamSizes: 00000000
+        arrayParamTypes:
+        - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000012000000070000000f000000170000001700000001000000
+        paramDataType: 1400000012000000070000000f00000017000000170000000100000018000000120000000c000000270000000100000001000000
         paramName:
         - gameObject
         - animName
@@ -1817,14 +1949,20 @@ MonoBehaviour:
         - finishEvent
         - loopEvent
         - stopOnExit
-        paramDataPos: 00000000000000000000000000000000000000000100000004000000
-        paramByteDataSize: 00000000000000000400000000000000000000000000000001000000
+        - behaviour
+        - methodName
+        - parameters
+        - storeResult
+        - everyFrame
+        - manualUI
+        paramDataPos: 00000000000000000000000000000000000000000100000004000000000000000100000000000000000000000500000006000000
+        paramByteDataSize: 00000000000000000400000000000000000000000000000001000000000000000000000000000000000000000100000001000000
     - name: Attack
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 471.03125
+        x: 295.03125
         y: 288.64062
         width: 157.2
         height: 96
@@ -1878,12 +2016,14 @@ MonoBehaviour:
         linkTarget: 0
         colorIndex: 0
       actionData:
-        actionNames: []
-        customNames: []
-        actionEnabled: 
-        actionIsOpen: 
-        actionStartIndex: 
-        actionHashCodes: 
+        actionNames:
+        - HutongGames.PlayMaker.Actions.CallMethod
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: ca51e900
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -1893,9 +2033,46 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
-        fsmObjectParams: []
-        fsmVarParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Attack
+        fsmObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          typeName: SkeletonBoss
+          value: {fileID: 1726776579084179484}
+        fsmVarParams:
+        - variableName: 
+          objectType: 
+          useVariable: 0
+          type: -1
+          floatValue: 0
+          intValue: 0
+          boolValue: 0
+          stringValue: 
+          vector4Value: {x: 0, y: 0, z: 0, w: 0}
+          objectReference: {fileID: 0}
+          arrayValue:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: 
+            floatValues: []
+            intValues: 
+            boolValues: 
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams: []
@@ -1907,21 +2084,28 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 
-        arrayParamSizes: 
-        arrayParamTypes: []
+        byteData: 0000
+        arrayParamSizes: 00000000
+        arrayParamTypes:
+        - HutongGames.PlayMaker.FsmVar
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 
-        paramName: []
-        paramDataPos: 
-        paramByteDataSize: 
+        paramDataType: 18000000120000000c000000270000000100000001000000
+        paramName:
+        - behaviour
+        - methodName
+        - parameters
+        - storeResult
+        - everyFrame
+        - manualUI
+        paramDataPos: 000000000000000000000000000000000000000001000000
+        paramByteDataSize: 000000000000000000000000000000000100000001000000
     - name: Combat
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 764.1328
+        x: 588.1328
         y: 332.32812
         width: 100
         height: 32
@@ -2013,7 +2197,7 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 234.32812
+        x: 58.328125
         y: 203.53906
         width: 100
         height: 32
@@ -2105,8 +2289,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 65
-        y: 186.20312
+        x: 66.1875
+        y: 114.02344
         width: 100
         height: 16
       isBreakpoint: 0
@@ -2313,12 +2497,15 @@ MonoBehaviour:
   animator: {fileID: 0}
   others: []
   agent: {fileID: 6671628731711484381}
-  stoppingDistance: 2
+  attackDistance: 5
+  combatDistance: 2.5
   anima: {fileID: 1183467242195411477}
   fsm: {fileID: 3358838697940785780}
   target: {fileID: 0}
   swordCollider: {fileID: 6169925884484983054}
   swordTrail: {fileID: 0}
+  flamethrower: {fileID: 491358756}
+  color: {r: 0, g: 0.9708953, b: 1, a: 0}
 --- !u!114 &1440208217111778959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2434,7 +2621,8 @@ Transform:
   m_LocalPosition: {x: 0.013223724, y: 0.048725177, z: 0.0029347753}
   m_LocalScale: {x: 1, y: 1.0000001, z: 0.99999994}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 491656708}
   m_Father: {fileID: 1183467243087102271}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -0.0000005035952, y: -0.000003590062, z: -124.137184}
@@ -3358,3 +3546,86 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.055343837, y: 0.12821323, z: 0.05312252}
     m_Extent: {x: 1.0036592, y: 0.714827, z: 0.80992174}
   m_DirtyAABB: 0
+--- !u!1001 &8103669240479533007
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1183467242543018492}
+    m_Modifications:
+    - target: {fileID: 8103669240164470251, guid: 34a7e43f7416aa24b95704c11b96ea53, type: 3}
+      propertyPath: m_Name
+      value: Flamethrower
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103669240164470251, guid: 34a7e43f7416aa24b95704c11b96ea53, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103669240164569547, guid: 34a7e43f7416aa24b95704c11b96ea53, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103669240164569547, guid: 34a7e43f7416aa24b95704c11b96ea53, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6213078
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103669240164569547, guid: 34a7e43f7416aa24b95704c11b96ea53, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.62130785
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103669240164569547, guid: 34a7e43f7416aa24b95704c11b96ea53, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6213081
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103669240164569547, guid: 34a7e43f7416aa24b95704c11b96ea53, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.026310705
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103669240164569547, guid: 34a7e43f7416aa24b95704c11b96ea53, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0056050844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103669240164569547, guid: 34a7e43f7416aa24b95704c11b96ea53, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0007116845
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103669240164569547, guid: 34a7e43f7416aa24b95704c11b96ea53, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.19252786
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103669240164569547, guid: 34a7e43f7416aa24b95704c11b96ea53, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.69823617
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103669240164569547, guid: 34a7e43f7416aa24b95704c11b96ea53, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.25206533
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103669240164569547, guid: 34a7e43f7416aa24b95704c11b96ea53, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.64176506
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103669240164569547, guid: 34a7e43f7416aa24b95704c11b96ea53, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103669240164569547, guid: 34a7e43f7416aa24b95704c11b96ea53, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103669240164569547, guid: 34a7e43f7416aa24b95704c11b96ea53, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 34a7e43f7416aa24b95704c11b96ea53, type: 3}
+--- !u!1 &491358756 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8103669240164470251, guid: 34a7e43f7416aa24b95704c11b96ea53, type: 3}
+  m_PrefabInstance: {fileID: 8103669240479533007}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &491656708 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8103669240164569547, guid: 34a7e43f7416aa24b95704c11b96ea53, type: 3}
+  m_PrefabInstance: {fileID: 8103669240479533007}
+  m_PrefabAsset: {fileID: 0}

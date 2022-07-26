@@ -20,6 +20,7 @@ public class ZombieDog : EnemyManagement
         anima["run"].speed = runningAnimationSpeed;
         health.onHit.AddListener(() => 
         {
+            jaw.enabled = false;
             fsm.SendEvent("HIT");
         });
         health.onDead.AddListener(() =>

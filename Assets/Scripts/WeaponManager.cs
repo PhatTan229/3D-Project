@@ -60,7 +60,6 @@ public class WeaponManager : MonoBehaviour
     private void OnValidate() => anim = GetComponent<Animator>();
     private void Start()
     {
-        SetUp(WeaponType.None);
         DisableAiming();
     }
     private void Update()
