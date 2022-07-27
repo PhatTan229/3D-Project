@@ -13,7 +13,6 @@ public class PlayerSpawner : MonoBehaviour
     public MinimapCompass compass;
     private void Start()
     {
-        Debug.Log("Start");
         PlayerManagement myPlayer = Instantiate(player, transform.position, Quaternion.identity);
         aimingCamera.Follow = myPlayer.transform;
         thirdPersonCamera.target = myPlayer.transform;

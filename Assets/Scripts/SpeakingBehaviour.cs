@@ -18,12 +18,13 @@ public class Dialogue
 public class SpeakingBehaviour : MonoBehaviour
 {
     public float radius;
+    public float signalOffset = 1.5f;
     public Color color;
     public LayerMask layer;
     public Dialogue[] conversation;
     private GameObject currentSignal;
     public GameObject signalPrefab;
-    public float signalOffset = 1.5f;
+    public UnityEvent onStart;
     //[SerializeField] private bool isTalking = false;
     private void Start()
     {
@@ -49,6 +50,7 @@ public class SpeakingBehaviour : MonoBehaviour
     {
         currentSignal.SetActive(false);
         enabled = false;
+        onStart.Invoke();
         MonoUtility.Instance.conversation.StartConversation(this);
 
         //DialogueController.Instance.

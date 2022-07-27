@@ -24,7 +24,7 @@ public class PlayerHealth : Health
         Armor = maxArmor;
     }
 
-    public override void TakeDamage(int damage)
+    public override void TakeDamage(float damage)
     {
         float damageOnArmor = Random.Range((float)(damage / 2), damage);
         float damageOnHealth = damage - damageOnArmor;

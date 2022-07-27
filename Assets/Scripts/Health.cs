@@ -32,7 +32,7 @@ public class Health : MonoBehaviour
         HealthPoint = maxHealthPoint;
     }
 
-    public virtual void TakeDamage(int damage)
+    public virtual void TakeDamage(float damage)
     {
         HealthPoint -= damage;
         if (HealthPoint <= 0)

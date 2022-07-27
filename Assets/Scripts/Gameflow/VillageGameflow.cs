@@ -17,6 +17,7 @@ public class VillageGameflow : MonoBehaviour
     public MissionPanel missionPanel;
 
     public PathRenderer path;
+    public PolygonIcon destinationIcon;
 
     public PlayableDirector director;
     public SpeakingBehaviour packageSender;
@@ -59,8 +60,8 @@ public class VillageGameflow : MonoBehaviour
         //Indivial
         StartCoroutine(missionPanel.Show("Explore the world"));
         path.player = myPlayer.transform;
-        path.target = packageSender.transform;
-        
+
+        SetDestination(packageSender.transform);
     }
     //public GameObject[] enemies;
 
@@ -69,13 +70,13 @@ public class VillageGameflow : MonoBehaviour
         packageSender.enabled = false;
         packageReceiver.enabled = true;
         StartCoroutine(missionPanel.Show("Ship the package to the village"));
-        path.target = packageReceiver.transform;
+        SetDestination(packageReceiver.transform);
     }
     public void FinishShippingTask()
     {
         packageReceiver.enabled = false;
         storyTeller.enabled = true;
-        path.target = storyTeller.transform;
+        SetDestination(storyTeller.transform);
     }
 
     //private IEnumerator PlayTimeline()
@@ -86,7 +87,6 @@ public class VillageGameflow : MonoBehaviour
     public void OnBossAppear()
     {
         director.Play();
-        path.gameObject.SetActive(false);
     }
 
     public void OnInvasionStart()
@@ -99,9 +99,7 @@ public class VillageGameflow : MonoBehaviour
         StartSpawning();
         StartCoroutine(missionPanel.Show("Find a weapon"));
         knifeIcon.SetActive(true);
-        path.gameObject.SetActive(true);
-        path.target = knifeIcon.transform;
-        
+        SetDestination(knifeIcon.transform);
     }
     public void ActivePlayer() => mono.player.ActivePlayer();
     public void DisablePlayer() => mono.player.DisablePlayer();
@@ -134,25 +132,34 @@ public class VillageGameflow : MonoBehaviour
     {
         mono.player.weapon.SetUp(WeaponType.Dagger);
         StartCoroutine(missionPanel.Show("Keep survive"));
-        path.gameObject.SetActive(false);
+        IgnoreDestination();
     }
 
     private void StartEscapingMission()
     {
         StartCoroutine(missionPanel.Show("Escape to the river side"));
         gate.SetActive(true);
-        path.gameObject.SetActive(true);
-        path.target = boat;
+        SetDestination(boat);
     }
     public void FinishEscapingMission()
     {
         StartCoroutine(missionPanel.Show("Mission complete"));
-        path.gameObject.SetActive(false);
+        IgnoreDestination();
         Invoke(nameof(FinishChapter), completingDelay);
     }
     private void FinishChapter()
     {
         SceneManager.LoadScene("Forest");
+    }
+    private void SetDestination(Transform target)
+    {
+        path.SetTarget(target);
+        destinationIcon.SetPosition(target.position);
+    }
+    public void IgnoreDestination()
+    {
+        path.Disable();
+        destinationIcon.Disable();
     }
 
 }

@@ -6,12 +6,19 @@ public class SkeletonBoss : EnemyManagement
 {
     public float attackDistance;
     public float combatDistance;
+    public float summonDelay;
+    public float summonDuration;
     public Animation anima;
     public PlayMakerFSM fsm;
     public CharacterManagement target;
     public Collider swordCollider;
     public TrailRenderer swordTrail;
     public GameObject flamethrower;
+    public GameObject dirtEffect;
+    public Skeleton skeleton;
+    public Transform[] summonPositions;
+    private float nextSummonTime;
+
     protected override void RegisterEvent()
     {
         health.onHit.AddListener(() =>
@@ -25,11 +32,9 @@ public class SkeletonBoss : EnemyManagement
     }
     public void Init()
     {
-        Debug.Log("Init1");
         target = MonoUtility.Instance.population.GetRandomTarget(transform.position, Side.Ally);
         if (target != null)
         {
-            Debug.Log($"Init2 {target.gameObject.name}");
             agent.isStopped = false;
             fsm.SendEvent("CHASE");
         }
@@ -73,10 +78,10 @@ public class SkeletonBoss : EnemyManagement
             fsm.SendEvent("USE_WEAPON");
             return;
         }
-        int random = Random.Range(0, 2);
-        if (random == 0)
+        if (Time.time > nextSummonTime)
         {
-            SummonSkeleton();
+            nextSummonTime = Time.time + summonDelay;
+            Invoke(nameof(SummonSkeleton), summonDuration);
             fsm.SendEvent("SUMMON_SKELETON");
             return;
         }
@@ -84,21 +89,25 @@ public class SkeletonBoss : EnemyManagement
         fsm.SendEvent("BREATH_FIRE");
     }
 
-    public void BreathFire()
-    {
-
-    }
     private void ActiveWeapon() => SetWeapon(true);
     private void DisableWeapon() => SetWeapon(false);
 
     private void SetWeapon(bool isActive)
     {
         swordCollider.enabled = isActive;
-        if (swordTrail) swordTrail.enabled = isActive;
+        swordTrail.enabled = isActive;
     }
     private void StartBreathingFire() => flamethrower.SetActive(true);
     private void StopBreathingFire() => flamethrower.SetActive(false);
-    private void SummonSkeleton() { }
+    private void SummonSkeleton()
+    {
+        foreach (Transform pos in summonPositions)
+        {
+            Instantiate(skeleton, pos.position, pos.rotation);
+            GameObject dirt = Instantiate(dirtEffect, pos.position, Quaternion.identity);
+            Destroy(dirt, 5f);
+        }
+    }
 
     public Color color;
     private void OnDrawGizmos()
