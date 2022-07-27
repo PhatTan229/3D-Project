@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class ForestGameflow : MonoBehaviour
 {
@@ -34,4 +35,8 @@ public class ForestGameflow : MonoBehaviour
         //StartCoroutine(PlayTimeline());
     }
 
+    public void ChangeSence()
+    {
+        SceneManager.LoadScene("Forest Boss");
+    }
 }

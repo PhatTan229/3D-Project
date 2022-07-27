@@ -9,6 +9,7 @@ public class PriestCast : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         priest = animator.GetComponent<Priest>();
+        priest.arrive.Invoke();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

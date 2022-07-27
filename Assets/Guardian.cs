@@ -7,6 +7,7 @@ public class Guardian : MonoBehaviour
 {
     [System.NonSerialized] public NavMeshAgent agent;
     public Priest priest;
+    public Collider weaponCollider;
 
     // Start is called before the first frame update
     void Start()
