@@ -24,9 +24,7 @@ public class Book : MonoBehaviour
 		else audi.PlayOneShot(pageTurnSound);
 		yield return new WaitForSeconds(5f);
 		SceneManager.LoadScene("Village");
-
 	}
-
     private void Update()
     {
         if (Input.GetKey(KeyCode.R))
@@ -38,7 +36,6 @@ public class Book : MonoBehaviour
 			pages[1].anim.Play("LR");
 		}
 	}
-
     private void SetCurrentPage(int page)
     {
 		currentPage = page;

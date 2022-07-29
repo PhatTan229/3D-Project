@@ -574,7 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f954c6209cfc945e3829755dfa3df683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitingDuration: 1
+  waitingDuration: 2
   turningDuration: 2
   pages:
   - {fileID: 292392366912428940}
