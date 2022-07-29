@@ -12,7 +12,7 @@ public enum Gender
 public class PlayerData
 {
     public string name;
-    public int level;
+    public int chapter;
     public int coin;
     public Gender gender;
 }

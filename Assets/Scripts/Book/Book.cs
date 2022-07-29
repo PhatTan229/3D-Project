@@ -16,7 +16,7 @@ public class Book : MonoBehaviour
 	private IEnumerator Start()
 	{
 		totalPages = pages.Length;
-		int level = DatabaseController.Instance.data.level;
+		int level = DatabaseController.Instance.data.chapter;
 		SetCurrentPage(level);
 		yield return new WaitForSeconds(waitingDuration);
 		pages[level].GetTurned(turningDuration);
