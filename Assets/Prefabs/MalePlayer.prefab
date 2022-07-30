@@ -5619,6 +5619,7 @@ GameObject:
   - component: {fileID: 1254835193}
   - component: {fileID: 3428308602160111538}
   - component: {fileID: 7159246641291891084}
+  - component: {fileID: -9138991420387506208}
   m_Layer: 3
   m_Name: MalePlayer
   m_TagString: Untagged
@@ -5771,11 +5772,13 @@ MonoBehaviour:
   anim: {fileID: 316410700326983233}
   weaponCollection:
   - type: 0
+    isEquipped: 0
     parts: []
     colliders: []
     trails: []
     skill: {fileID: 9100000, guid: d76f3d78b3558b244ab681b124349760, type: 2}
-  - type: 0
+  - type: 1
+    isEquipped: 0
     parts:
     - {fileID: 6450960971116342389}
     - {fileID: 4429148931049748279}
@@ -5787,6 +5790,7 @@ MonoBehaviour:
     - {fileID: 6582612001470122093}
     skill: {fileID: 9100000, guid: fc2c31c9ec6e0e649b8ed26451f80d78, type: 2}
   - type: 2
+    isEquipped: 0
     parts:
     - {fileID: 680445347006364044}
     - {fileID: 5816922854925996659}
@@ -5794,6 +5798,7 @@ MonoBehaviour:
     trails: []
     skill: {fileID: 9100000, guid: 0dd5614a05890df4481f1f675b8ea5ad, type: 2}
   - type: 3
+    isEquipped: 0
     parts:
     - {fileID: 876972388009030621}
     - {fileID: 7594677279574284817}
@@ -6040,6 +6045,20 @@ CapsuleCollider:
   m_Height: 1.8094621
   m_Direction: 1
   m_Center: {x: 0.0039862394, y: 0.9109793, z: 0.04826218}
+--- !u!114 &-9138991420387506208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6471639280217413249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a91d83a264a74409eb31b941b8f2c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMarker: {fileID: 0}
+  type: 0
 --- !u!1 &6617388189318818570
 GameObject:
   m_ObjectHideFlags: 0

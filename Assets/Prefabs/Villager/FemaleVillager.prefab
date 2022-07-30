@@ -3461,6 +3461,7 @@ GameObject:
   - component: {fileID: 8230975722249164543}
   - component: {fileID: 355475321482490469}
   - component: {fileID: 3083076195536910705}
+  - component: {fileID: 8327930301221520814}
   m_Layer: 6
   m_Name: FemaleVillager
   m_TagString: Untagged
@@ -3582,6 +3583,7 @@ MonoBehaviour:
   zombieTransform: {fileID: 3083076195536910705}
   job: 0
   tool: {fileID: 0}
+  target: {fileID: 0}
 --- !u!114 &4801224389100740990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3636,6 +3638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 2
+  signalOffset: 2
   color: {r: 0, g: 1, b: 0.7813556, a: 0.4117647}
   layer:
     serializedVersion: 2
@@ -3654,7 +3657,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   signalPrefab: {fileID: 5830859735662686686, guid: e9e095e111226404fb0aff93d7df7d7b, type: 3}
-  signalOffset: 2
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3083076195536910705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3677,6 +3682,20 @@ MonoBehaviour:
   agent: {fileID: 1533152842275519400}
   behaviour: {fileID: 9100000, guid: 809d8dc6719df31468f478841fca1d02, type: 2}
   shadowPrefab: {fileID: 8346374960626448657, guid: e808a5e77cb56c24db7d5d2f625e4982, type: 3}
+--- !u!114 &8327930301221520814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7531101743620309391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a91d83a264a74409eb31b941b8f2c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMarker: {fileID: 0}
+  type: 4
 --- !u!1 &7665968057255918313
 GameObject:
   m_ObjectHideFlags: 0

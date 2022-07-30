@@ -991,6 +991,7 @@ GameObject:
   - component: {fileID: 1373163710}
   - component: {fileID: 4676027072086653408}
   - component: {fileID: 2233777836817100}
+  - component: {fileID: 5964661144010936635}
   m_Layer: 6
   m_Name: MaleVillager
   m_TagString: Untagged
@@ -1111,6 +1112,7 @@ MonoBehaviour:
   zombieTransform: {fileID: 2233777836817100}
   job: 0
   tool: {fileID: 0}
+  target: {fileID: 0}
 --- !u!114 &688156904081791937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1165,6 +1167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 2
+  signalOffset: 2
   color: {r: 0, g: 1, b: 1, a: 0.39215687}
   layer:
     serializedVersion: 2
@@ -1183,7 +1186,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   signalPrefab: {fileID: 5830859735662686686, guid: e9e095e111226404fb0aff93d7df7d7b, type: 3}
-  signalOffset: 2
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2233777836817100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1206,6 +1211,20 @@ MonoBehaviour:
   agent: {fileID: 5806178996525592112}
   behaviour: {fileID: 9100000, guid: 809d8dc6719df31468f478841fca1d02, type: 2}
   shadowPrefab: {fileID: 8346374960626448657, guid: e808a5e77cb56c24db7d5d2f625e4982, type: 3}
+--- !u!114 &5964661144010936635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4645066235704542514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a91d83a264a74409eb31b941b8f2c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMarker: {fileID: 0}
+  type: 4
 --- !u!1 &4725175564381038729
 GameObject:
   m_ObjectHideFlags: 0

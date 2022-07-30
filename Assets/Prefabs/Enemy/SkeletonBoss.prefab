@@ -1341,6 +1341,7 @@ GameObject:
   - component: {fileID: 3358838697940785780}
   - component: {fileID: 1726776579084179484}
   - component: {fileID: 1440208217111778959}
+  - component: {fileID: 6231099830477186096}
   m_Layer: 7
   m_Name: SkeletonBoss
   m_TagString: Untagged
@@ -2493,6 +2494,20 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   delay: 0
+--- !u!114 &6231099830477186096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183467242195411478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a91d83a264a74409eb31b941b8f2c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMarker: {fileID: 0}
+  type: 2
 --- !u!1 &1183467242417348200
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,5 +8,6 @@ public class MonoUtility : MonoBehaviour
     public ConversationController conversation;
     public PlayerManagement player;
     public PopulationManager population;
+    public MinimapMarkerManager marker;
     private void Awake() => Instance = this;
 }
