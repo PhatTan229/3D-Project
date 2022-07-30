@@ -5,6 +5,7 @@ using UnityEngine;
 public class AllyManagement : CharacterManagement
 {
     public ZombieTransform zombieTransform;
+    public MinimapRegister minimapRegister;
     protected override void RegisterEvent()
     {
         base.RegisterEvent();
@@ -20,6 +21,7 @@ public class AllyManagement : CharacterManagement
                 Destroy(gameObject, 10f);
             });
             health.onDead.RemoveListener(zombieTransform.StartTransform);
+            minimapRegister.ChangeMarker(MinimapMarkerType.Red);
         });
     }
 }

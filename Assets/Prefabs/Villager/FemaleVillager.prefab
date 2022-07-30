@@ -3581,6 +3581,7 @@ MonoBehaviour:
   animator: {fileID: 3830352553638216015}
   others: []
   zombieTransform: {fileID: 3083076195536910705}
+  minimapRegister: {fileID: 8327930301221520814}
   job: 0
   tool: {fileID: 0}
   target: {fileID: 0}

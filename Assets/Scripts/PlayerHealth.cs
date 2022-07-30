@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class PlayerHealth : Health
 {
+    
     public float maxArmor;
-    [SerializeField]
     private float _armor;
     public float Armor
     {
@@ -18,14 +18,18 @@ public class PlayerHealth : Health
         }
     }
     public UnityEvent onArmorChanged;
+    private bool isImmune = false;
+    public float immuneDuration;
     protected override void Start()
     {
         base.Start();
         Armor = maxArmor;
+        isImmune = false;
     }
 
     public override void TakeDamage(float damage)
     {
+        if (isImmune) return;
         float damageOnArmor = Random.Range((float)(damage / 2), damage);
         float damageOnHealth = damage - damageOnArmor;
         float redundantDamage = damageOnArmor - Armor;
@@ -48,6 +52,13 @@ public class PlayerHealth : Health
         else
         {
             onHit.Invoke();
+            StartImmune();
         }
     }
+    private void StartImmune()
+    {
+        isImmune = true;
+        Invoke(nameof(StopImmune), immuneDuration);
+    }
+    private void StopImmune() => isImmune = false;
 }

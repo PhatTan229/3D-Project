@@ -24,7 +24,7 @@ public class PlayerSpawner : MonoBehaviour
         mono.player = myPlayer;
 
         
-        myPlayer.weapon.SetUp(WeaponType.SwordAndShield);
+        myPlayer.weapon.SetUp(WeaponType.Dagger);
     }
 
 }

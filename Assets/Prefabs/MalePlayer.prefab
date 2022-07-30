@@ -5751,10 +5751,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   maxArmor: 10
-  _armor: 0
   onArmorChanged:
     m_PersistentCalls:
       m_Calls: []
+  immuneDuration: 1
 --- !u!114 &1290225016
 MonoBehaviour:
   m_ObjectHideFlags: 0

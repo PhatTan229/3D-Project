@@ -80,6 +80,15 @@ public class WeaponManager : MonoBehaviour
                 SetUp(WeaponType.SwordAndShield);
         }
     }
+    public void Equip(params WeaponType[] weapons)
+    {
+        foreach (WeaponType type in weapons)
+        {
+            int weaponIndex = (int)type;
+            weaponCollection[weaponIndex].isEquipped = true;
+        }
+    }
+
     public void SetUp(WeaponType type)
     {
         int weaponIndex = (int)type;
