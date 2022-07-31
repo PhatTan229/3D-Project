@@ -119,9 +119,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fix bug
-
-'
+  m_text: Fix bug
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 30cf4508329854545a0dd643a812eb85, type: 2}
   m_sharedMaterial: {fileID: 891992055512709107, guid: 30cf4508329854545a0dd643a812eb85, type: 2}

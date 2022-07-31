@@ -925,6 +925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f991c84b3eb21204d8eeb04d557df4d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameText: {fileID: 8486128506428341932}
   healthBar: {fileID: 6597216394825640414}
   manaBar: {fileID: 5801821433661214538}
   armorBar: {fileID: 2743047674415585687}
@@ -1750,8 +1751,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 30cf4508329854545a0dd643a812eb85, type: 2}
+  m_sharedMaterial: {fileID: 891992055512709107, guid: 30cf4508329854545a0dd643a812eb85, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

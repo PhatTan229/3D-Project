@@ -16,6 +16,10 @@ public class PlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
     }
+    private void Start()
+    {
+        thirdPersonCamera = MonoUtility.Instance.thirdPersonCamera.transform;
+    }
     private void Update()
     {
         UpdateMoving();

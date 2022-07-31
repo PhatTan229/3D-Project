@@ -6,6 +6,7 @@ public class MinimapCompass : MonoBehaviour
 {
     public Transform thirdPersonCamera;
     public RectTransform compass;
+    private void Start() => thirdPersonCamera = MonoUtility.Instance.thirdPersonCamera.transform;
     private void Update()
     {
         Vector3 cameraZDirection = Vector3.ProjectOnPlane(thirdPersonCamera.forward, Vector3.up);

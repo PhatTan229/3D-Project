@@ -8,9 +8,9 @@ public class MinimapRegister : MonoBehaviour
     public MinimapMarkerType type;
     private void Start()
     {
-        RegisterMinimap();
+        RegistMinimap();
     }
-    private void RegisterMinimap()
+    private void RegistMinimap()
     {
         currentMarker = MonoUtility.Instance.marker.GetMarker(type);
         currentMarker.SetTarget(transform);
@@ -19,6 +19,6 @@ public class MinimapRegister : MonoBehaviour
     {
         Destroy(currentMarker.gameObject);
         type = _type;
-        RegisterMinimap();
+        RegistMinimap();
     }
 }

@@ -1,15 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class ThirdPersonCamera : MonoBehaviour
 {
+    public Transform virtualCamera;
+    [Header("Movement")]
     public int sensitivity;
     public int minAngle;
     public int maxAngle;
     public Vector3 offset = new Vector3(0, 1, 0);
     public Transform target;
-    
+    [Header("Vibration")]
+    //private bool isShaking;
+    public float shakingDuration;
+    public float strength;
+    public int vibrato;
     private void LateUpdate()
     {
         if (Cursor.lockState != CursorLockMode.Locked) return;
@@ -32,5 +39,12 @@ public class ThirdPersonCamera : MonoBehaviour
         transform.eulerAngles = newEulerAngles;
     }
     private void RotateAroundYawAxis(float xInput) => transform.Rotate(0, xInput * sensitivity * Time.deltaTime, 0, Space.World);
-
+    public void Shake()
+    {
+        //enabled = false;
+        virtualCamera.DOShakePosition(shakingDuration, strength, vibrato).OnComplete(() =>
+        {
+            //enabled = true;
+        });
+    }
 }

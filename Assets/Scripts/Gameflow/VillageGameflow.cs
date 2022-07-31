@@ -10,7 +10,7 @@ public class VillageGameflow : MonoBehaviour
     public MonoUtility mono;
     public PlayerManagement player;
     public CinemachineVirtualCamera aimingCamera;
-    public ThirdPersonCamera thirdPersonCamera;
+    //public ThirdPersonCamera thirdPersonCamera;
     public MinimapCamera minimapCamera;
     public StatusPanel statusPanel;
     public MinimapCompass compass;
@@ -34,10 +34,12 @@ public class VillageGameflow : MonoBehaviour
     public int targetNumberOfDeadEnemies;
     private int currentNumberOfDeadEnemies;
 
-    public GameObject knifeIcon;
+    public GameObject daggerIcon;
     public GameObject gate;
-    public Transform boat;
+    public Boat boat;
     public float completingDelay;
+
+    private bool canEscape = false;
 
     private void Start()
     {
@@ -45,11 +47,11 @@ public class VillageGameflow : MonoBehaviour
         PlayerManagement myPlayer = Instantiate(player, transform.position, transform.rotation);
         mono.player = myPlayer;
         aimingCamera.Follow = myPlayer.transform;
-        thirdPersonCamera.target = myPlayer.transform;
+        mono.thirdPersonCamera.target = myPlayer.transform;
         minimapCamera.target = myPlayer.transform;
-        compass.thirdPersonCamera = thirdPersonCamera.transform;
-        myPlayer.movement.thirdPersonCamera = thirdPersonCamera.transform;
-        myPlayer.weapon.thirdPersonCamera = thirdPersonCamera.gameObject;
+        //compass.thirdPersonCamera = mono.thirdPersonCamera.transform;
+        //myPlayer.movement.thirdPersonCamera = mono.thirdPersonCamera.transform;
+        //myPlayer.weapon.thirdPersonCamera = mono.thirdPersonCamera.gameObject;
         myPlayer.weapon.aimingCamera = aimingCamera.gameObject;
         PlayerHealth newHealth = myPlayer.health as PlayerHealth;
         statusPanel.healthBar.health = newHealth;
@@ -84,6 +86,11 @@ public class VillageGameflow : MonoBehaviour
     //    yield return new WaitForSeconds(1f);
     //    director.Play();
     //}
+    public void OnVibration()
+    {
+        mono.thirdPersonCamera.Shake();
+    }
+
     public void OnBossAppear()
     {
         director.Play();
@@ -98,8 +105,8 @@ public class VillageGameflow : MonoBehaviour
         currentNumberOfDeadEnemies = 0;
         StartSpawning();
         StartCoroutine(missionPanel.Show("Find a weapon"));
-        knifeIcon.SetActive(true);
-        SetDestination(knifeIcon.transform);
+        daggerIcon.SetActive(true);
+        SetDestination(daggerIcon.transform);
     }
     public void ActivePlayer() => mono.player.ActivePlayer();
     public void DisablePlayer() => mono.player.DisablePlayer();
@@ -121,11 +128,15 @@ public class VillageGameflow : MonoBehaviour
         }
         Invoke(nameof(SpawnEnemy), spawningDuration);
     }
-    private void CountEnemyDeath()
+    public void CountEnemyDeath()
     {
+        if (canEscape) return;
         currentNumberOfDeadEnemies++;
         if (currentNumberOfDeadEnemies >= targetNumberOfDeadEnemies)
+        {
+            canEscape = true;
             StartEscapingMission();
+        }
     }
 
     public void StartCombat()
@@ -139,10 +150,14 @@ public class VillageGameflow : MonoBehaviour
     {
         StartCoroutine(missionPanel.Show("Escape to the river side"));
         gate.SetActive(true);
-        SetDestination(boat);
+        SetDestination(boat.transform);
     }
     public void FinishEscapingMission()
     {
+        mono.player.Teleport(boat.seat.position);
+        mono.player.transform.SetParent(boat.transform);
+        mono.player.DisablePlayer();
+        boat.StartMoving();
         StartCoroutine(missionPanel.Show("Mission complete"));
         IgnoreDestination();
         Invoke(nameof(FinishChapter), completingDelay);

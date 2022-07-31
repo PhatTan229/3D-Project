@@ -12,6 +12,9 @@ public class PlayerManagement : CharacterManagement
     {
         movement.enabled = isActive;
         weapon.enabled = isActive;
-
+    }
+    public void Teleport(Vector3 destination)
+    {
+        transform.position = destination;
     }
 }

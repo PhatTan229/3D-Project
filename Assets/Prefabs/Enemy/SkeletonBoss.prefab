@@ -2493,7 +2493,7 @@ MonoBehaviour:
   onHit:
     m_PersistentCalls:
       m_Calls: []
-  delay: 0
+  delay: 5
 --- !u!114 &6231099830477186096
 MonoBehaviour:
   m_ObjectHideFlags: 0

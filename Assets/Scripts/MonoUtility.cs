@@ -9,5 +9,6 @@ public class MonoUtility : MonoBehaviour
     public PlayerManagement player;
     public PopulationManager population;
     public MinimapMarkerManager marker;
+    public ThirdPersonCamera thirdPersonCamera;
     private void Awake() => Instance = this;
 }

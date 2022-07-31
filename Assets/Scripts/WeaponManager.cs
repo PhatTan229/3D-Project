@@ -60,6 +60,7 @@ public class WeaponManager : MonoBehaviour
     private void OnValidate() => anim = GetComponent<Animator>();
     private void Start()
     {
+        thirdPersonCamera = MonoUtility.Instance.thirdPersonCamera.gameObject;
         DisableAiming();
     }
     private void Update()

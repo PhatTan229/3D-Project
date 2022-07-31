@@ -34,8 +34,8 @@ public class RunningVillager : StateMachineBehaviour
         
 
         if (!villager) villager = animator.GetComponent<Villager>();
-        villager.target = new GameObject($"Target of {animator.gameObject.name}");
-        villager.target.transform.position = destination;
+        //villager.target = new GameObject($"Target of {animator.gameObject.name}");
+        //villager.target.transform.position = destination;
 
         agent.SetDestination(destination);
         agent.isStopped = false;
