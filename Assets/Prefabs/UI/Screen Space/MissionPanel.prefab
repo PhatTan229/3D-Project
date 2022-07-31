@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71bb731c69bf8f6499fccb95caaafa0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showingDuration: 3
+  showingDuration: 5
   fadingDuration: 2
   text: {fileID: 8594392312728598836}
 --- !u!1 &8594392312728598838

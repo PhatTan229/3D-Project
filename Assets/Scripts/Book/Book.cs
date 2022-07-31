@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
+
 
 public class Book : MonoBehaviour
 {
@@ -22,8 +22,9 @@ public class Book : MonoBehaviour
 		pages[level].GetTurned(turningDuration);
 		if (level == 0 || level == pages.Length - 1) audi.PlayOneShot(openCloseSound);
 		else audi.PlayOneShot(pageTurnSound);
-		yield return new WaitForSeconds(5f);
-		SceneManager.LoadScene("Village");
+		yield return new WaitForSeconds(waitingDuration);
+		LoadingScreen.Instance.LoadScene(SceneTheme.Village);
+		
 	}
     private void Update()
     {
