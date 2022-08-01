@@ -9,15 +9,20 @@ public class Guardian : MonoBehaviour
     public Priest priest;
     public Collider weaponCollider;
 
+    public Vector3 startDestination;
+
+    private Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
+        startDestination = transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Return()
     {
-        
+        anim.SetBool("Return", true);
     }
 }

@@ -11,15 +11,26 @@ public class Priest : MonoBehaviour
     public float visonRange;
     public AncientTree tree;
     public UnityEvent arrive;
+    public Vector3 startDestination;
+
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
+        startDestination = transform.position;
     }
     private void Update()
     {
         enemies = Physics.OverlapSphere(transform.position, visonRange, LayerMask.GetMask("Enemy"));
+    }
+
+    public void Return()
+    {
+        anim.SetBool("Cast", false);
+        anim.SetTrigger("Done");
     }
     private void OnDrawGizmos()
     {

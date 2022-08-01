@@ -2,39 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GuardianRun : StateMachineBehaviour
+public class PriestReturn : StateMachineBehaviour
 {
-    private Guardian guardian;
+    private Priest priest;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        guardian = animator.GetComponent<Guardian>();
+        priest = animator.GetComponent<Priest>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(guardian.priest.enemies.Length == 0)
-        {
-            if (guardian.agent.remainingDistance <= guardian.agent.stoppingDistance)
-            {
-                guardian.agent.stoppingDistance = 3;
-                guardian.agent.isStopped = true;
-                animator.SetBool("Wait", true);
-            }
-            else
-            {
-                guardian.agent.stoppingDistance = 1;
-                guardian.agent.SetDestination(guardian.priest.transform.position);
-                guardian.agent.isStopped = false;
-            }            
-        }
-        else
-        {
-            guardian.agent.SetDestination(guardian.priest.enemies[0].transform.position);
-            guardian.agent.stoppingDistance = 2;
-            animator.SetBool("Attack", guardian.agent.remainingDistance <= guardian.agent.stoppingDistance);
-        }
+        priest.agent.SetDestination(priest.startDestination);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

@@ -6,11 +6,16 @@ using UnityEngine.Events;
 
 public class ProgessUI : MonoBehaviour
 {
+    public static ProgessUI Intance;
     [SerializeField] private Image fillImage;
     [SerializeField] private float targetAmount;
 
     private float currentAmount;
-    private UnityEvent onDone;
+    public UnityEvent onDone;
+    private void Awake()
+    {
+        Intance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +30,7 @@ public class ProgessUI : MonoBehaviour
         if(currentAmount >= targetAmount)
         {
             onDone.Invoke();
+            gameObject.SetActive(false);
         }
     }
 }

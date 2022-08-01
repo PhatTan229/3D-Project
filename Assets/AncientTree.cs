@@ -6,6 +6,6 @@ public class AncientTree : MonoBehaviour
 {
    public void UpdateProgress()
     {
-
+        ProgessUI.Intance.IncreaseProgess();
     }
 }

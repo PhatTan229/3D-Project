@@ -14,6 +14,7 @@ public class ForestGameflow : MonoBehaviour
     public MinimapCompass compass;
     public MissionPanel missionPanel;
 
+    [SerializeField]private TestSpawner spawner;
     private void Start()
     {
         //Default
@@ -33,6 +34,16 @@ public class ForestGameflow : MonoBehaviour
         myPlayer.weapon.SetUp(WeaponType.Dagger);
         //Indivial
         //StartCoroutine(PlayTimeline());
+    }
+
+    public void TestSpawner()
+    {
+        spawner.gameObject.SetActive(true);
+    }
+
+    public void StartProcessing()
+    {
+        ProgessUI.Intance.gameObject.SetActive(true);
     }
 
 }
