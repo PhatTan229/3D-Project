@@ -5726,6 +5726,7 @@ MonoBehaviour:
   others: []
   movement: {fileID: 4123384205950301784}
   weapon: {fileID: 1290225016}
+  controller: {fileID: 8339157311754780458}
 --- !u!114 &1290225015
 MonoBehaviour:
   m_ObjectHideFlags: 0

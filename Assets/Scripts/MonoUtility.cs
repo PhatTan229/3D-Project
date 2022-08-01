@@ -10,5 +10,6 @@ public class MonoUtility : MonoBehaviour
     public PopulationManager population;
     public MinimapMarkerManager marker;
     public ThirdPersonCamera thirdPersonCamera;
+    public DeathMagic death;
     private void Awake() => Instance = this;
 }

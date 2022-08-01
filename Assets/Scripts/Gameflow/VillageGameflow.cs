@@ -49,9 +49,6 @@ public class VillageGameflow : MonoBehaviour
         aimingCamera.Follow = myPlayer.transform;
         mono.thirdPersonCamera.target = myPlayer.transform;
         minimapCamera.target = myPlayer.transform;
-        //compass.thirdPersonCamera = mono.thirdPersonCamera.transform;
-        //myPlayer.movement.thirdPersonCamera = mono.thirdPersonCamera.transform;
-        //myPlayer.weapon.thirdPersonCamera = mono.thirdPersonCamera.gameObject;
         myPlayer.weapon.aimingCamera = aimingCamera.gameObject;
         PlayerHealth newHealth = myPlayer.health as PlayerHealth;
         statusPanel.healthBar.health = newHealth;
@@ -62,7 +59,7 @@ public class VillageGameflow : MonoBehaviour
         //Indivial
         StartCoroutine(missionPanel.Show("Explore the world"));
         path.player = myPlayer.transform;
-
+        myPlayer.weapon.SetUp(WeaponType.None);
         SetDestination(packageSender.transform);
     }
     //public GameObject[] enemies;

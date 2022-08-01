@@ -15,12 +15,13 @@ public class ZombieTransform : MonoBehaviour
     public RuntimeAnimatorController behaviour;
     public GameObject shadowPrefab;
     private GameObject shadowFog;
-
     public virtual void StartTransform()
     {
-        Invoke(nameof(FinishTransform), delay);
+        if (MonoUtility.Instance.death.isActive)
+            Invoke(nameof(FinishTransform), delay);
+        else
+            Destroy(gameObject, delay);
     }
-
     public virtual void FinishTransform()
     {
         anim.runtimeAnimatorController = behaviour;
