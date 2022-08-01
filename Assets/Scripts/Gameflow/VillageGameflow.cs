@@ -10,7 +10,6 @@ public class VillageGameflow : MonoBehaviour
     public MonoUtility mono;
     public PlayerManagement player;
     public CinemachineVirtualCamera aimingCamera;
-    //public ThirdPersonCamera thirdPersonCamera;
     public MinimapCamera minimapCamera;
     public StatusPanel statusPanel;
     public MinimapCompass compass;

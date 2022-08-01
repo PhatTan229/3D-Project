@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3447714292186095667}
   - component: {fileID: 3456971184463354009}
   - component: {fileID: 3408032180985454141}
+  - component: {fileID: -106878431967974228}
   m_Layer: 0
   m_Name: KnightDeadBody7
   m_TagString: Untagged
@@ -98,3 +99,16 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43074277454025558, guid: 70874dd130ff0fd46b2faed2ee20179c, type: 2}
+--- !u!114 &-106878431967974228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3434973690912695783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18df4df2dbc3a04bb6e4a504464ad64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 2332456876062808345, guid: ce12ba7680917c84ab59a855b3b4096d, type: 3}

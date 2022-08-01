@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 174153682327231180}
   - component: {fileID: 166415237086653730}
   - component: {fileID: 214579679172525138}
+  - component: {fileID: -2441876260076449289}
   m_Layer: 0
   m_Name: PlebDeadBody2
   m_TagString: Untagged
@@ -98,3 +99,16 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43059346437837620, guid: b23c462b49895884ba8af60e3d4fa371, type: 2}
+--- !u!114 &-2441876260076449289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151288899110604278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18df4df2dbc3a04bb6e4a504464ad64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 728795217825043134, guid: 78bf21daf3cc4d54d9655b5b38b418ce, type: 3}

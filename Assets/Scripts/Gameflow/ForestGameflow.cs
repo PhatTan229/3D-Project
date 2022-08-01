@@ -9,10 +9,10 @@ public class ForestGameflow : MonoBehaviour
     public MonoUtility mono;
     public PlayerManagement player;
     public CinemachineVirtualCamera aimingCamera;
-    public ThirdPersonCamera thirdPersonCamera;
     public MinimapCamera minimapCamera;
     public StatusPanel statusPanel;
     public MinimapCompass compass;
+    public MissionPanel missionPanel;
 
     private void Start()
     {
@@ -20,23 +20,19 @@ public class ForestGameflow : MonoBehaviour
         PlayerManagement myPlayer = Instantiate(player, transform.position, transform.rotation);
         mono.player = myPlayer;
         aimingCamera.Follow = myPlayer.transform;
-        thirdPersonCamera.target = myPlayer.transform;
+        mono.thirdPersonCamera.target = myPlayer.transform;
         minimapCamera.target = myPlayer.transform;
-        compass.thirdPersonCamera = thirdPersonCamera.transform;
-        myPlayer.movement.thirdPersonCamera = thirdPersonCamera.transform;
-        myPlayer.weapon.thirdPersonCamera = thirdPersonCamera.gameObject;
         myPlayer.weapon.aimingCamera = aimingCamera.gameObject;
         PlayerHealth newHealth = myPlayer.health as PlayerHealth;
         statusPanel.healthBar.health = newHealth;
         statusPanel.armorBar.health = newHealth;
         newHealth.onHealthChanged.AddListener(statusPanel.healthBar.UpdateHealth);
         newHealth.onArmorChanged.AddListener(statusPanel.armorBar.UpdateArmor);
+
+        myPlayer.weapon.Equip(WeaponType.Dagger, WeaponType.Bow);
+        myPlayer.weapon.SetUp(WeaponType.Dagger);
         //Indivial
         //StartCoroutine(PlayTimeline());
     }
 
-    public void ChangeSence()
-    {
-        SceneManager.LoadScene("Forest Boss");
-    }
 }
