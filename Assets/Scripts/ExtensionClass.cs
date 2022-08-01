@@ -9,6 +9,4 @@ public static class ExtensionClass
         int index = Random.Range(0, array.Length);
         return array[index];
     }
-
-
 }

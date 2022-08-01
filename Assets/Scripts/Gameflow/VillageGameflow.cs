@@ -158,9 +158,11 @@ public class VillageGameflow : MonoBehaviour
         IgnoreDestination();
         Invoke(nameof(FinishChapter), completingDelay);
     }
-    private void FinishChapter()
+    public void FinishChapter()
     {
-        SceneManager.LoadScene("Forest");
+        DatabaseController.Instance.data.chapter++;
+        SceneManager.LoadScene("Book");
+        //LoadingScreen.Instance.LoadScene(SceneTheme.Town);
     }
     private void SetDestination(Transform target)
     {
