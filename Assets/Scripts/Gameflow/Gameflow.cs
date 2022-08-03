@@ -12,6 +12,9 @@ public class Gameflow : MonoBehaviour
     public StatusPanel statusPanel;
     public MinimapCompass compass;
     public MissionPanel missionPanel;
+
+    public PathRenderer path;
+    public PolygonIcon destinationIcon;
     private void Start()
     {
         Init();
@@ -29,6 +32,18 @@ public class Gameflow : MonoBehaviour
         statusPanel.armorBar.health = newHealth;
         newHealth.onHealthChanged.AddListener(statusPanel.healthBar.UpdateHealth);
         newHealth.onArmorChanged.AddListener(statusPanel.armorBar.UpdateArmor);
+        path.player = myPlayer.transform;
+    }
+
+    protected void SetDestination(Transform target)
+    {
+        path.SetTarget(target);
+        destinationIcon.SetPosition(target.position);
+    }
+    public void IgnoreDestination()
+    {
+        path.Disable();
+        destinationIcon.Disable();
     }
 
 }

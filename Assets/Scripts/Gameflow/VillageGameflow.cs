@@ -54,10 +54,10 @@ public class VillageGameflow : MonoBehaviour
         statusPanel.armorBar.health = newHealth;
         newHealth.onHealthChanged.AddListener(statusPanel.healthBar.UpdateHealth);
         newHealth.onArmorChanged.AddListener(statusPanel.armorBar.UpdateArmor);
-
-        //Indivial
-        StartCoroutine(missionPanel.Show("Explore the world"));
         path.player = myPlayer.transform;
+        //Indivial
+
+        StartCoroutine(missionPanel.Show("Explore the world"));
         myPlayer.weapon.SetUp(WeaponType.None);
         SetDestination(packageSender.transform);
     }
@@ -161,8 +161,8 @@ public class VillageGameflow : MonoBehaviour
     public void FinishChapter()
     {
         DatabaseController.Instance.data.chapter++;
-        SceneManager.LoadScene("Book");
-        //LoadingScreen.Instance.LoadScene(SceneTheme.Town);
+        
+        LoadingScreen.Instance.LoadScene(SceneTheme.Town);
     }
     private void SetDestination(Transform target)
     {
