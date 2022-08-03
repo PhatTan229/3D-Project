@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 8bcf22e4805f6f34b86a3c993c2ba46a, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.1545243, g: 0.09977097, b: 0.12283721, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1221,17 +1221,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4264825688478686, guid: dbea36c3c9e4fc8489d8e3a7a82ff494, type: 3}
   m_PrefabInstance: {fileID: 1043882409}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1052471506 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8005655696947951381, guid: 72ebc6dc549d9ad4dac9d4a9317f85c4, type: 3}
-  m_PrefabInstance: {fileID: 1947481724}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46efb8f5170fc3640b5714209a83b45f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1059651723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,10 +1754,11 @@ MonoBehaviour:
   mono: {fileID: 1726607452}
   player: {fileID: 2973176956526030448, guid: 43ed3fea3e02f9d4e87648120d9859cb, type: 3}
   aimingCamera: {fileID: 2062529720}
-  thirdPersonCamera: {fileID: 1052471506}
   minimapCamera: {fileID: 2138024867}
   statusPanel: {fileID: 1626196663}
   compass: {fileID: 1917835583}
+  missionPanel: {fileID: 0}
+  spawner: {fileID: 0}
 --- !u!1001 &1486319270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2152,6 +2142,9 @@ MonoBehaviour:
   conversation: {fileID: 804002074}
   player: {fileID: 0}
   population: {fileID: 216297011}
+  marker: {fileID: 0}
+  thirdPersonCamera: {fileID: 0}
+  death: {fileID: 0}
 --- !u!4 &1726607453
 Transform:
   m_ObjectHideFlags: 0
@@ -2806,6 +2799,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fillImage: {fileID: 558912972}
   targetAmount: 0
+  onDone:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2091153585
 MonoBehaviour:
   m_ObjectHideFlags: 0
