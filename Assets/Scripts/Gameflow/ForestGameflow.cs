@@ -14,7 +14,7 @@ public class ForestGameflow : MonoBehaviour
     public MinimapCompass compass;
     public MissionPanel missionPanel;
 
-    [SerializeField]private TestSpawner spawner;
+    public SkeletonBoss boss;
     private void Start()
     {
         //Default
@@ -31,19 +31,18 @@ public class ForestGameflow : MonoBehaviour
         newHealth.onArmorChanged.AddListener(statusPanel.armorBar.UpdateArmor);
 
         myPlayer.weapon.Equip(WeaponType.Dagger, WeaponType.Bow);
-        myPlayer.weapon.SetUp(WeaponType.Dagger);
+        myPlayer.weapon.SetUp(WeaponType.Bow);
+        StartCoroutine(missionPanel.Show("Protest the priest"));
         //Indivial
         //StartCoroutine(PlayTimeline());
-    }
-
-    public void TestSpawner()
-    {
-        spawner.gameObject.SetActive(true);
     }
 
     public void StartProcessing()
     {
         ProgessUI.Intance.gameObject.SetActive(true);
     }
-
+    public void GenerateBoss()
+    {
+        Instantiate(boss, transform.position, Quaternion.identity);
+    }
 }

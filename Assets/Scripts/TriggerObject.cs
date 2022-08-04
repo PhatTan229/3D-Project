@@ -10,6 +10,7 @@ public class TriggerObject : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
+            Debug.Log($"other {other.name}");
             onTouch.Invoke();
             Destroy(gameObject);
         }
